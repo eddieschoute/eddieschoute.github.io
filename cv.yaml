@@ -1,0 +1,16 @@
+name: Eddie Schoute
+title: My cv
+publications:
+    -
+        title: My work
+        author: Me
+        description: |
+            * This was cool
+            * Yes it was
+        importance: 3
+    -
+        title: My work 2
+        author: You
+        description: yes
+        importance: 1
+        
