@@ -1,6 +1,80 @@
 name: Eddie Schoute
 title: My cv
-publications:
+lang: en
+education:
+    -
+        title: Doctoral Student, Computer Science
+        university: QuICS
+        date: 2016--present
+        location: Joint Center for Quantum Information and Computer Science,
+            University of Maryland, College Park, USA
+        description: |
+            * Currently working on transforming quantum programs to real-world architectures and routing
+            of qubits (i.e., implementing a permutation) under the supervision of Andrew Childs.
+            * Informally co-supervised Cem Unsal during the “Circuit Transformations for Quantum Archi-
+            tecture” project.
+            * Worked on quantum algorithms and quantum cryptography under supervision of Yi-Kai Liu.
+    -
+        title: Master of Science, Computer Science
+        university: TU Delft
+        date: 2013--2015
+        location: Delft, The Netherlands
+    -
+        title: Master of Science, Embedded Systems
+        university: TU Delft
+        date: 2013--2015
+        location: Delft, The Netherlands
+experience:
+    -
+        title: Research Summer Internship
+        company: Microsoft Research
+        date: 2020
+        location: Redmond (virtual), WA, USA
+        description: >
+            Research algorithms for executing circuits on quantum hardware.
+            We use native operations to better use the hardware capabilities.
+            I implemented a proof of concept in Julia language that shows a 5x speed-up over the state-of-the-art.
+
+            Work performed with Vadym Kliuchnikov, Alexander Vaschillo, and Dmitry Vasilevsky.
+    -
+        title: Summer Intern
+        company: IBM
+        date: 2019
+        location: Yorktown Heights, NY, USA
+        description: >
+            Research algorithms for quantum chemistry
+            and contribute to Qiskit development under the supervision of Ali Javadi-Abhari.
+    -
+        title: Developer
+        company: Owlin
+        date: Jun 2016--Aug 2016
+        location: Amsterdam, The Netherlands
+        description: |
+            * Developed 7 APIs in 3 months using Node.js, RethinkDB and ElasticSearch.
+            * Provided interactive website interface and documentation for the APIs using OpenAPI.
+            * Deployed and provided support for staging servers running the APIs.
+    -
+        title: Scientist
+        company: '[QuTech](https://qutech.nl/)'
+        date: Sep 2015--Dec 2015
+        location: Delft, The Netherlands
+        description: >
+            Working with Stephanie Wehner to publish my thesis work as paper. Furthermore, I programmed
+            and perform simulations written in Scala to be performed on a multi-core server.
+
+            Simulations code: <https://github.com/eddieschoute/spherical-routing>
+    -
+        title: Teaching Assistant
+        company: Delft University of Technology
+        date: 2012--2015
+        location: Delft, The Netherlands
+        description: |
+            Assisted and graded:
+
+            * one year of masters students in the fourth year Advanced Algorithms course.
+            * two years of bachelors students in the second year Algorithms course.
+
+publication:
     -
         title: My work
         author: Me
