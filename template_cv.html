@@ -14,6 +14,12 @@ $if(keywords)$
   <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
 $endif$
   <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
   <style>
     $styles.css()$
   </style>
@@ -23,12 +29,6 @@ $endfor$
 $if(math)$
   $math$
 $endif$
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
 $for(header-includes)$
   $header-includes$
 $endfor$
@@ -63,29 +63,44 @@ $endif$
 
 $name$
 
-<h1>Education</h1>
+<h2 class="text-primary">Education</h2>
 $for(education)$
-  <div class="row align-items-center">
-    <div class="col-lg-auto"><h3><span class="badge badge-secondary">$education.date$</span></h3></div>
-    <div class="col text-lg-center"><h3>$education.title$</h3></div>
-    <div class="col-md-auto"><span class="h3 text-muted">$education.university$</span></div>
+  <div class="row align-items-center $if(education.unimportant)$unimportant$endif$">
+    <div class="col-lg-2"><h3 class="text-muted">$education.date$</h3></div>
+    <div class="col-auto"><h3>$education.title$</h5></div>
+    <div class="col-md-auto ml-md-auto"><h3 class="text-muted"><span class="text-muted">$education.university$</h3></div>
   </div>
-   $education.location$
+  $if(education.unimportant)$
+  $else$
+  $if(education.location)$
+  <p>$education.location$</p>
+  $endif$
 
+  $if(education.description)$
   <p>$education.description$</p>
-
+  $endif$
+  $endif$
 $endfor$
 
-<h1>Experience</h1>
+<h2 class="text-primary">Experience</h2>
 $for(experience)$
-  <h2>$experience.title$ <small class="text-muted">$experience.company$</small></h2>
-  $experience.date$ $experience.location$
+  <div class="row align-items-center">
+    <div class="col-lg-2"><h3><span class="text-muted">$experience.date$</span></h3></div>
+    <div class="col-auto"><h3>$experience.title$</h3></div>
+    <div class="col-md-auto ml-md-auto"><h3><span class="text-muted">$experience.company$</span></h3></div>
+  </div>
+  $if(experience.location)$
+  <p>$experience.location$</p>
+  $endif$
 
+  $if(experience.description)$
   <p>$experience.description$</p>
+  $endif$
 $endfor$
 
+<h2 class="text-primary">Publications</h2>
 $for(publication)$
-	<h1>$publication.title$</h1>
+	<h3>$publication.title$</h3>
 	<p>$publication.author$</p>
 	$publication.description$
 $endfor$

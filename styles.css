@@ -13,3 +13,17 @@ $endif$
 $if(displaymath-css)$
 .display.math{display: block; text-align: center; margin: 0.5rem auto;}
 $endif$
+
+h3 {
+    font-size: 1.5rem;
+}
+.unimportant h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+.unimportant h4 {
+    font-size: 1rem;
+}

@@ -5,14 +5,13 @@ education:
     -
         title: Doctoral Student, Computer Science
         university: QuICS
-        date: 2016--present
+        date: 2016--now
         location: Joint Center for Quantum Information and Computer Science,
             University of Maryland, College Park, USA
         description: |
             * Currently working on transforming quantum programs to real-world architectures and routing
             of qubits (i.e., implementing a permutation) under the supervision of Andrew Childs.
-            * Informally co-supervised Cem Unsal during the “Circuit Transformations for Quantum Archi-
-            tecture” project.
+            * Informally co-supervised Cem Unsal during the “Circuit Transformations for Quantum Architecture” project.
             * Worked on quantum algorithms and quantum cryptography under supervision of Yi-Kai Liu.
     -
         title: Master of Science, Computer Science
@@ -24,6 +23,19 @@ education:
         university: TU Delft
         date: 2013--2015
         location: Delft, The Netherlands
+
+    -
+        title: Bachelor of Science, Computer Science
+        university: TU Delft
+        date: 2013--2015
+        location: Delft, The Netherlands
+        unimportant: true
+    -
+        title: Bachelor of Science, Electrical Engineering
+        university: TU Delft
+        date: 2013--2015
+        location: Delft, The Netherlands
+        unimportant: true
 experience:
     -
         title: Research Summer Internship
@@ -47,7 +59,7 @@ experience:
     -
         title: Developer
         company: Owlin
-        date: Jun 2016--Aug 2016
+        date: 2016
         location: Amsterdam, The Netherlands
         description: |
             * Developed 7 APIs in 3 months using Node.js, RethinkDB and ElasticSearch.
@@ -56,7 +68,7 @@ experience:
     -
         title: Scientist
         company: '[QuTech](https://qutech.nl/)'
-        date: Sep 2015--Dec 2015
+        date: 2015
         location: Delft, The Netherlands
         description: >
             Working with Stephanie Wehner to publish my thesis work as paper. Furthermore, I programmed
