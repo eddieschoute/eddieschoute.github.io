@@ -4,7 +4,7 @@ lang: en
 education:
     -
         title: Doctoral Student, Computer Science
-        university: QuICS
+        university: '[QuICS](https://quics.umd.edu/)'
         date: 2016--now
         location: Joint Center for Quantum Information and Computer Science,
             University of Maryland, College Park, USA
@@ -15,31 +15,38 @@ education:
             * Worked on quantum algorithms and quantum cryptography under supervision of Yi-Kai Liu.
     -
         title: Master of Science, Computer Science
-        university: TU Delft
+        university: '[TU Delft](https://www.tudelft.nl)'
         date: 2013--2015
         location: Delft, The Netherlands
+        description: >
+            Specialization _Software Technology_, with a focus on (distributed) algorithms and networks.
     -
         title: Master of Science, Embedded Systems
-        university: TU Delft
+        university: '[TU Delft](https://www.tudelft.nl)'
         date: 2013--2015
         location: Delft, The Netherlands
+        description: |
+            * I constructed a proof of concept fiber-optic cable tap for less than €30.
+            * I worked on software acceleration using vectorization (SSE) and parallelization (Pthreads, OpenMP),
+                as well as GPGPU programming (CUDA) and DSPs.
 
     -
         title: Bachelor of Science, Computer Science
-        university: TU Delft
+        university: '[TU Delft](https://www.tudelft.nl)'
         date: 2013--2015
         location: Delft, The Netherlands
         unimportant: true
     -
         title: Bachelor of Science, Electrical Engineering
-        university: TU Delft
+        university: '[TU Delft](https://www.tudelft.nl)'
         date: 2013--2015
         location: Delft, The Netherlands
         unimportant: true
+
 experience:
     -
         title: Research Summer Internship
-        company: Microsoft Research
+        company: '[Microsoft Research](https://www.microsoft.com)'
         date: 2020
         location: Redmond (virtual), WA, USA
         description: >
@@ -50,7 +57,7 @@ experience:
             Work performed with Vadym Kliuchnikov, Alexander Vaschillo, and Dmitry Vasilevsky.
     -
         title: Summer Intern
-        company: IBM
+        company: '[IBM](https://www.ibm.com)'
         date: 2019
         location: Yorktown Heights, NY, USA
         description: >
@@ -58,7 +65,7 @@ experience:
             and contribute to Qiskit development under the supervision of Ali Javadi-Abhari.
     -
         title: Developer
-        company: Owlin
+        company: '[Owlin](https://www.owlin.com/)'
         date: 2016
         location: Amsterdam, The Netherlands
         description: |
@@ -75,28 +82,122 @@ experience:
             and perform simulations written in Scala to be performed on a multi-core server.
 
             Simulations code: <https://github.com/eddieschoute/spherical-routing>
+
+    -
+        title: Intern
+        company: '[Waag](https://waag.org)'
+        date: 2013
+        location: Amsterdam, The Netherlands
+        description: >
+            I constructed a recommender system for arts tourism in the Netherlands using a semantic database.
+
     -
         title: Teaching Assistant
-        company: Delft University of Technology
+        company: '[TU Delft](https://www.tudelft.nl)'
         date: 2012--2015
         location: Delft, The Netherlands
         description: |
-            Assisted and graded:
+            * Assisted and graded one year of masters students in the fourth year Advanced Algorithms course.
+            * Assisted and graded two years of bachelors students in the second year Algorithms course.
 
-            * one year of masters students in the fourth year Advanced Algorithms course.
-            * two years of bachelors students in the second year Algorithms course.
+service:
+    -
+        title: Computer Science Graduate Student Council
+        venue: '[Computer Science Department](https://www.cs.umd.edu/)'
+        date: 2018--present
+        description: >
+            I organized and contributed to the annual CS department picnic.
+            I also organized student trips to foster a community withing the department.
+        
+    -
+        title: Organize Seminar Recordings and [Youtube](https://www.youtube.com/c/QuICS).
+        venue: '[QuICS](https://quics.umd.edu/)'
+        date: 2018--2020
+        description: >
+            I organized videotaping and processing of QuICS seminars for upload to Youtube,
+            to promote accessibility of research.
+    
+    -
+        title: Assist with Organizing QuICS-JQI-CMTC Seminars.
+        venue: '[QuICS](https://quics.umd.edu/)'
+        date: 2019--present
+        description: >
+            This weekly seminar series encourages the transfer of knowledge across the field of physics,
+            computer science and math.
+            I also made sure everyone had healthier food available.
+    
+    -
+        title: Live Stream and Video Recording
+        venue: '[TQC 2019 and NISQ workshop](https://www.tqcconference.org/)'
+        location: 14th Conference on the Theory of Quantum Compilation, Communication and Cryptography
+        date: 2019
+        description: >
+            I helped with finding the appropriate hardware and assisted with the live streaming of
+            TQC and NISQ workshop.
 
-publication:
+awards:
     -
-        title: My work
-        author: Me
-        description: |
-            * This was cool
-            * Yes it was
-        importance: 3
+        title: IBM PhD Fellowship
+        grantor: '[IBM](https://www.ibm.com)'
+        date: 2020-2022
+        description: >
+            A stipend of $35,000/yr. plus $25,000 towards education expenses in the first year.
     -
-        title: My work 2
-        author: You
-        description: yes
-        importance: 1
+        title: Tied 2nd Place IBM Developer challenge
+        grantor: '[IBM](https://www.ibm.com)'
+        date: 2018
+        description: This is a $1000 prize for developing software with IBM’s Qiskit to compile quantum circuits for the IBM quantum computer architectures.
+    -
+        title: Lanczos Graduate Fellowship
+        grantor: '[QuICS](https://quics.umd.edu)'
+        location: Joint Center for Quantum Information and Computer Science, College Park, MD
+        date: 2016--2018
+        description: Covers tuition, stipend and an additional $5000/yr. Three fellowships were awarded.
+    -
+        title: Dean's Graduate Fellowship.
+        grantor: '[The Graduate School](https://gradschool.umd.edu/)'
+        location: University of Maryland, College Park
+        date: 2016--2018
+        description: An award of $2500 yearly.
+    -
+        title: Jacob K. Goldhauber Travel Award.
+        grantor: '[The Graduate School, University of Maryland, Colleg Park](https://gradschool.umd.edu)'
+        location: University of Maryland, College Park
+        date: 2017
+        description: Covers $500 for travel to a conference.
+
+
+publications:
+    -
+        title: Nearly optimal time-independent state reversal of a spin chain
+        date: 2020
+        author: Aniruddha Bapat, Eddie Schoute, Alexey V. Gorshkov, Andrew M. Childs
+        link: https://arxiv.org/abs/2003.02843
+        description: >
+            We propose a time-independent Hamiltonian protocol for the reversal of qubit ordering in a chain of N spins.
+            Our protocol has an easily implementable nearest-neighbor, transverse-field Ising model Hamiltonian with time-independent, non-uniform couplings.
+            Under appropriate normalization, we implement this state reversal three times faster than a naive approach using SWAP gates,
+            in time comparable to a protocol of Raussendorf [Phys. Rev. A 72, 052301 (2005)] that requires dynamical control.
+            We also prove lower bounds on state reversal by using results on the entanglement capacity of Hamiltonians and show that we are within a factor 1.502(1+1/N) of the shortest time possible.
+            Our lower bound holds for all nearest-neighbor qubit protocols with arbitrary finite ancilla spaces and local operations and classical communication.
+            Finally, we extend our protocol to an infinite family of nearest-neighbor, time-independent Hamiltonian protocols for state reversal.
+            This includes chains with nearly uniform coupling that may be especially feasible for experimental implementation. 
+
+    -
+        title: Circuit Transformations for Quantum Architectures
+        date: 2019
+        author: Andrew M. Childs, Eddie Schoute, Cem M. Unsal
+        link: https://www.doi.org/10.4230/LIPIcs.TQC.2019.3
+        description: >
+            Quantum computer architectures impose restrictions on qubit interactions.
+            We propose efficient circuit transformations that modify a given quantum circuit to fit an architecture,
+            allowing for any initial and final mapping of circuit qubits to architecture qubits.
+            To achieve this, we first consider the qubit movement subproblem and use the routing via matchings framework to prove tighter bounds on parallel routing.
+            In practice, we only need to perform partial permutations, so we generalize routing via matchings to that setting.
+            We give new routing procedures for common architecture graphs and for the generalized hierarchical product of graphs,
+            which produces subgraphs of the Cartesian product. Secondly, for serial routing,
+            we consider the token swapping framework and extend a 4-approximation algorithm for general graphs to support partial permutations.
+            We apply these routing procedures to give several circuit transformations, using various heuristic qubit placement subroutines.
+            We implement these transformations in software and compare their performance for large quantum circuits on grid and modular architectures,
+            identifying strategies that work well in practice. 
         
