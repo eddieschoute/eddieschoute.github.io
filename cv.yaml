@@ -1,5 +1,5 @@
 name: Eddie Schoute
-title: My cv
+title: Curriculum Vitae
 lang: en
 education:
     -
@@ -200,4 +200,26 @@ publications:
             We apply these routing procedures to give several circuit transformations, using various heuristic qubit placement subroutines.
             We implement these transformations in software and compare their performance for large quantum circuits on grid and modular architectures,
             identifying strategies that work well in practice. 
+    -
+        title: Shortcuts to quantum network routing
+        date: 2016
+        author: E. Schoute, L. Mančinska, T. Islam, I. Kerenidis, and S. Wehner
+        link: https://arxiv.org/abs/1610.05238
+        description: |
+            A quantum network promises to enable long distance quantum communication, and assemble small quantum devices into a large quantum computing cluster. Each network node can thereby be seen as a small few qubit quantum computer. Qubits can be sent over direct physical links connecting nearby quantum nodes, or by means of teleportation over pre-established entanglement amongst distant network nodes. Such pre-shared entanglement effectively forms a shortcut - a virtual quantum link - which can be used exactly once.
+
+            Here, we present an abstraction of a quantum network that allows ideas from computer science to be applied to the problem of routing qubits, and manage entanglement in the network. Specifically, we consider a scenario in which each quantum network node can create EPR pairs with its immediate neighbours over a physical connection, and perform entanglement swapping operations in order to create long distance virtual quantum links. We proceed to discuss the features unique to quantum networks, which call for the development of new routing techniques. As an example, we present two simple hierarchical routing schemes for a quantum network of N nodes for a ring and sphere topology. For these topologies we present efficient routing algorithms requiring O(log N) qubits to be stored at each network node, O(polylog N) time and space to perform routing decisions, and O(log N) timesteps to replenish the virtual quantum links in a model of entanglement generation. 
+
+    -
+        title: Shortcuts to Quantum Network Routing
+        date: 2016
+        author: E. Schoute
+        link: http://resolver.tudelft.nl/uuid:684bb201-64a2-461d-b603-1f47590a1341
+        description: Master's thesis.
+
+    -
+        title: 'Systematic Testing of Hardware Compilers: Testing the DWARV C-to-VHDL Compiler'
+        date: 2013
+        author: A. J. Rouvoet, E. Schoute, and A. B. Booij
+        description: Bachelor's thesis.
         
