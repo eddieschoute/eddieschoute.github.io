@@ -37,33 +37,33 @@ $endfor$
 $for(include-before)$
 $include-before$
 $endfor$
-<div class="container">
-$if(title)$
 <header id="title-block-header">
-<h1 class="title">$title$</h1>
-$if(subtitle)$
-<p class="subtitle">$subtitle$</p>
-$endif$
-$for(author)$
-<p class="author">$author$</p>
-$endfor$
-$if(date)$
-<p class="date">$date$</p>
-$endif$
+  <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light">
+    <a class="navbar-brand" href="#">$name$</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#experience">Experience</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#education">Education</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#publications">Publications</a>
+      </li>
+    </ul>
+
+  </nav>
+
 </header>
-$endif$
-$if(toc)$
-<nav id="$idprefix$TOC" role="doc-toc">
-$if(toc-title)$
-<h2 id="$idprefix$toc-title">$toc-title$</h2>
-$endif$
-$table-of-contents$
-</nav>
-$endif$
+<div class="container header-padding">
+<h1>$title$</h1>
 
-$name$
-
-<section>
+<section id="education">
   <h2>Education</h2>
   <div class="section-body">
     $for(education)$
@@ -91,7 +91,7 @@ $name$
   </div>
 </section>
 
-<section>
+<section id="experience">
   <h2>Experience</h2>
   <div class="section-body">
   $for(experience)$
@@ -117,7 +117,7 @@ $name$
   </div>
 </section>
 
-<section>
+<section id="service">
   <h2>Service</h2>
   <div class="section-body">
   $for(service)$
@@ -168,7 +168,7 @@ $name$
 </section>
 
 
-<section>
+<section id="publications">
   <h2>Publications</h2>
   <div class="section-body">
   $for(publications)$
@@ -195,8 +195,8 @@ $for(include-after)$
 $include-after$
 $endfor$
 </div>
-  $--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  $--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  $--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 </html>
