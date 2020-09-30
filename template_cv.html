@@ -37,7 +37,7 @@ $endfor$
 $for(include-before)$
 $include-before$
 $endfor$
-<header id="title-block-header">
+<header>
   <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light">
     <a class="navbar-brand" href="#">$name$</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,15 +53,19 @@ $endfor$
         <a class="nav-link" href="#education">Education</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="#service">Service</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="#publications">Publications</a>
       </li>
     </ul>
+  </div>
 
   </nav>
-
 </header>
-<div class="container header-padding">
-<h1>$title$</h1>
+
+<div class="container header-margin">
+<h1 class="display-1">$title$</h1>
 
 <section id="education">
   <h2>Education</h2>
@@ -69,15 +73,15 @@ $endfor$
     $for(education)$
     <div class="job-entry">
       <div class="row">
-        <div class="col-sm-3"><h5 class="text-muted">$education.date$</h5></div>
-        <div class="col-sm-9"><h3>$education.title$</h3></div>
+        <div class="col-md-3"><h5 class="text-muted">$education.date$</h5></div>
+        <div class="col-md-9"><h3>$education.title$</h3></div>
       </div>
       <div class="row">
-        <div class="offset-sm-3 col-sm-9"><h3 class="text-muted">$education.university$</h3></div>
+        <div class="offset-md-3 col-md-9"><h3 class="text-muted">$education.university$</h3></div>
       </div>
       $if(education.location)$
       <div class="row">
-        <div class="offset-sm-3 col-sm-9">
+        <div class="offset-md-3 col-md-9">
           <p class="small">$education.location$</p>
         </div>
       </div>
@@ -97,15 +101,15 @@ $endfor$
   $for(experience)$
     <div class="job-entry">
       <div class="row">
-        <div class="col-sm-3"><h5 class="text-muted">$experience.date$</h5></div>
-        <div class="col-sm-9"><h3>$experience.title$</h3></div>
+        <div class="col-md-3"><h5 class="text-muted">$experience.date$</h5></div>
+        <div class="col-md-9"><h3>$experience.title$</h3></div>
       </div>
       <div class="row">
-        <div class="offset-sm-3 col-sm-9"><h3 class="text-muted">$experience.company$</h3></div>
+        <div class="offset-md-3 col-md-9"><h3 class="text-muted">$experience.company$</h3></div>
       </div>
       $if(experience.location)$
       <div class="row">
-        <div class="offset-sm-3 col-sm-9"><p class="small">$experience.location$</p></div>
+        <div class="offset-md-3 col-md-9"><p class="small">$experience.location$</p></div>
       </div>
       $endif$
 
@@ -123,17 +127,17 @@ $endfor$
   $for(service)$
     <div class="job-entry">
       <div class="row">
-        <div class="col-sm-3"><h5 class="text-muted">$service.date$</h5></div>
-        <div class="col-sm-9"><h3>$service.title$</h3></div>
+        <div class="col-md-3"><h5 class="text-muted">$service.date$</h5></div>
+        <div class="col-md-9"><h3>$service.title$</h3></div>
       </div>
       $if(service.venue)$
       <div class="row">
-        <div class="offset-sm-3 col-sm-9"><h3 class="text-muted">$service.venue$</h3></div>
+        <div class="offset-md-3 col-md-9"><h3 class="text-muted">$service.venue$</h3></div>
       </div>
       $endif$
       $if(service.location)$
       <div class="row">
-        <div class="offset-sm-3 col-sm-9"><p class="small">$service.location$</p></div>
+        <div class="offset-md-3 col-md-9"><p class="small">$service.location$</p></div>
       </div>
       $endif$
       $service.description$
@@ -148,17 +152,17 @@ $endfor$
   $for(awards)$
     <div class="job-entry">
       <div class="row">
-        <div class="col-sm-3"><h5 class="text-muted">$awards.date$</h5></div>
-        <div class="col-sm-9"><h3>$awards.title$</h3></div>
+        <div class="col-md-3"><h5 class="text-muted">$awards.date$</h5></div>
+        <div class="col-md-9"><h3>$awards.title$</h3></div>
       </div>
       $if(awards.grantor)$
       <div class="row">
-        <div class="offset-sm-3 col-sm-9"><h3 class="text-muted">$awards.grantor$</h3></div>
+        <div class="offset-md-3 col-md-9"><h3 class="text-muted">$awards.grantor$</h3></div>
       </div>
       $endif$
       $if(awards.location)$
       <div class="row">
-        <div class="offset-sm-3 col-sm-9"><p class="small">$awards.location$</p></div>
+        <div class="offset-md-3 col-md-9"><p class="small">$awards.location$</p></div>
       </div>
       $endif$
       $awards.description$
@@ -174,15 +178,15 @@ $endfor$
   $for(publications)$
     <div class="job-entry">
       <div class="row">
-        <div class="col-sm-3"><h5 class="text-muted">$publications.date$</h5></div>
-        <div class="col-sm-9"><h3>$publications.title$</h3></div>
+        <div class="col-md-3"><h5 class="text-muted">$publications.date$</h5></div>
+        <div class="col-md-9"><h3>$publications.title$</h3></div>
       </div>
       <div class="row">
-        <div class="offset-sm-3 col-sm-9"><h3 class="text-muted">$publications.author$</h3></div>
+        <div class="offset-md-3 col-md-9"><h3 class="text-muted">$publications.author$</h3></div>
       </div>
       $if(publications.link)$
       <div class="row">
-        <div class="offset-sm-3 col-sm-9"><p class="small"><a href="$publications.link$">$publications.link$</a></p></div>
+        <div class="offset-md-3 col-md-9"><p class="small"><a href="$publications.link$">$publications.link$</a></p></div>
       </div>
       $endif$
       $publications.description$
