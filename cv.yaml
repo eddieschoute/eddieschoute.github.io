@@ -110,11 +110,11 @@ service:
             I also organized student trips to foster a community withing the department.
         
     -
-        title: Organize Seminar Recordings and [Youtube](https://www.youtube.com/c/QuICS).
+        title: Organize Seminar Recordings and Youtube.
         venue: '[QuICS](https://quics.umd.edu/)'
         date: 2018--2020
         description: >
-            I organized videotaping and processing of QuICS seminars for upload to Youtube,
+            I organized videotaping and processing of QuICS seminars for upload to the [QuICS Youtube](https://www.youtube.com/c/QuICS),
             to promote accessibility of research.
     
     -
@@ -124,7 +124,7 @@ service:
         description: >
             This weekly seminar series encourages the transfer of knowledge across the field of physics,
             computer science and math.
-            I also made sure everyone had healthier food available.
+            I also made sure healthier food was available.
     
     -
         title: Live Stream and Video Recording
@@ -161,7 +161,7 @@ awards:
         description: An award of $2500 yearly.
     -
         title: Jacob K. Goldhauber Travel Award.
-        grantor: '[The Graduate School, University of Maryland, Colleg Park](https://gradschool.umd.edu)'
+        grantor: '[The Graduate School, University of Maryland, College Park](https://gradschool.umd.edu)'
         location: University of Maryland, College Park
         date: 2017
         description: Covers $500 for travel to a conference.
