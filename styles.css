@@ -15,7 +15,7 @@ $if(displaymath-css)$
 $endif$
 
 section {
-    margin-top: 1vw;
+    margin-top: 10vh;
 }
 
 .section-body {
@@ -23,11 +23,29 @@ section {
 	padding-right: 8vw;
 }
 
-.job-entry {
+/* Add margin for static header */
+body {
+    margin-top: 56px;
+}
+
+
+/* Anchor offset with static header */
+*[id]:before { 
+    display: block; 
+    content: ""; 
+    margin-top: -56px; 
+    height: 56px; 
+    visibility: hidden; 
+}
+.display-1 {
+    font-size: calc( 3.1rem + 3vw );
+}
+
+.job-entry:not(:last-child) {
     margin-bottom: 9vh;
 }
 
-ul, ul.list-group {
+.job-entry ul {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -37,7 +55,7 @@ ul, ul.list-group {
     border-radius:  .25rem;
 }
 
-li, .list-group-item {
+.job-entry li {
     padding: .75rem 0;
     position: relative;
     display: block;
@@ -45,11 +63,11 @@ li, .list-group-item {
     border: 1px solid rgba(0,0,0,.125);
     border-width: 0 0 1px;
 }
-li:first-child {
+.job-entry li:first-child {
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
 }
-li:last-child {
+.job-entry li:last-child {
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
     border-bottom-width: 0;
@@ -57,4 +75,8 @@ li:last-child {
 
 h2 {
     margin-bottom: 1rem;
+}
+
+h5 {
+    margin-top: .5rem;
 }
