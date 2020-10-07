@@ -118,7 +118,7 @@ service:
             to promote accessibility of research.
     
     -
-        title: Assist with Organizing QuICS-JQI-CMTC Seminars.
+        title: Assist with Organizing QuICS-JQI-CMTC Seminars
         venue: '[QuICS](https://quics.umd.edu/)'
         date: 2019--present
         description: >
@@ -146,25 +146,29 @@ awards:
         title: Tied 2nd Place IBM Developer challenge
         grantor: '[IBM](https://www.ibm.com)'
         date: 2018
-        description: This is a $1000 prize for developing software with IBM’s Qiskit to compile quantum circuits for the IBM quantum computer architectures.
+        description: >
+            This is a $1000 prize for developing software with IBM’s Qiskit to compile quantum circuits for the IBM quantum computer architectures.
     -
         title: Lanczos Graduate Fellowship
         grantor: '[QuICS](https://quics.umd.edu)'
         location: Joint Center for Quantum Information and Computer Science, College Park, MD
         date: 2016--2018
-        description: Covers tuition, stipend and an additional $5000/yr. Three fellowships were awarded.
+        description: >
+            Covers tuition, stipend and an additional $5000/yr. Three fellowships were awarded.
     -
-        title: Dean's Graduate Fellowship.
+        title: Dean's Graduate Fellowship
         grantor: '[The Graduate School](https://gradschool.umd.edu/)'
         location: University of Maryland, College Park
         date: 2016--2018
-        description: An award of $2500 yearly.
+        description: >
+            An award of $2500 yearly.
     -
-        title: Jacob K. Goldhauber Travel Award.
+        title: Jacob K. Goldhauber Travel Award
         grantor: '[The Graduate School, University of Maryland, College Park](https://gradschool.umd.edu)'
         location: University of Maryland, College Park
         date: 2017
-        description: Covers $500 for travel to a conference.
+        description: >
+            Covers $500 for travel to a conference.
 
 
 publications:
@@ -215,11 +219,13 @@ publications:
         date: 2016
         author: E. Schoute
         link: http://resolver.tudelft.nl/uuid:684bb201-64a2-461d-b603-1f47590a1341
-        description: Master's thesis.
+        description: >
+            Master's thesis.
 
     -
         title: 'Systematic Testing of Hardware Compilers: Testing the DWARV C-to-VHDL Compiler'
         date: 2013
         author: A. J. Rouvoet, E. Schoute, and A. B. Booij
-        description: Bachelor's thesis.
+        description: >
+            Bachelor's thesis.
         
