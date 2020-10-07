@@ -14,13 +14,12 @@ $if(displaymath-css)$
 .display.math{display: block; text-align: center; margin: 0.5rem auto;}
 $endif$
 
-section {
-    margin-top: 10vh;
+.container-fluid {
+    max-width: 730px;
 }
 
 .section-body {
-	padding-left: 6vw;
-	padding-right: 8vw;
+	padding-left: 6%;
 }
 
 /* Add margin for static header */
@@ -38,11 +37,13 @@ body {
     visibility: hidden; 
 }
 .display-1 {
-    font-size: calc( 3.1rem + 3vw );
+    /* We make sure that the title "Curriculum Vitae" still fits on one line at large width */
+    font-size: min(calc( 2rem + 3vw ), 600%);
+    margin-bottom: 5%;
 }
 
-.job-entry:not(:last-child) {
-    margin-bottom: 9vh;
+.job-entry {
+    margin-bottom: 9%;
 }
 
 .job-entry ul {
