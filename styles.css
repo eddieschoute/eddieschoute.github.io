@@ -37,7 +37,7 @@ body {
     visibility: hidden; 
 }
 .display-1 {
-    /* We make sure that the title "Curriculum Vitae" still fits on one line at large width */
+    /* Make sure that the title "Curriculum Vitae" still fits on one line at large width */
     font-size: min(calc( 2rem + 3vw ), 600%);
     margin-bottom: 5%;
 }
