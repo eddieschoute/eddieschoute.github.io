@@ -28,7 +28,7 @@ jobs:
         uses: docker://pandoc/core
         with:
           # Dummy REAMDE.md input file that is not used
-          args: |>
+          args: >-
             --metadata-file cv.yaml
             --template=template_academic_resume.tex
             -t latex
