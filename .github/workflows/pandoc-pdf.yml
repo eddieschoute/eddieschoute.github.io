@@ -21,6 +21,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      - run: mkdir build
 
       # Build the tex file using pandoc
       - name: Create tex file
@@ -31,7 +32,7 @@ jobs:
             --metadata-file cv.yaml
             --template=template_academic_resume.tex
             -t latex
-            --output=academic_resume.tex
+            --output=build/academic_resume.tex
             README.md
       
       # Compile the tex file using latex
@@ -39,10 +40,12 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: academic_resume.tex
+          working_directory: build
+          latexmk_use_lualatex: true
 
       # Upload artifact
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v2
         with:
           name: academic resume pdf
-          path: academic_resume.pdf
+          path: build/academic_resume.pdf
