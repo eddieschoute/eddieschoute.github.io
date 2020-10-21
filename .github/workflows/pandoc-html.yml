@@ -46,16 +46,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: html
-          path: ./html.zip
-          
-      - run: ls
-      - run: cat html.zip
-      - name: Extract html
-        run: unzip html.zip
-      
-      - run: |
-          mkdir public
-          mv cv.html public
+          path: public
       
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
