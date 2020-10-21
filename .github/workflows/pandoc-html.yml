@@ -48,6 +48,8 @@ jobs:
           name: html
           path: public
       
+      - run: mv public/cv.html public/index.html
+      
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
