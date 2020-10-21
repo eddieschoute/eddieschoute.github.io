@@ -42,25 +42,21 @@ jobs:
     # Make sure we only deploy when pushed to master branch
     if: github.ref == 'refs/heads/master'
     steps:
-      - run: mkdir build
       - name: Download html
         uses: actions/download-artifact@v2
         with:
           name: html
-          path: ./build/html.zip
-
-      - run: ls -la
-        working-directory: ./build
-      
-      - run: pwd
-        working-directory: ./build
+          path: ./html.zip
         
       - name: Extract html
-        run: unzip ./html.zip
-        working-directory: ./build
+        run: unzip html.zip
+      
+      - run: |
+          mkdir public
+          mv cv.html public
       
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: $${ secrets.GITHUB_TOKEN }
-          publish_dir: ./build
+          publish_dir: ./public
