@@ -56,7 +56,7 @@ jobs:
         working-directory: ./build
         
       - name: Extract html
-        run: unzip html.zip
+        run: unzip ./html.zip
         working-directory: ./build
       
       - name: Deploy
