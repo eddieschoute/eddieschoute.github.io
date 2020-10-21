@@ -28,7 +28,12 @@ jobs:
         uses: docker://pandoc/core:2.11.0.2
         with:
           # Use Readme.md as dummy input file (not used in the template)
-          args: --metadata-file cv.yaml --template=template_cv.html -t html README.md --output=build/cv.html
+          args: >-
+            --metadata-file cv.yaml
+            --template=template_cv.html
+            -t html
+            --output=build/cv.html
+            README.md
       
       - name: Upload HTML artifact
         uses: actions/upload-artifact@v2
