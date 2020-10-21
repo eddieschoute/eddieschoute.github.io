@@ -104,13 +104,13 @@ $endif$
 
 \section*{Education}
 $for(education)$
-\paragraph{$education.date$ $education.title$}
+\paragraph{$education.date$ $education.title$ ($education.university$)}
 $education.description$
 $endfor$
 
 \section*{Experience}
 $for(experience)$
-\paragraph{$experience.date$ $experience.title$}
+\paragraph{$experience.date$ $experience.title$ ($experience.company$)}
 $experience.description$
 $endfor$
 
@@ -129,7 +129,7 @@ $endfor$
 \section*{Publications}
 \begin{enumerate}
 $for(publications)$
-\item $publications.title$ by $publications.author$
+\item ``\href{$publications.link$}{$publications.title$}''. $publications.author$ ($publications.date$)
 $endfor$
 \end{enumerate}
 
