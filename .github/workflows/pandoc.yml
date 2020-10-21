@@ -27,4 +27,4 @@ jobs:
         uses: docker://pandoc/core
         with:
           # Use Readme.md as dummy input file (not used in the template)
-          args: --metadata-file cv.yaml --template=template_cv.html -t html Readme.md
+          args: --metadata-file cv.yaml --template=template_cv.html -t html README.md
