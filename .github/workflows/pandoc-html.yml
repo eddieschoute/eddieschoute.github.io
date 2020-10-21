@@ -47,14 +47,20 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: html
-          path: build/html.zip
+          path: ./build/html.zip
+
+      - run: ls -la
+        working-directory: ./build
       
+      - run: pwd
+        working-directory: ./build
+        
       - name: Extract html
         run: unzip html.zip
-        working-directory: build
+        working-directory: ./build
       
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: $${ secrets.GITHUB_TOKEN }
-          publish_dir: build/
+          publish_dir: ./build
