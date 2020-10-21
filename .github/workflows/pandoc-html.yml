@@ -47,7 +47,8 @@ jobs:
         with:
           name: html
           path: ./html.zip
-        
+          
+      - run: ls
       - name: Extract html
         run: unzip html.zip
       
