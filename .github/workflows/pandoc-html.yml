@@ -49,6 +49,7 @@ jobs:
           path: ./html.zip
           
       - run: ls
+      - run: cat html.zip
       - name: Extract html
         run: unzip html.zip
       
