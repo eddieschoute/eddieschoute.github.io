@@ -129,7 +129,10 @@ $endfor$
 \section*{Publications}
 \begin{enumerate}
 $for(publications)$
-\item ``\href{$publications.link$}{$publications.title$}''. $publications.author$ ($publications.date$)
+\item ``\href{$publications.link$}{$publications.title$}''. $publications.author$ ($publications.date$).
+$if(publications.inpreparation)$
+In preparation.
+$endif$
 $endfor$
 \end{enumerate}
 
