@@ -1,0 +1,49 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Pandoc PDF
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      - run: mdkir build
+
+      # Build the tex file using pandoc
+      - name: Create tex file
+        uses: docker://pandoc/core
+        with:
+          # Dummy REAMDE.md input file that is not used
+          args: |>
+            --metadata-file cv.yaml
+            --template=template_academic_resume.tex
+            -t latex
+            --output=build/academic_resume.tex
+            README.md
+      
+      # Compile the tex file using latex
+      - name: Build tex to pdf
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: build/academic_resume.tex
+
+      # Upload artifact
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: academic resume pdf
+          path: build/academic_resume.pdf
