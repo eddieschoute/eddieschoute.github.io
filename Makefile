@@ -16,7 +16,7 @@ $(BUILDDIR)/%_resume.tex: template_%_resume.tex cv.yaml directories
 	echo "" | pandoc --metadata-file cv.yaml --template=$< -t latex > $@
 
 $(BUILDDIR)/cv.html: template_cv.html cv.yaml directories
-	echo "" | pandoc --metadata-file cv.yaml --template=$< -t html > $@
+	echo "" | pandoc --metadata title="My Title" --metadata-file cv.yaml --template=$< -t html > $@
 
 clean:
 	rm build/*
