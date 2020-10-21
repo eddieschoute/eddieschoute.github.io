@@ -38,7 +38,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     # Make sure we only deploy when pushed to master branch
-    if: github.ref == "refs/heads/master"
+    if: github.ref == 'refs/heads/master'
     steps:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
