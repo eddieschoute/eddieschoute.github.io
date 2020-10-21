@@ -13,7 +13,7 @@ $endif$
 $if(keywords)$
   <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
 $endif$
-  <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+  <title>CV: $name$</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
@@ -65,7 +65,7 @@ $endfor$
 </header>
 
 <div class="container-fluid">
-<h1 class="display-1">$title$</h1>
+<h1 class="display-1">Curriculum Vitae</h1>
 
 <section id="education">
   <h2>Education</h2>
@@ -105,7 +105,7 @@ $endfor$
         <div class="col-md-9"><h3>$experience.title$</h3></div>
       </div>
       <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted">$experience.company$</h3></div>
+        <div class="offset-md-3 col-md-9"><h4 class="text-muted">$experience.company$</h4></div>
       </div>
       $if(experience.location)$
       <div class="row">
