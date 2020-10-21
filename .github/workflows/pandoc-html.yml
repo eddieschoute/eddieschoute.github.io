@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Pandoc build
+name: Pandoc html
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -27,4 +27,10 @@ jobs:
         uses: docker://pandoc/core
         with:
           # Use Readme.md as dummy input file (not used in the template)
-          args: --metadata-file cv.yaml --template=template_cv.html -t html README.md
+          args: --metadata-file cv.yaml --template=template_cv.html -t html README.md --output=build/cv.html
+      
+      - name: Upload HTML artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: html
+          path: build/cv.html
