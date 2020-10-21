@@ -39,7 +39,8 @@ jobs:
       - name: Build tex to pdf
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: build/academic_resume.tex
+          root_file: academic_resume.tex
+          working_directory: build
           latexmk_use_lualatex: true
 
       # Upload artifact
