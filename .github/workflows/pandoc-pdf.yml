@@ -24,7 +24,7 @@ jobs:
 
       # Build the tex file using pandoc
       - name: Create tex file
-        uses: docker://pandoc/core
+        uses: docker://pandoc/core:2.11.0.2
         with:
           # Dummy REAMDE.md input file that is not used
           args: >-
