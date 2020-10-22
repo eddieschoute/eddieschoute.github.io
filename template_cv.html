@@ -56,6 +56,12 @@ $endfor$
         <a class="nav-link" href="#service">Service</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="#awards">Awards</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#talks">Talks</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="#publications">Publications</a>
       </li>
     </ul>
@@ -146,7 +152,7 @@ $endfor$
   </div>
 </section>
 
-<section>
+<section id="awards">
   <h2>Awards</h2>
   <div class="section-body">
   $for(awards)$
@@ -166,6 +172,29 @@ $endfor$
       </div>
       $endif$
       $awards.description$
+    </div>
+  $endfor$
+  </div>
+</section>
+
+<section id="talks">
+  <h2>Talks</h2>
+  <div class="section-body">
+  $for(talks)$
+    <div class="job-entry">
+      <div class="row">
+        <div class="col-md-3"><h5 class="text-muted">$talks.date$</h5></div>
+        <div class="col-md-9"><h3>$talks.title$</h3></div>
+      </div>
+      <div class="row">
+        <div class="offset-md-3 col-md-9"><h4 class="text-muted">$talks.venue$</h4></div>
+      </div>
+      $if(talks.link)$
+      <div class="row">
+        <div class="offset-md-3 col-md-9"><p class="small"><a href="$talks.link$">$talks.link$</a></p></div>
+      </div>
+      $endif$
+      $talks.description$
     </div>
   $endfor$
   </div>

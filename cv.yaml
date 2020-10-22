@@ -171,6 +171,18 @@ awards:
         description: >
             Covers $500 for travel to a conference.
 
+talks:
+    -
+        title: Circuit Transformations for Quantum Architectures
+        venue: '[TQC 2019](https://www.tqcconference.org/)'
+        date: 2019
+        link: https://www.youtube.com/watch?v=h7vc5lELd3E
+    -
+        title: Circuit Transformations for Quantum Architectures
+        venue: Qiskit Camp
+        date: 2019
+        link: https://www.youtube.com/watch?v=Raw6AYil79Q
+
 
 publications:
     -
