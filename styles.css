@@ -36,11 +36,6 @@ body {
     height: 56px; 
     visibility: hidden; 
 }
-.display-1 {
-    /* Make sure that the title "Curriculum Vitae" still fits on one line at large width */
-    font-size: min(calc( 2rem + 3vw ), 600%);
-    margin-bottom: 5%;
-}
 
 .section-body a {
 	color: inherit;
@@ -97,6 +92,14 @@ body {
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
     border-bottom-width: 0;
+}
+
+h1 {
+    /* Make sure that the title "Curriculum Vitae" still fits on one line at large width */
+    font-size: min(calc( 2rem + 3vw ), 600%);
+    font-weight: 200;
+    color: #17a2b8; 
+    margin-bottom: 5%;
 }
 
 h2 {
