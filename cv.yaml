@@ -171,19 +171,6 @@ awards:
         description: >
             Covers $500 for travel to a conference.
 
-
-talks:
-    -
-        title: Circuit Transformations for Quantum Architectures
-        venue: '[TQC 2019](https://www.tqcconference.org/)'
-        date: 2019
-        link: https://www.youtube.com/watch?v=h7vc5lELd3E
-    -
-        title: Circuit Transformations for Quantum Architectures
-        venue: Qiskit Camp
-        date: 2019
-        link: https://www.youtube.com/watch?v=Raw6AYil79Q
-
 publications:
     -
         title: Quantum Qubit Routing
@@ -196,6 +183,17 @@ publications:
         title: Sorting by Reversals
         inpreparation: true
         date: 2020
+
+publications:
+    -
+        title: Quantum Qubit Routing
+        inpreparation: true
+        author: Aniruddha Bapat, Alexey V. Gorshkov, Andrew M. Childs, and Eddie Schoute
+        description: >
+            Qubit routing work in preparation.
+    -
+        title: Sorting by Reversals
+        inpreparation: true
         author: Sam King, Hrishee Shashtri, Aniruddha Bapat, Eddie Schoute, Alexey V. Gorshkov, and Andrew M. Childs
         description: >
             NSF research for undergraduates (REU) work that I co-supervised.
@@ -203,14 +201,13 @@ publications:
         title: Untitled
         inpreparation: true
         author: Vadym Kliuchnikov, Eddie Schoute, and co-authors
-        date: 2020
         description: >
             Work stemming from a research internship at Microsoft Research.
     -
         title: Nearly optimal time-independent state reversal of a spin chain
-        date: 2020
         author: Aniruddha Bapat, Eddie Schoute, Alexey V. Gorshkov, and Andrew M. Childs
         link: https://arxiv.org/abs/2003.02843
+        date: 2020
         description: >
             We propose a time-independent Hamiltonian protocol for the reversal of qubit ordering in a chain of N spins.
             Our protocol has an easily implementable nearest-neighbor, transverse-field Ising model Hamiltonian with time-independent, non-uniform couplings.
