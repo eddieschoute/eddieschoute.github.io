@@ -20,3 +20,7 @@ You can also just build one target by running e.g.
 ```
 > make build/cv.html
 ```
+
+# Copyright
+All files except for `cv.yaml` are licensed under GPLv3 (see `LICENSE`).
+All rights reserved &copy; 2020 Eddie Schoute for `cv.yaml`.
