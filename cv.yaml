@@ -9,9 +9,8 @@ education:
             University of Maryland, College Park, USA
         description: |
             * Thesis topic: Transforming quantum circuits for quantum architectures with limited connectivity.
-                I identified qubit routing, i.e., implementing permutations of qubits as an interesting subproblem and we are currently exploring this research direction.
-            * Currently working on transforming quantum programs to real-world architectures and routing
-            of qubits (i.e., implementing a permutation) under the supervision of Andrew Childs.
+                Identified qubit routing, i.e., implementing permutations of qubits as an interesting subproblem and we are currently exploring this research direction
+                under supervision of Andrew Childs.
             * Co-supervised undergraduate students Sam King and Hrishee Shahstri during and after a NSF research experience for undergraduates (REU) program.
               A paper is in preparation.
             * Informally co-supervised Cem Unsal during the “Circuit Transformations for Quantum Architecture” project.
@@ -24,6 +23,7 @@ education:
         description: >
             Specialization _Software Technology_, with a focus on (distributed) algorithms and networks.
             Master's thesis on routing for quantum networks.
+            Awarded "cum laude" (<5% of students).
     -
         title: Master of Science, Embedded Systems
         university: '[TU Delft](https://www.tudelft.nl)'
@@ -33,17 +33,22 @@ education:
             I constructed a proof of concept fiber-optic cable tap for less than €30.
             I also worked on software acceleration using vectorization (SSE), parallelization (Pthreads, OpenMP),
             GPGPU programming (CUDA), and DSPs.
+            Awarded "cum laude".
 
     -
         title: Bachelor of Science, Computer Science
         university: '[TU Delft](https://www.tudelft.nl)'
         date: 2013--2015
         location: Delft, The Netherlands
+        description: >
+            Awarded "cum laude".
     -
         title: Bachelor of Science, Electrical Engineering
         university: '[TU Delft](https://www.tudelft.nl)'
         date: 2013--2015
         location: Delft, The Netherlands
+        description: >
+            Awarded "cum laude".
 
 experience:
     -
@@ -53,11 +58,11 @@ experience:
         location: Redmond (virtual), WA, USA
         important: true
         description: >
-            Research algorithms for executing circuits on quantum hardware.
-            We use native operations to better use the hardware capabilities.
-            I implemented a proof of concept in Julia language that shows a 5x speed-up over the state-of-the-art.
-
+            Researched algorithms for executing circuits on quantum hardware.
+            Used native operations to better use the hardware capabilities.
+            Implemented proof of concept in Julia language that shows a 5x speed-up over state-of-the-art.
             Work performed with Vadym Kliuchnikov, Alexander Vaschillo, and Dmitry Vasilevsky.
+
     -
         title: Summer Intern
         company: '[IBM](https://www.ibm.com)'
@@ -65,24 +70,24 @@ experience:
         location: Yorktown Heights, NY, USA
         important: true
         description: >
-            Research algorithms for quantum chemistry
-            and contribute to Qiskit development under the supervision of Ali Javadi-Abhari.
+            Researched algorithms for quantum chemistry
+            and contributed to Qiskit development under the supervision of Ali Javadi-Abhari.
     -
         title: Developer
         company: '[Owlin](https://www.owlin.com/)'
         date: 2016
         location: Amsterdam, The Netherlands
         description: >
-            I developed and deployed 7 APIs in 3 months using Node.js, RethinkDB and ElasticSearch.
-            I also provided interactive website interface and documentation for the APIs using OpenAPI.
+            Developed and deployed 7 APIs in 3 months using Node.js, RethinkDB and ElasticSearch.
+            Provided interactive website interface and documentation for the APIs using OpenAPI.
     -
         title: Scientist
         company: '[QuTech](https://qutech.nl/)'
         date: 2015
         location: Delft, The Netherlands
         description: >
-            Working with Stephanie Wehner to publish my thesis work as paper. Furthermore, I programmed
-            and perform simulations written in Scala to be performed on a multi-core server.
+            Worked with Stephanie Wehner to publish my thesis work as paper.
+            Programmed and performed simulations in Scala on a multi-core server.
 
             Simulations code: <https://github.com/eddieschoute/spherical-routing>
 
@@ -92,7 +97,7 @@ experience:
         date: 2013
         location: Amsterdam, The Netherlands
         description: >
-            I constructed a recommender system for arts tourism in the Netherlands using a semantic database.
+            Constructed a recommender system for arts tourism in the Netherlands using a semantic database.
 
     -
         title: Teaching Assistant
@@ -109,15 +114,16 @@ service:
         venue: '[Computer Science Department](https://www.cs.umd.edu/)'
         date: 2018--present
         description: >
-            I organized and contributed to the annual CS department picnic.
-            I also organized student trips to foster a community withing the department.
+            Member (2018--2019) and president in 2020.
+            Organized and contributed to the annual CS department picnic.
+            Organized student trips and events to foster a community withing the department.
         
     -
         title: Organize Seminar Recordings and Youtube.
         venue: '[QuICS](https://quics.umd.edu/)'
         date: 2018--2020
         description: >
-            I organized videotaping and processing of QuICS seminars for upload to the [QuICS Youtube](https://www.youtube.com/c/QuICS),
+            Organized videotaping and processing of QuICS seminars for upload to the [QuICS Youtube](https://www.youtube.com/c/QuICS),
             to promote accessibility of research.
     
     -
@@ -135,7 +141,7 @@ service:
         location: 14th Conference on the Theory of Quantum Compilation, Communication and Cryptography
         date: 2019
         description: >
-            I helped with finding the appropriate hardware and assisted with the live streaming of
+            Helped with finding the appropriate hardware and assisted with the live streaming of
             TQC and NISQ workshop.
 
 awards:
@@ -151,7 +157,7 @@ awards:
         grantor: '[IBM](https://www.ibm.com)'
         date: 2018
         description: >
-            This is a $1000 prize for developing software with IBM’s Qiskit to compile quantum circuits for the IBM quantum computer architectures.
+            A $1000 prize for developing software with IBM’s Qiskit to compile quantum circuits for the IBM quantum computer architectures.
     -
         title: Lanczos Graduate Fellowship
         grantor: '[QuICS](https://quics.umd.edu)'
