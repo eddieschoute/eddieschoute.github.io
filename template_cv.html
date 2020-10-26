@@ -77,7 +77,7 @@ $endfor$
   <h2>Education</h2>
   <div class="section-body">
     $for(education)$
-    <div class="job-entry">
+    <div class="job-entry $if(education.important)$highlight$endif$">
       <div class="row">
         <div class="col-md-3"><h5 class="text-muted">$education.date$</h5></div>
         <div class="col-md-9"><h3>$education.title$</h3></div>
@@ -105,7 +105,7 @@ $endfor$
   <h2>Experience</h2>
   <div class="section-body">
   $for(experience)$
-    <div class="job-entry">
+    <div class="job-entry $if(experience.important)$highlight$endif$">
       <div class="row">
         <div class="col-md-3"><h5 class="text-muted">$experience.date$</h5></div>
         <div class="col-md-9"><h3>$experience.title$</h3></div>
@@ -131,7 +131,7 @@ $endfor$
   <h2>Service</h2>
   <div class="section-body">
   $for(service)$
-    <div class="job-entry">
+    <div class="job-entry $if(service.important)$highlight$endif$">
       <div class="row">
         <div class="col-md-3"><h5 class="text-muted">$service.date$</h5></div>
         <div class="col-md-9"><h3>$service.title$</h3></div>
@@ -156,7 +156,7 @@ $endfor$
   <h2>Awards</h2>
   <div class="section-body">
   $for(awards)$
-    <div class="job-entry">
+    <div class="job-entry $if(awards.important)$highlight$endif$">
       <div class="row">
         <div class="col-md-3"><h5 class="text-muted">$awards.date$</h5></div>
         <div class="col-md-9"><h3>$awards.title$</h3></div>
@@ -181,7 +181,7 @@ $endfor$
   <h2>Talks</h2>
   <div class="section-body">
   $for(talks)$
-    <div class="job-entry">
+    <div class="job-entry $if(talks.important)$highlight$endif$">
       <div class="row">
         <div class="col-md-3"><h5 class="text-muted">$talks.date$</h5></div>
         <div class="col-md-9"><h3>$talks.title$</h3></div>
@@ -205,7 +205,7 @@ $endfor$
   <h2>Publications</h2>
   <div class="section-body">
   $for(publications)$
-    <div class="job-entry">
+    <div class="job-entry $if(publications.important)$highlight$endif$">
       <div class="row">
         <div class="col-md-3"><h5 class="text-muted">
           $if(publications.inpreparation)$

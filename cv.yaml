@@ -51,6 +51,7 @@ experience:
         company: '[Microsoft Research](https://www.microsoft.com)'
         date: 2020
         location: Redmond (virtual), WA, USA
+        important: true
         description: >
             Research algorithms for executing circuits on quantum hardware.
             We use native operations to better use the hardware capabilities.
@@ -62,6 +63,7 @@ experience:
         company: '[IBM](https://www.ibm.com)'
         date: 2019
         location: Yorktown Heights, NY, USA
+        important: true
         description: >
             Research algorithms for quantum chemistry
             and contribute to Qiskit development under the supervision of Ali Javadi-Abhari.
@@ -141,6 +143,7 @@ awards:
         title: IBM PhD Fellowship
         grantor: '[IBM](https://www.ibm.com)'
         date: 2020--2022
+        important: true
         description: >
             A stipend of $35,000/yr. plus $25,000 towards education expenses in the first year.
     -
@@ -191,18 +194,21 @@ publications:
         author: Aniruddha Bapat, Alexey V. Gorshkov, Andrew M. Childs, and Eddie Schoute
         description: >
             Qubit routing work in preparation.
+
     -
         title: Sorting by Reversals
         inpreparation: true
         author: Sam King, Hrishee Shashtri, Aniruddha Bapat, Eddie Schoute, Alexey V. Gorshkov, and Andrew M. Childs
         description: >
             NSF research for undergraduates (REU) work that I co-supervised.
+
     -
         title: Untitled
         inpreparation: true
         author: Vadym Kliuchnikov, Eddie Schoute, and co-authors
         description: >
             Work stemming from a research internship at Microsoft Research.
+
     -
         title: Nearly optimal time-independent state reversal of a spin chain
         author: Aniruddha Bapat, Eddie Schoute, Alexey V. Gorshkov, and Andrew M. Childs
@@ -222,6 +228,7 @@ publications:
         title: Circuit Transformations for Quantum Architectures
         date: 2019
         author: Andrew M. Childs, Eddie Schoute, and Cem M. Unsal
+        important: true
         link: https://www.doi.org/10.4230/LIPIcs.TQC.2019.3
         description: >
             Quantum computer architectures impose restrictions on qubit interactions.
