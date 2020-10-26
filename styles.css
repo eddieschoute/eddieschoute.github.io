@@ -80,7 +80,6 @@ body {
     padding: .75rem 0;
     position: relative;
     display: block;
-    background-color: #fff;
     border: 1px solid rgba(0,0,0,.125);
     border-width: 0 0 1px;
 }
