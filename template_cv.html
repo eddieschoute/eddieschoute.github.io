@@ -75,160 +75,178 @@ $endfor$
 
 <section id="education">
   <h2>Education</h2>
-  <div class="section-body">
-    $for(education)$
+
+  $for(education)$
     <div class="job-entry $if(education.important)$highlight$endif$">
       <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">$education.date$</h5></div>
-        <div class="col-md-9"><h3>$education.title$</h3></div>
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">$education.date$</h5></div>
+        <div class="col-md-8"><h3>$education.title$</h3></div>
       </div>
       <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted">$education.university$</h4></div>
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted">$education.university$</h4></div>
       </div>
       $if(education.location)$
       <div class="row">
-        <div class="offset-md-3 col-md-9">
-          <p class="small">$education.location$</p>
+        <div class="offset-md-4 col-md-8"><p class="small">$education.location$</p></div>
+      </div>
+      $endif$
+      $if(education.description)$
+      <div class="row">
+        <div class="offset-md-1 col-md-11">
+          $education.description$
         </div>
       </div>
       $endif$
-
-      $if(education.description)$
-      $education.description$
-      $endif$
     </div>
-    $endfor$
-  </div>
+  $endfor$
+
 </section>
 
 <section id="experience">
   <h2>Experience</h2>
-  <div class="section-body">
+
   $for(experience)$
     <div class="job-entry $if(experience.important)$highlight$endif$">
       <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">$experience.date$</h5></div>
-        <div class="col-md-9"><h3>$experience.title$</h3></div>
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">$experience.date$</h5></div>
+        <div class="col-md-8"><h3>$experience.title$</h3></div>
       </div>
       <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted">$experience.company$</h4></div>
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted">$experience.company$</h4></div>
       </div>
       $if(experience.location)$
       <div class="row">
-        <div class="offset-md-3 col-md-9"><p class="small">$experience.location$</p></div>
+        <div class="offset-md-4 col-md-8"><p class="small">$experience.location$</p></div>
       </div>
       $endif$
-
       $if(experience.description)$
-      $experience.description$
+      <div class="row">
+        <div class="offset-md-1 col-md-11">
+          $experience.description$
+        </div>
+      </div>
       $endif$
     </div>
   $endfor$
-  </div>
+
 </section>
 
 <section id="service">
   <h2>Service</h2>
-  <div class="section-body">
+
   $for(service)$
     <div class="job-entry $if(service.important)$highlight$endif$">
       <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">$service.date$</h5></div>
-        <div class="col-md-9"><h3>$service.title$</h3></div>
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">$service.date$</h5></div>
+        <div class="col-md-8"><h3>$service.title$</h3></div>
       </div>
       $if(service.venue)$
       <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted">$service.venue$</h4></div>
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted">$service.venue$</h4></div>
       </div>
       $endif$
       $if(service.location)$
       <div class="row">
-        <div class="offset-md-3 col-md-9"><p class="small">$service.location$</p></div>
+        <div class="offset-md-4 col-md-8"><p class="small">$service.location$</p></div>
       </div>
       $endif$
-      $service.description$
+      <div class="row">
+        <div class="offset-md-1 col-md-11">
+          $service.description$
+        </div>
+      </div>
     </div>
   $endfor$
-  </div>
+
 </section>
 
 <section id="awards">
   <h2>Awards</h2>
-  <div class="section-body">
+
   $for(awards)$
     <div class="job-entry $if(awards.important)$highlight$endif$">
       <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">$awards.date$</h5></div>
-        <div class="col-md-9"><h3>$awards.title$</h3></div>
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">$awards.date$</h5></div>
+        <div class="col-md-8"><h3>$awards.title$</h3></div>
       </div>
       $if(awards.grantor)$
       <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted">$awards.grantor$</h4></div>
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted">$awards.grantor$</h4></div>
       </div>
       $endif$
       $if(awards.location)$
       <div class="row">
-        <div class="offset-md-3 col-md-9"><p class="small">$awards.location$</p></div>
+        <div class="offset-md-4 col-md-8"><p class="small">$awards.location$</p></div>
       </div>
       $endif$
-      $awards.description$
+      <div class="row">
+        <div class="offset-md-1 col-md-11">
+          $awards.description$
+        </div>
+      </div>
     </div>
   $endfor$
-  </div>
+
 </section>
 
 <section id="talks">
   <h2>Talks</h2>
-  <div class="section-body">
+
   $for(talks)$
     <div class="job-entry $if(talks.important)$highlight$endif$">
       <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">$talks.date$</h5></div>
-        <div class="col-md-9"><h3>$talks.title$</h3></div>
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">$talks.date$</h5></div>
+        <div class="col-md-8"><h3>$talks.title$</h3></div>
       </div>
       <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted">$talks.venue$</h4></div>
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted">$talks.venue$</h4></div>
       </div>
       $if(talks.link)$
       <div class="row">
-        <div class="offset-md-3 col-md-9"><p class="small"><a href="$talks.link$">$talks.link$</a></p></div>
+        <div class="offset-md-4 col-md-8"><p class="small"><a href="$talks.link$">$talks.link$</a></p></div>
       </div>
       $endif$
-      $talks.description$
+      <div class="row">
+        <div class="offset-md-1 col-md-11">
+          $talks.description$
+        </div>
+      </div>
     </div>
   $endfor$
-  </div>
-</section>
 
+</section>
 
 <section id="publications">
   <h2>Publications</h2>
-  <div class="section-body">
+
   $for(publications)$
     <div class="job-entry $if(publications.important)$highlight$endif$">
       <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">
           $if(publications.inpreparation)$
           in preparation
           $else$
           $publications.date$
           $endif$
         </h5></div>
-        <div class="col-md-9"><h3>$publications.title$
-        </h3></div>
+        <div class="col-md-8"><h3>$publications.title$</h3></div>
       </div>
       <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted">$publications.author$</h4></div>
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted">$publications.author$</h4></div>
       </div>
       $if(publications.link)$
       <div class="row">
-        <div class="offset-md-3 col-md-9"><p class="small"><a href="$publications.link$">$publications.link$</a></p></div>
+        <div class="offset-md-4 col-md-8"><p class="small"><a href="$publications.link$">$publications.link$</a></p></div>
       </div>
       $endif$
-      $publications.description$
+      <div class="row">
+        <div class="offset-md-1 col-md-11">
+          $publications.description$
+        </div>
+      </div>
     </div>
   $endfor$
-  </div>
+
 </section>
 
 

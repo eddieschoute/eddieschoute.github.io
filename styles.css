@@ -15,18 +15,13 @@ $if(displaymath-css)$
 $endif$
 
 .container-fluid {
-    max-width: 730px;
-}
-
-.section-body {
-	padding-left: 6%;
+    max-width: 768px;
 }
 
 /* Add margin for static header */
 body {
     margin-top: 56px;
 }
-
 
 /* Anchor offset with static header */
 *[id]:before { 
@@ -37,14 +32,14 @@ body {
     visibility: hidden; 
 }
 
-.section-body a {
-	color: inherit;
+section a {
+    color: inherit;
 }
-.section-body a:hover {
-	color: #0056b3;
+section a:hover {
+    color: #0056b3;
 }
 
-.section-body a:after {
+section a:after {
     display: inline-block;
     content: "";
     background-size: .8rem .8rem; /* bepaalt de grootte van de icon */
@@ -60,12 +55,17 @@ body {
 }
 
 .job-entry.highlight {
-	background-color: #f8f9fa;
-	border-left: 1px solid #0056b3;
-	margin-left: -6%;
-	padding-left: 6%;
-	margin-right: -15px;  
-    	padding-right: 15px;
+    background-color: #f8f9fa;
+    border-left: 1px solid #0056b3;
+    margin-right: -15px;  
+    padding-right: 15px;
+}
+
+@media screen and (max-width: 768px){
+  .job-entry.highlight {
+      margin-left: -15px;
+      padding-left: 14px;
+  }
 }
 
 .job-entry ul {
@@ -81,6 +81,10 @@ body {
 }
 .job-entry li:last-child {
     border-bottom-width: 0;
+    padding-bottom: 0;
+}
+.job-entry li:first-child {
+    padding-top: 0;
 }
 
 h1 {
@@ -93,6 +97,8 @@ h1 {
 
 h2 {
     margin-bottom: 1rem;
+    margin-top: 1rem;
+    color: #014792;
 }
 
 h4 {
