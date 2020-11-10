@@ -1,7 +1,11 @@
 SHELL := /bin/zsh
 BUILDDIR := build
 
-all: validate_yaml $(BUILDDIR)/academic_resume.pdf $(BUILDDIR)/publication_list.pdf $(BUILDDIR)/cv.html
+all: validate_yaml \
+	$(BUILDDIR)/academic_resume.pdf \
+	$(BUILDDIR)/academic_cv.pdf \
+	$(BUILDDIR)/publication_list.pdf \
+	$(BUILDDIR)/cv.html
 
 validate_yaml:
 	@yq . cv.yaml > /dev/null

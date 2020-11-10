@@ -1,0 +1,152 @@
+\documentclass[11pt]{article}
+
+\usepackage{fontspec}
+\usepackage{microtype}
+
+\usepackage[%
+  margin=3cm,
+  % footskip=0pt,
+  headheight=0pt,
+  % headsep=0pt,
+  % marginparsep=0pt,
+  % marginparwidth=0pt,
+]{geometry}
+
+% Adjust section spacing
+\usepackage{titlesec}
+%\titlespacing{\section}{0pt}{2em}{0.5em}
+\titlespacing{\paragraph}{0pt}{1em}{1em}
+
+% Itemize and enumerate settings
+\usepackage{enumitem}
+\setlist{%
+  topsep=0.15em,
+  partopsep=0pt,
+  parsep=0pt,
+  itemsep=0.15em,
+  leftmargin=*
+}
+
+\usepackage{xcolor}
+
+%Link colors
+\definecolor{dark-red}{rgb}{0.4,0.15,0.15}
+\definecolor{dark-blue}{rgb}{0.15,0.15,0.4}
+\definecolor{medium-blue}{rgb}{0,0,0.5}
+
+\definecolor{mycomment}{rgb}{0.3,0.7,0.8}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{lightgray}{rgb}{0.95,0.95,0.95}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\usepackage{hyperref}
+\hypersetup{
+$if(title-meta)$
+  pdftitle={$title-meta$},
+$endif$
+$if(author-meta)$
+  pdfauthor={$author-meta$},
+$endif$
+$if(lang)$
+  pdflang={$lang$},
+$endif$
+$if(subject)$
+  pdfsubject={$subject$},
+$endif$
+$if(keywords)$
+  pdfkeywords={$for(keywords)$$keywords$$sep$, $endfor$},
+$endif$
+	colorlinks,
+	final,
+	linkcolor={dark-blue},
+	citecolor={dark-blue},
+	urlcolor={medium-blue},
+  filecolor={dark-blue},
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+$if(graphics)$
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+$endif$
+
+% Pandoc list
+\providecommand{\tightlist}{}
+
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+$if(lang)$
+\usepackage[shorthands=off,$for(babel-otherlangs)$$babel-otherlangs$,$endfor$main=$babel-lang$]{babel}
+$endif$
+
+\title{Curriculum Vitae}
+\author{$name$}
+
+% \makeatletter
+%   \renewcommand\maketitle{
+%     {\raggedright\begin{center}%
+%       {\Large\bfseries CV: \@author}\\[4ex]
+%     \end{center}}
+%   }
+% \makeatother
+
+\begin{document}
+
+\maketitle
+
+\section*{Education}
+$for(education)$
+\paragraph{$education.date$ $education.title$ ($education.university$)}
+$education.description$
+$endfor$
+
+\section*{Experience}
+$for(experience)$
+\paragraph{$experience.date$ $experience.title$ ($experience.company$)}
+$experience.description$
+$endfor$
+
+\section*{Service}
+$for(service)$
+\paragraph{$service.date$ $service.title$}
+$service.description$
+$endfor$
+
+\section*{Awards}
+$for(awards)$
+\paragraph{$awards.date$ $awards.title$}
+$awards.description$
+$endfor$
+
+\section*{Talks}
+\begin{enumerate}
+$for(talks)$
+\item ``\href{$talks.link$}{$talks.title$}''. $talks.venue$ ($talks.date$).
+$endfor$
+\end{enumerate}
+
+\section*{Publications}
+\begin{enumerate}
+$for(publications)$
+\item ``\href{$publications.link$}{$publications.title$}''. $publications.author$$if(publications.date)$ ($publications.date$)$endif$.
+$if(publications.inpreparation)$
+In preparation.
+$endif$
+$if(publications.pubtitle)$
+In: \emph{$publications.pubtitle$}.
+$endif$
+$if(publications.link)$
+\url{$publications.link$}
+$endif$
+$endfor$
+\end{enumerate}
+
+\end{document}
