@@ -45,6 +45,44 @@ jobs:
           name: academic resume pdf
           path: build/academic_resume.pdf
 
+  build-academic-cv:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      - run: mkdir build
+
+      # Build the tex file using pandoc
+      - name: Create tex file
+        uses: docker://pandoc/core:2.11.0.2
+        with:
+          # Dummy REAMDE.md input file that is not used
+          args: >-
+            --metadata-file cv.yaml
+            --template=template_academic_cv.tex
+            -t latex
+            --output=build/academic_cv.tex
+            README.md
+      
+      # Compile the tex file using latex
+      - name: Build tex to pdf
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: academic_cv.tex
+          working_directory: build
+          latexmk_use_lualatex: true
+
+      # Upload artifact
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: academic cv pdf
+          path: build/academic_cv.pdf
+
+
   build-publication-list:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
