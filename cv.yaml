@@ -235,6 +235,7 @@ publications:
         date: 2019
         author: Andrew M. Childs, Eddie Schoute, and Cem M. Unsal
         important: true
+        pubtitle: 14th Conference on the Theory of Quantum Computation, Communication and Cryptography (TQC 2019)
         link: https://www.doi.org/10.4230/LIPIcs.TQC.2019.3
         description: >
             Quantum computer architectures impose restrictions on qubit interactions.
