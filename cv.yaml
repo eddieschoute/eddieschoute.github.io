@@ -195,7 +195,7 @@ talks:
 
 publications:
     -
-        title: Quantum Qubit Routing
+        title: Quantum Routing
         inpreparation: true
         author: Aniruddha Bapat, Alexey V. Gorshkov, Andrew M. Childs, and Eddie Schoute
         description: >
