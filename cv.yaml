@@ -110,13 +110,21 @@ experience:
 
 service:
     -
+        title: Program Committee (PC)
+        venue: '[Sixth International Conference for Young Quantum Information Scientists (YQIS 6)](https://indico.frib.msu.edu/event/31/)'
+        date: 2021
+        description: >
+            Reviewed abstracts submitted to the YQIS conference for talks and posters.
+
+    -
         title: Computer Science Graduate Student Council
         venue: '[Computer Science Department](https://www.cs.umd.edu/)'
         date: 2018--present
         description: >
-            Member (2018--2019) and president in 2020.
+            Member (2018--2019) and president (2020--present).
             Organized and contributed to the annual CS department picnic.
             Organized student trips and events to foster a community withing the department.
+            Act as liaison between the department and graduate students.
         
     -
         title: Organize Seminar Recordings and Youtube.
@@ -202,18 +210,26 @@ publications:
             Qubit routing work in preparation.
 
     -
-        title: Sorting by Reversals
-        inpreparation: true
-        author: Sam King, Hrishee Shashtri, Aniruddha Bapat, Eddie Schoute, Alexey V. Gorshkov, and Andrew M. Childs
-        description: >
-            NSF research for undergraduates (REU) work that I co-supervised.
-
-    -
         title: Untitled
         inpreparation: true
         author: Michael Beverland, Vadym Kliuchnikov, and Eddie Schoute
         description: >
             Work stemming from a research internship at Microsoft Research.
+
+    -
+        title: Quantum routing with fast reversals
+        author: Aniruddha Bapat, Andrew M. Childs, Alexey V. Gorshkov, Samuel King, Eddie Schoute, Hrishee Shastri
+        link: https://arxiv.org/abs/2103.03264
+        date: 2021
+        description: |
+            NSF research for undergraduates (REU) work that I co-supervised.
+
+            We present methods for implementing arbitrary permutations of qubits under interaction constraints.
+            Our protocols make use of previous methods for rapidly reversing the order of qubits along a path.
+            Given nearest-neighbor interactions on a path of length n, we show that there exists a constant ϵ≈0.034 such that the quantum routing time is at most (1−ϵ)n, whereas any swap-based protocol needs at least time n−1.
+            This represents the first known quantum advantage over swap-based routing methods and also gives improved quantum routing times for realistic architectures such as grids.
+            Furthermore, we show that our algorithm approaches a quantum routing time of 2n/3 in expectation for uniformly random permutations, whereas swap-based protocols require time n asymptotically.
+            Additionally, we consider sparse permutations that route k≤n qubits and give algorithms with quantum routing time at most n/3+O(k2) on paths and at most 2r/3+O(k2) on general graphs with radius r. 
 
     -
         title: Nearly optimal time-independent state reversal of a spin chain
