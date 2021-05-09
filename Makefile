@@ -8,7 +8,7 @@ all: validate_yaml \
 	$(BUILDDIR)/cv.html
 
 validate_yaml:
-	@yq . cv.yaml > /dev/null
+	@yq read cv.yaml > /dev/null
 
 directories:
 	@mkdir -p $(BUILDDIR)
