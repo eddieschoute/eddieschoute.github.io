@@ -12,7 +12,6 @@ education:
                 Identified qubit routing, i.e., implementing permutations of qubits as an interesting subproblem and I am currently exploring this research direction
                 under supervision of Andrew Childs.
             * Co-supervised undergraduate students Sam King and Hrishee Shahstri during and after a NSF research experience for undergraduates (REU) program.
-              A paper is in preparation.
             * Informally co-supervised Cem Unsal during the “Circuit Transformations for Quantum Architecture” project.
             * Worked on quantum algorithms and quantum cryptography under supervision of Yi-Kai Liu.
     -
@@ -189,6 +188,10 @@ awards:
             Covers $500 for travel to a conference.
 
 talks:
+    -
+        title: Quantum routing with fast reversals
+        venue: '[PLanQC 2021](https://pldi21.sigplan.org/home/planqc-2021)'
+        date: 2021
     -
         title: Circuit Transformations for Quantum Architectures
         venue: '[TQC 2019](https://www.tqcconference.org/)'
