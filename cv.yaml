@@ -204,6 +204,19 @@ talks:
         link: https://www.youtube.com/watch?v=Raw6AYil79Q
 
 
+patents:
+    -
+        title: Nearly optimal time-independent reversal of a spin chain
+        inventors: A. Bapat, E. Schoute, A.V. Gorshkov, A.M. Childs,
+        id: U.S. Provisional Patent Application 63/148662
+        date: 2021/02/21
+
+    -
+        title: Edge-Disjoint Paths for Multi-Qubit Operations In Quantum Circuit
+        inventors: M.E. Beverland, V. Kliuchnikov, E. Schoute, A. Vaschillo, D. Vasilevsky
+        date: 2020
+
+
 publications:
     -
         title: Quantum Routing
