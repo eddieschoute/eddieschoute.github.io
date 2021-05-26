@@ -133,6 +133,16 @@ $for(talks)$
 $endfor$
 \end{enumerate}
 
+\section*{Patents and Patent Applications}
+\begin{enumerate}
+$for(patents)$
+\item ``$patents.title$''. $patents.inventors$$if(patents.date)$ ($patents.date$)$endif$.
+$if(patents.id)$
+$patents.id$.
+$endif$
+$endfor$
+\end{enumerate}
+
 \section*{Publications}
 \begin{enumerate}
 $for(publications)$
