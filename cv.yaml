@@ -8,10 +8,12 @@ education:
         location: Joint Center for Quantum Information and Computer Science,
             University of Maryland, College Park, USA
         description: |
-            * Thesis topic: Transforming quantum circuits for quantum architectures with limited connectivity.
-                Identified qubit routing, i.e., implementing permutations of qubits as an interesting subproblem and I am currently exploring this research direction
-                under supervision of Andrew Childs.
-            * Co-supervised undergraduate students Sam King and Hrishee Shahstri during and after a NSF research experience for undergraduates (REU) program.
+            * Thesis topic: Transforming quantum circuits for quantum architectures with limited connectivity
+                under supervision of prof.\ Andrew Childs.
+                I have contributed efficient algorithms and bounds for routing qubits.
+                On the path graph we showed the first quantum-classical routing separation.
+            * Co-supervised undergraduate students Sam DeCoster, Nicole Dong, and Mason Wittman in NSF research experience for undergraduates (REU) program (2021).
+            * Co-supervised undergraduate students Sam King and Hrishee Shahstri in REU program (2020) until paper completion.
             * Informally co-supervised Cem Unsal during the “Circuit Transformations for Quantum Architecture” project.
             * Worked on quantum algorithms and quantum cryptography under supervision of Yi-Kai Liu.
     -
@@ -109,7 +111,7 @@ experience:
 
 service:
     -
-        title: Program Committee (PC)
+        title: YQIS Program Committee
         venue: '[Sixth International Conference for Young Quantum Information Scientists (YQIS 6)](https://indico.frib.msu.edu/event/31/)'
         date: 2021
         description: >
@@ -199,7 +201,7 @@ talks:
         link: https://www.youtube.com/watch?v=h7vc5lELd3E
     -
         title: Circuit Transformations for Quantum Architectures
-        venue: Qiskit Camp
+        venue: Invited at Qiskit Camp
         date: 2019
         link: https://www.youtube.com/watch?v=Raw6AYil79Q
 
