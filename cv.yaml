@@ -160,7 +160,7 @@ awards:
         date: 2020--2022
         important: true
         description: >
-            A stipend of $35,000/yr. plus $25,000 towards education expenses in the first year.
+            A stipend of $35,000/yr. plus $25,000 towards educational expenses.
     -
         title: Tied 2nd Place IBM Developer challenge
         grantor: '[IBM](https://www.ibm.com)'
@@ -237,6 +237,7 @@ publications:
     -
         title: Quantum routing with fast reversals
         author: Aniruddha Bapat, Andrew M. Childs, Alexey V. Gorshkov, Samuel King, Eddie Schoute, Hrishee Shastri
+        pubtitle: '[Quantum](https://quantum-journal.org/) (forthcoming)'
         link: https://arxiv.org/abs/2103.03264
         date: 2021
         description: |

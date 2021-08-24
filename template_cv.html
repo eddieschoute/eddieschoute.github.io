@@ -269,6 +269,11 @@ $endfor$
       <div class="row">
         <div class="offset-md-4 col-md-8"><h4 class="text-muted">$publications.author$</h4></div>
       </div>
+      $if(publications.pubtitle)$
+      <div class="row">
+        <div class="offset-md-4 col-md-8"><p class="small">In: <i>$publications.pubtitle$</i></p></div>
+      </div>
+      $endif$
       $if(publications.link)$
       <div class="row">
         <div class="offset-md-4 col-md-8"><p class="small"><a href="$publications.link$">$publications.link$</a></p></div>
