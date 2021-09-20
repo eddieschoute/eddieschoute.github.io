@@ -237,8 +237,8 @@ publications:
     -
         title: Quantum routing with fast reversals
         author: Aniruddha Bapat, Andrew M. Childs, Alexey V. Gorshkov, Samuel King, Eddie Schoute, Hrishee Shastri
-        pubtitle: '[Quantum](https://quantum-journal.org/) (forthcoming)'
-        link: https://arxiv.org/abs/2103.03264
+        pubtitle: '[Quantum](https://quantum-journal.org/)'
+        link: https://doi.org/10.22331/q-2021-08-31-533
         date: 2021
         description: |
             NSF research for undergraduates (REU) work that I co-supervised.
@@ -253,6 +253,7 @@ publications:
     -
         title: Nearly optimal time-independent state reversal of a spin chain
         author: Aniruddha Bapat, Eddie Schoute, Alexey V. Gorshkov, and Andrew M. Childs
+        pubtitle: Physical Review Research Letter (forthcoming)
         link: https://arxiv.org/abs/2003.02843
         date: 2020
         description: >
