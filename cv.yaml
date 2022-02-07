@@ -4,14 +4,14 @@ education:
     -
         title: Doctoral Student, Computer Science
         university: '[QuICS](https://quics.umd.edu/)'
-        date: 2016--now
+        important: true
+        date: 2016--2021
         location: Joint Center for Quantum Information and Computer Science,
             University of Maryland, College Park, USA
         description: |
             * Thesis topic: Transforming quantum circuits for quantum architectures with limited connectivity
                 under supervision of prof.\ Andrew Childs.
                 I have contributed efficient algorithms and bounds for routing qubits.
-                On the path graph we showed the first quantum-classical routing separation.
             * Co-supervised undergraduate students Sam DeCoster, Nicole Dong, and Mason Wittman in NSF research experience for undergraduates (REU) program (2021).
             * Co-supervised undergraduate students Sam King and Hrishee Shahstri in REU program (2020) until paper completion.
             * Informally co-supervised Cem Unsal during the “Circuit Transformations for Quantum Architecture” project.
@@ -53,6 +53,13 @@ education:
 
 experience:
     -
+        title: Postdoctoral research associate
+        company: '[Los Alamos National Laboratory](https://www.lanl.gov/)'
+        date: 2022--present
+        location: Los Alamos, NM, USA
+        important: true
+
+    -
         title: Research Summer Internship
         company: '[Microsoft Research](https://www.microsoft.com)'
         date: 2020
@@ -69,7 +76,6 @@ experience:
         company: '[IBM](https://www.ibm.com)'
         date: 2019
         location: Yorktown Heights, NY, USA
-        important: true
         description: >
             Researched algorithms for quantum chemistry
             and contributed to Qiskit development under the supervision of Ali Javadi-Abhari.
@@ -120,9 +126,9 @@ service:
     -
         title: Computer Science Graduate Student Council
         venue: '[Computer Science Department](https://www.cs.umd.edu/)'
-        date: 2018--present
+        date: 2018--2021
         description: >
-            Member (2018--2019) and president (2020--present).
+            Member (2018--2019) and president (2020--2021).
             Organized and contributed to the annual CS department picnic.
             Organized student trips and events to foster a community withing the department.
             Act as liaison between the department and graduate students.
@@ -138,7 +144,7 @@ service:
     -
         title: Assist with Organizing QuICS-JQI-CMTC Seminars
         venue: '[QuICS](https://quics.umd.edu/)'
-        date: 2019--present
+        date: 2019--2020
         description: >
             This weekly seminar series encourages the transfer of knowledge across the field of physics,
             computer science and math.
@@ -228,11 +234,14 @@ publications:
             Qubit routing work in preparation.
 
     -
-        title: Untitled
-        inpreparation: true
+        title: Surface code compilation via edge-disjoint paths
+        date: 2021
+        pubtitle: arXiv
+        link: https://arxiv.org/abs/2110.11493
+        important: true
         author: Michael Beverland, Vadym Kliuchnikov, and Eddie Schoute
         description: >
-            Work stemming from a research internship at Microsoft Research.
+            We provide an efficient algorithm to compile quantum circuits for fault-tolerant execution. We target surface codes, which form a 2D grid of logical qubits with nearest-neighbor logical operations. Embedding an input circuit's qubits in surface codes can result in long-range two-qubit operations across the grid. We show how to prepare many long-range Bell pairs on qubits connected by edge-disjoint paths of ancillas in constant depth which can be used to perform these long-range operations. This forms one core part of our Edge-Disjoint Paths Compilation (EDPC) algorithm, by easily performing parallel long-range Clifford operations in constant depth. It also allows us to establish a connection between surface code compilation and several well-studied edge-disjoint paths problems. Similar techniques allow us to perform non-Clifford single-qubit rotations far from magic state distillation factories. In this case, we can easily find the maximum set of paths by a max-flow reduction, which forms the other major part of our EDPC algorithm. We compare EDPC to other compilation approaches including a SWAP-based algorithm, and find significantly improved performance for circuits built from parallel CNOTs, and for circuits which implement the multi-controlled X gate. 
 
     -
         title: Quantum routing with fast reversals
