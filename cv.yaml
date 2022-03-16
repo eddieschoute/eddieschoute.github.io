@@ -242,7 +242,7 @@ publications:
         author: Michael Beverland, Vadym Kliuchnikov, and Eddie Schoute
         description: >
             We provide an efficient algorithm to compile quantum circuits for fault-tolerant execution. We target surface codes, which form a 2D grid of logical qubits with nearest-neighbor logical operations. Embedding an input circuit's qubits in surface codes can result in long-range two-qubit operations across the grid. We show how to prepare many long-range Bell pairs on qubits connected by edge-disjoint paths of ancillas in constant depth which can be used to perform these long-range operations. This forms one core part of our Edge-Disjoint Paths Compilation (EDPC) algorithm, by easily performing parallel long-range Clifford operations in constant depth. It also allows us to establish a connection between surface code compilation and several well-studied edge-disjoint paths problems. Similar techniques allow us to perform non-Clifford single-qubit rotations far from magic state distillation factories. In this case, we can easily find the maximum set of paths by a max-flow reduction, which forms the other major part of our EDPC algorithm. We compare EDPC to other compilation approaches including a SWAP-based algorithm, and find significantly improved performance for circuits built from parallel CNOTs, and for circuits which implement the multi-controlled X gate. 
-
+            
     -
         title: Quantum routing with fast reversals
         author: Aniruddha Bapat, Andrew M. Childs, Alexey V. Gorshkov, Samuel King, Eddie Schoute, Hrishee Shastri
@@ -262,18 +262,19 @@ publications:
     -
         title: Nearly optimal time-independent state reversal of a spin chain
         author: Aniruddha Bapat, Eddie Schoute, Alexey V. Gorshkov, and Andrew M. Childs
-        pubtitle: Physical Review Research Letter (forthcoming)
-        link: https://arxiv.org/abs/2003.02843
-        date: 2020
+        pubtitle: Physical Review Research
+        link: https://doi.org/10.1103/PhysRevResearch.4.L012023
+        date: 2022
         description: >
             We propose a time-independent Hamiltonian protocol for the reversal of qubit ordering in a chain of N spins.
-            Our protocol has an easily implementable nearest-neighbor, transverse-field Ising model Hamiltonian with time-independent, non-uniform couplings.
-            Under appropriate normalization, we implement this state reversal three times faster than a naive approach using SWAP gates,
+            Our protocol has an easily implementable nearest-neighbor, transverse-field Ising model Hamiltonian with time-independent, nonuniform couplings.
+            Under appropriate normalization, we implement this state reversal three times faster than a naive approach using swap gates,
             in time comparable to a protocol of Raussendorf [Phys. Rev. A 72, 052301 (2005)] that requires dynamical control.
             We also prove lower bounds on state reversal by using results on the entanglement capacity of Hamiltonians and show that we are within a factor 1.502(1+1/N) of the shortest time possible.
             Our lower bound holds for all nearest-neighbor qubit protocols with arbitrary finite ancilla spaces and local operations and classical communication.
+            We give numerical evidence that the fast reversal protocols are more robust to noise than a swap-based reversal.
             Finally, we extend our protocol to an infinite family of nearest-neighbor, time-independent Hamiltonian protocols for state reversal.
-            This includes chains with nearly uniform coupling that may be especially feasible for experimental implementation. 
+            This includes chains with nearly uniform coupling that may be especially feasible for experimental implementation.
 
     -
         title: Circuit Transformations for Quantum Architectures
