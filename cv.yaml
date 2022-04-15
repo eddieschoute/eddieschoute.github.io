@@ -197,9 +197,14 @@ awards:
 
 talks:
     -
+        title: Surface code compilation via edge-disjoint paths
+        venue: '[QCTIP 2022](http://www.qctip.org/)'
+        date: 2022
+    -
         title: Quantum routing with fast reversals
         venue: '[PLanQC 2021](https://pldi21.sigplan.org/home/planqc-2021)'
         date: 2021
+        link: https://www.youtube.com/watch?v=e-1rk_QFiCg
     -
         title: Circuit Transformations for Quantum Architectures
         venue: '[TQC 2019](https://www.tqcconference.org/)'
