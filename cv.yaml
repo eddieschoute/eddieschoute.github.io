@@ -198,6 +198,7 @@ awards:
 talks:
     -
         title: Surface code compilation via edge-disjoint paths
+<<<<<<< HEAD
         venue: '[TQC 2022](https://tqc2022-conference.iquist.illinois.edu/)'
         date: 2022
         important: true
@@ -215,10 +216,15 @@ talks:
         title: Surface code compilation via edge-disjoint paths
         venue: Quantum science center Thrust 2
         date: 2022
+=======
+        venue: '[QCTIP 2022](http://www.qctip.org/)'
+        date: 2022
+>>>>>>> c8522ecf9de634b3cd50829f68f89d618dfe5a92
     -
         title: Quantum routing with fast reversals
         venue: '[PLanQC 2021](https://pldi21.sigplan.org/home/planqc-2021)'
         date: 2021
+        link: https://www.youtube.com/watch?v=e-1rk_QFiCg
     -
         title: Circuit Transformations for Quantum Architectures
         venue: '[TQC 2019](https://www.tqcconference.org/)'
@@ -261,6 +267,7 @@ publications:
     -
         title: Quantum Routing with Teleportation
         author: Dhruv Devulapalli, Eddie Schoute, Aniruddha Bapat, Andrew M. Childs, Alexey V. Gorshkov
+<<<<<<< HEAD
         date: 2022
         pubtitle: arXiv
         link: https://arxiv.org/abs/2204.04185
@@ -271,6 +278,17 @@ publications:
         date: 2022
         pubtitle: arXiv
         link: https://arxiv.org/abs/2206.01766
+=======
+        pubtitle: arXiv
+        date: 2022
+        link: https://arxiv.org/abs/2204.04185
+        description: >
+          We study the problem of implementing arbitrary permutations of qubits under interaction constraints in quantum systems that allow for arbitrarily fast local operations and classical communication (LOCC). In particular, we show examples of speedups over swap-based and more general unitary routing methods by distributing entanglement and using LOCC to perform quantum teleportation. We further describe an example of an interaction graph for which teleportation gives a logarithmic speedup in the worst-case routing time over swap-based routing. We also study limits on the speedup afforded by quantum teleportation - showing an O(sqrt(NlogN)) upper bound on the separation in routing time for any interaction graph - and give tighter bounds for some common classes of graphs. 
+            
+    -
+        title: Quantum Routing
+        inpreparation: true
+>>>>>>> c8522ecf9de634b3cd50829f68f89d618dfe5a92
         author: Aniruddha Bapat, Alexey V. Gorshkov, Andrew M. Childs, and Eddie Schoute
         description: >
             The Swap gate is a ubiquitous tool for moving information on quantum hardware, yet it can be considered a classical operation because it does not entangle product states. Genuinely quantum operations could outperform Swap for the task of permuting qubits within an architecture, which we call routing. We consider quantum routing in two models: (1) allowing arbitrary two-qubit unitaries, or (2) allowing Hamiltonians with norm-bounded interactions. We lower bound the circuit depth or time of quantum routing in terms of spectral properties of graphs representing the architecture interaction constraints, and give a generalized upper bound for all simple connected n-vertex graphs. In particular, we give conditions for a superpolynomial classical-quantum routing separation, which exclude graphs with a small spectral gap and graphs of bounded degree. Finally, we provide examples of a quadratic separation between gate-based and Hamiltonian routing models with a constant number of local ancillas per qubit and of an Omega(n) speedup if we also allow fast local interactions. 
