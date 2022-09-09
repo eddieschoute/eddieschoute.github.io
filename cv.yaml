@@ -197,6 +197,25 @@ awards:
 
 talks:
     -
+        title: Surface code compilation via edge-disjoint paths
+        venue: '[TQC 2022](https://tqc2022-conference.iquist.illinois.edu/)'
+        date: 2022
+        important: true
+        link: https://youtu.be/nWm2LKr_Nzk?t=4014
+    -
+        title: Surface code compilation via edge-disjoint paths
+        venue: '[QCTIP 2022](http://www.qctip.org/)'
+        date: 2022
+        link: https://www.youtube.com/watch?v=bYJvPJtcHUE
+    -
+        title: Surface code compilation via edge-disjoint paths
+        venue: David Gosset group
+        date: 2022
+    -
+        title: Surface code compilation via edge-disjoint paths
+        venue: Quantum science center Thrust 2
+        date: 2022
+    -
         title: Quantum routing with fast reversals
         venue: '[PLanQC 2021](https://pldi21.sigplan.org/home/planqc-2021)'
         date: 2021
