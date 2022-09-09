@@ -244,6 +244,8 @@ patents:
         id: US Patent App. 17/669,946
         date: 2022/8/25
         link: https://patents.google.com/patent/US20220269966A1/en
+        description: >
+            Performing state reversal on a quantum spin chain includes: providing qubits in a quantum spin chain in an input state, such that the quantum spin chain includes: first and second terminal qubits and one or more intermediate qubits, such that: the qubits have a transverse field strength; the first and terminal qubits a longitudinal field strength; and nearest neighbor qubit pair has an Ising coupling strength; and evolving the quantum spin chain from the input state to a final state for an evolution period to perform state reversal on the quantum spin chain.
 
     -
         title: Edge-disjoint paths for long-range multi-qubit operations in quantum circuit
@@ -251,6 +253,8 @@ patents:
         date: 2022/5/12
         id: US Patent App. 17/096,313
         link: https://patents.google.com/patent/US20220147856A1/en
+        description: >
+            A method for performing long-range multi-qubit measurements in a quantum circuit utilizes a graph that maps qubits of the quantum circuit to nodes that are connected to one another by edges. The method provides for identifying sets of the nodes on the graph corresponding to sets of qubits targeted by multi-qubit operations in a quantum algorithm and for defining a group of edge-disjoint paths connecting the nodes of each set. The group of edge-disjoint paths is defined such that no two of the paths in the group share an edge. The method further provides for performing a set of operations to entangle the qubits corresponding to the to the identified set of nodes that are included in each path in the group and for performing the set of multi-qubit operations on the entangled sets of the qubits.
 
 
 publications:
