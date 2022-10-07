@@ -163,10 +163,10 @@ awards:
     -
         title: IBM PhD Fellowship
         grantor: '[IBM](https://www.ibm.com)'
-        date: 2020--2022
+        date: 2020
         important: true
         description: >
-            A stipend of $35,000/yr. plus $25,000 towards educational expenses.
+            A stipend of $35,000/yr.\ plus $25,000 towards educational expenses.
     -
         title: Tied 2nd Place IBM Developer challenge
         grantor: '[IBM](https://www.ibm.com)'
@@ -237,12 +237,12 @@ patents:
         title: Quantum Routing with Fast Reversals
         inventors: S. King, H. Shastri, A. Bapat, E. Schoute, A.V. Gorshkov, A.M. Childs
         date: 2022
-        id: U.S. Prov. App. No. 63/316016
+        id: U.S.\ Prov.\ App.\ No.\ 63/316016
 
     -
         title: Performing state reversal on a quantum spin chain
         inventors: A. Bapat, E. Schoute, A.V. Gorshkov, A.M. Childs
-        id: US Patent App. 17/669,946
+        id: US Patent App.\ 17/669,946
         date: 2022/8/25
         link: https://patents.google.com/patent/US20220269966A1/en
         description: >
@@ -252,7 +252,7 @@ patents:
         title: Edge-disjoint paths for long-range multi-qubit operations in quantum circuit
         inventors: V. Kliuchnikov, E. Schoute, A. Vaschillo, D. Vasilevsky, M. Beverland
         date: 2022/5/12
-        id: US Patent App. 17/096,313
+        id: US Patent App.\ 17/096,313
         link: https://patents.google.com/patent/US20220147856A1/en
         description: >
             A method for performing long-range multi-qubit measurements in a quantum circuit utilizes a graph that maps qubits of the quantum circuit to nodes that are connected to one another by edges. The method provides for identifying sets of the nodes on the graph corresponding to sets of qubits targeted by multi-qubit operations in a quantum algorithm and for defining a group of edge-disjoint paths connecting the nodes of each set. The group of edge-disjoint paths is defined such that no two of the paths in the group share an edge. The method further provides for performing a set of operations to entangle the qubits corresponding to the to the identified set of nodes that are included in each path in the group and for performing the set of multi-qubit operations on the entangled sets of the qubits.
