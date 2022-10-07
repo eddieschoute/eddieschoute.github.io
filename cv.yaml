@@ -278,9 +278,9 @@ publications:
 
     -
         title: Surface code compilation via edge-disjoint paths
-        date: 2021
-        pubtitle: arXiv
-        link: https://arxiv.org/abs/2110.11493
+        date: 2022
+        pubtitle: '[PRX Quantum](https://journals.aps.org/prxquantum)'
+        link: https://doi.org/10.1103/PRXQuantum.3.020342
         important: true
         author: Michael Beverland, Vadym Kliuchnikov, and Eddie Schoute
         description: >
