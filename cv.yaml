@@ -260,21 +260,22 @@ patents:
 
 publications:
     -
+        title: Advantages and limitations of quantum routing
+        date: 2023
+        pubtitle: '[PRX Quantum](https://journals.aps.org/prxquantum)'
+        link: https://doi.org/10.1103/PRXQuantum.4.010313
+        author: Aniruddha Bapat, Alexey V. Gorshkov, Andrew M. Childs, and Eddie Schoute
+        description: >
+            The Swap gate is a ubiquitous tool for moving information on quantum hardware, yet it can be considered a classical operation because it does not entangle product states. Genuinely quantum operations could outperform Swap for the task of permuting qubits within an architecture, which we call routing. We consider quantum routing in two models: (1) allowing arbitrary two-qubit unitaries, or (2) allowing Hamiltonians with norm-bounded interactions. We lower bound the circuit depth or time of quantum routing in terms of spectral properties of graphs representing the architecture interaction constraints, and give a generalized upper bound for all simple connected n-vertex graphs. In particular, we give conditions for a superpolynomial classical-quantum routing separation, which exclude graphs with a small spectral gap and graphs of bounded degree. Finally, we provide examples of a quadratic separation between gate-based and Hamiltonian routing models with a constant number of local ancillas per qubit and of an Omega(n) speedup if we also allow fast local interactions. 
+
+    -
         title: Quantum Routing with Teleportation
         author: Dhruv Devulapalli, Eddie Schoute, Aniruddha Bapat, Andrew M. Childs, Alexey V. Gorshkov
         date: 2022
         pubtitle: arXiv
         link: https://arxiv.org/abs/2204.04185
         description: >
-            We study the problem of implementing arbitrary permutations of qubits under interaction constraints in quantum systems that allow for arbitrarily fast local operations and classical communication (LOCC). In particular, we show examples of speedups over swap-based and more general unitary routing methods by distributing entanglement and using LOCC to perform quantum teleportation. We further describe an example of an interaction graph for which teleportation gives a logarithmic speedup in the worst-case routing time over swap-based routing. We also study limits on the speedup afforded by quantum teleportation - showing an O(sqrt(NlogN)) upper bound on the separation in routing time for any interaction graph - and give tighter bounds for some common classes of graphs. 
-    -
-        title: Advantages and limitations of quantum routing
-        date: 2022
-        pubtitle: arXiv
-        link: https://arxiv.org/abs/2206.01766
-        author: Aniruddha Bapat, Alexey V. Gorshkov, Andrew M. Childs, and Eddie Schoute
-        description: >
-            The Swap gate is a ubiquitous tool for moving information on quantum hardware, yet it can be considered a classical operation because it does not entangle product states. Genuinely quantum operations could outperform Swap for the task of permuting qubits within an architecture, which we call routing. We consider quantum routing in two models: (1) allowing arbitrary two-qubit unitaries, or (2) allowing Hamiltonians with norm-bounded interactions. We lower bound the circuit depth or time of quantum routing in terms of spectral properties of graphs representing the architecture interaction constraints, and give a generalized upper bound for all simple connected n-vertex graphs. In particular, we give conditions for a superpolynomial classical-quantum routing separation, which exclude graphs with a small spectral gap and graphs of bounded degree. Finally, we provide examples of a quadratic separation between gate-based and Hamiltonian routing models with a constant number of local ancillas per qubit and of an Omega(n) speedup if we also allow fast local interactions. 
+            We study the problem of implementing arbitrary permutations of qubits under interaction constraints in quantum systems that allow for arbitrarily fast local operations and classical communication (LOCC). In particular, we show examples of speedups over swap-based and more general unitary routing methods by distributing entanglement and using LOCC to perform quantum teleportation. We further describe an example of an interaction graph for which teleportation gives a logarithmic speedup in the worst-case routing time over swap-based routing. We also study limits on the speedup afforded by quantum teleportation - showing an O(sqrt(NlogN)) upper bound on the separation in routing time for any interaction graph - and give tighter bounds for some common classes of graphs.
 
     -
         title: Surface code compilation via edge-disjoint paths
