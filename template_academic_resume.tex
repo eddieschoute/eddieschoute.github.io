@@ -1,23 +1,28 @@
-\documentclass[10pt,twocolumn]{article}
+\documentclass[11pt]{article}
 \pagestyle{empty}
 
 \usepackage{fontspec}
 \usepackage{microtype}
 
 \usepackage[%
-  margin=1cm,
+  margin=1in,
   footskip=0pt,
   headheight=0pt,
   headsep=0pt,
   marginparsep=0pt,
   marginparwidth=0pt,
-  twocolumn,
+  %twocolumn,
 ]{geometry}
 
 % Adjust section spacing
-\usepackage{titlesec}
-\titlespacing{\section}{0pt}{0.75em}{0.4em}
-\titlespacing{\paragraph}{0pt}{\parskip}{1em}
+\usepackage[sf,compact,raggedright]{titlesec}
+% \titlespacing{\section}{0pt}{0.75em}{0.4em}
+
+\titleclass{\jobtitle}{straight}[\paragraph]
+\titleformat{\jobtitle}[hang]{\sffamily\normalsize}{\theparagraph}{}{}
+\titlespacing*{\jobtitle}{0pt}{\parskip}{0em}
+
+\usepackage{multicol}
 
 % Itemize and enumerate settings
 \usepackage{enumitem}
@@ -86,43 +91,52 @@ $endif$
 $if(title)$
 \title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
 $endif$
-\author{$name$}
+\author{$name$, PhD}
 \date{}
 
 \makeatletter
   \renewcommand\maketitle{
-    {\raggedright\begin{center}%
-      {\Large\bfseries Resume: \@author}\\[3ex]
-    \end{center}}
+    {\noindent\Large\sffamily\bfseries \@author\\
+		\large\itshape $jobtitle$}
   }
 \makeatother
 
 \begin{document}
-
 \maketitle
 \thispagestyle{empty}
 
-\section*{Education}
-$for(education)$
-\paragraph{$education.date$ $education.title$ ($education.university$)}
-$education.description$
-$endfor$
+\section{Executive Summary}
+\noindent $summary$
+\paragraph{Skills} \begin{multicols}{3}
+	\begin{itemize}
+		$for(skills)$
+		\item $skills$
+		$endfor$
+	\end{itemize}
+\end{multicols}
+\titlerule
 
 \section*{Experience}
 $for(experience)$
-\paragraph{$experience.date$ $experience.title$ ($experience.company$)}
+\jobtitle{$experience.title$ ($experience.company$) \hfill $experience.date$}
 $experience.description$
+$endfor$
+
+\section*{Education}
+$for(education)$
+\jobtitle{$education.title$ ($education.university$) \hfill $education.date$}
+$education.description$
 $endfor$
 
 \section*{Service}
 $for(service)$
-\paragraph{$service.date$ $service.title$}
+\jobtitle{$service.title$ \hfill $service.date$}
 $service.description$
 $endfor$
 
 \section*{Awards}
 $for(awards)$
-\paragraph{$awards.date$ $awards.title$}
+\jobtitle{$awards.title$ \hfill $awards.date$}
 $awards.description$
 $endfor$
 
