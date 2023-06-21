@@ -12,10 +12,10 @@ skills:
 - Six
 education:
 -
-    title: Doctoral Student, Computer Science
+    title: PhD, Computer Science
     university: '[QuICS](https://quics.umd.edu/)'
     important: true
-    date: 2016--2021
+    date: 2021
     location: Joint Center for Quantum Information and Computer Science,
         University of Maryland, College Park, USA
     description: |
@@ -29,37 +29,37 @@ education:
 -
     title: Master of Science, Computer Science
     university: '[TU Delft](https://www.tudelft.nl)'
-    date: 2013--2015
+    date: 2015
     location: Delft, The Netherlands
     description: >
         Specialization _Software Technology_, with a focus on (distributed) algorithms and networks.
         Master's thesis on routing for quantum networks under supervision of Stephanie Wehner at QuTech.
         Awarded "cum laude" (<5% of students).
+    honors: "Magna cum laude"
 -
     title: Master of Science, Embedded Systems
     university: '[TU Delft](https://www.tudelft.nl)'
-    date: 2013--2015
+    date: 2015
     location: Delft, The Netherlands
     description: >
         I constructed a proof of concept fiber-optic cable tap for less than €30.
         I also worked on software acceleration using vectorization (SSE), parallelization (Pthreads, OpenMP),
         GPGPU programming (CUDA), and DSPs.
         Awarded "cum laude".
+    honors: "Magna cum laude"
 
 -
     title: Bachelor of Science, Computer Science
     university: '[TU Delft](https://www.tudelft.nl)'
-    date: 2010--2013
+    date: 2013
     location: Delft, The Netherlands
-    description: >
-        Awarded "cum laude".
+    honors: "Magna cum laude"
 -
     title: Bachelor of Science, Electrical Engineering
     university: '[TU Delft](https://www.tudelft.nl)'
-    date: 2010--2013
+    date: 2013
     location: Delft, The Netherlands
-    description: >
-        Awarded "cum laude".
+    honors: "Magna cum laude"
 
 experience:
 -

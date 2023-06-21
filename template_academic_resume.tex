@@ -124,8 +124,11 @@ $endfor$
 
 \section*{Education}
 $for(education)$
-\jobtitle{$education.title$ ($education.university$) \hfill $education.date$}
-$education.description$
+\jobtitle{$education.title$ ($education.university$)
+$if(education.honors)$
+, \emph{$education.honors$}
+$endif$
+\hfill $education.date$}
 $endfor$
 
 \section*{Service}
