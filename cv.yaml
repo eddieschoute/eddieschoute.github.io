@@ -208,6 +208,21 @@ awards:
 talks:
 -
     title: Surface code compilation via edge-disjoint paths
+    venue: '[APS March Meeting](https://march.aps.org)'
+    date: 2023
+    important: true
+    link: https://march.aps.org/sessions/F69/5
+-
+    title: Advantages and limitations of quantum routing
+    venue: '[APS March Meeting](https://march.aps.org)'
+    date: 2023
+    link: https://meetings.aps.org/Meeting/MAR23/Session/Z73.11
+-
+    title: Surface code compilation via edge-disjoint paths
+    venue: Invited to Microsoft Quantum Research
+    date: 2023
+-
+    title: Surface code compilation via edge-disjoint paths
     venue: '[TQC 2022](https://tqc2022-conference.iquist.illinois.edu/)'
     date: 2022
     important: true
