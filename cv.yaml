@@ -2,7 +2,12 @@ name: Eddie Schoute
 lang: en
 jobtitle: Quantum Algorithms Researcher
 summary: |
-  Computer scientist with 7+ years of experience quantum computing and information with 5 publications in leading journal in the field containing precise highly technical language to communicate with other professionals. Demonstrated scientific leadership by supervising graduate students and undergraduate students in 3 different projects resulting in 2 publications that shows an ability to communicate clearly and effectively at various levels of technicality. Wide expertise in software engineering with 5 papers containing implementations of our algorithms in a variety of software languages such as Python, Julia, Scala, and expertise in low-level programming with C, C++, and Rust, and an intention to bring quantum computing to market with 3 patent applications.
+  Computer scientist with 7+ years of experience quantum computing,
+  resulting in 5 publications in leading journals.
+  Established track record of successfully communicating scientific concepts to both professionals and non-specialists,
+  and a strong history of mentoring---leading teams of graduate and undergraduate researchers to complete 3 projects resulting in 2 additional publications.
+  Demonstrated broad expertise in software engineering using numerous software languages (including Python, Julia, Scala, C, and Rust).
+  Expertise in marketable quantum computing applications has results in 3 patents pending.
 skills:
 - One
 - Two
