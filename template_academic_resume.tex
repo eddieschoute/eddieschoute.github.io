@@ -146,7 +146,9 @@ $endfor$
 \section*{Talks}
 \begin{enumerate}
 $for(talks)$
-\item ``\href{$talks.link$}{$talks.title$}''. $talks.venue$ ($talks.date$).
+$for(talks.entries)$
+\item ``\href{$it.link$}{$it.title$}''. $it.venue$ ($it.date$).
+$endfor$
 $endfor$
 \end{enumerate}
 

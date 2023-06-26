@@ -127,11 +127,14 @@ $awards.description$
 $endfor$
 
 \section*{Talks}
-\begin{enumerate}
 $for(talks)$
-\item ``\href{$talks.link$}{$talks.title$}''. $talks.venue$ ($talks.date$).
+\subsection*{$talks.category$}
+\begin{enumerate}
+$for(talks.entries)$
+\item ``\href{$talks.entires.link$}{$talks.entries.title$}''. $talks.entries.venue$ ($talks.entries.date$).
 $endfor$
 \end{enumerate}
+$endfor$
 
 \section*{Patents and Patent Applications}
 \begin{enumerate}
