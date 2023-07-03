@@ -1,12 +1,12 @@
 \documentclass[11pt]{article}
 
-\usepackage{fontspec}
-\usepackage{microtype}
+%\usepackage{fontspec}
+%\usepackage{microtype}
 
 \usepackage[%
   margin=1in,
   % footskip=0pt,
-  headheight=0pt,
+  headheight=13.6pt,
   % headsep=0pt,
   % marginparsep=0pt,
   % marginparwidth=0pt,
@@ -129,6 +129,7 @@ $endif$
 $education.description$
 $endfor$
 
+\vspace{14pt}
 \section{Service}
 $for(service)$
 \cvtitle{$service.title$ ($service.venue$) \hfill $service.date$}
@@ -146,7 +147,9 @@ $for(talks)$
 \subsection{$talks.category$}
 \begin{enumerate}
 $for(talks.entries)$
-\item ``\href{$talks.entires.link$}{$talks.entries.title$}''. $talks.entries.venue$ ($talks.entries.date$).
+\item ``%
+	$if(it.link)$\href{$it.link$}{$it.title$}$else$$it.title$$endif$%
+	''. $it.venue$ ($it.date$).
 $endfor$
 \end{enumerate}
 $endfor$
