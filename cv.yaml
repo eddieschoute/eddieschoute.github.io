@@ -39,7 +39,6 @@ education:
     description: >
         Specialization _Software Technology_, with a focus on (distributed) algorithms and networks.
         Master's thesis on routing for quantum networks under supervision of Stephanie Wehner at QuTech.
-        Awarded "cum laude" (<5% of students).
     honors: "Magna cum laude"
 -
     title: Master of Science, Embedded Systems
@@ -50,7 +49,6 @@ education:
         I constructed a proof of concept fiber-optic cable tap for less than €30.
         I also worked on software acceleration using vectorization (SSE), parallelization (Pthreads, OpenMP),
         GPGPU programming (CUDA), and DSPs.
-        Awarded "cum laude".
     honors: "Magna cum laude"
 
 -
@@ -79,7 +77,7 @@ experience:
   entries:
     - title: Research Summer Internship
       company: '[Microsoft Research](https://www.microsoft.com)'
-      date: 2020
+      date: Summer 2020
       location: Redmond (virtual), WA, USA
       important: true
       description: >
@@ -89,21 +87,21 @@ experience:
           Work performed with Vadym Kliuchnikov, Alexander Vaschillo, and Dmitry Vasilevsky.
     - title: Summer Intern
       company: '[IBM](https://www.ibm.com)'
-      date: 2019
+      date: Summer 2019
       location: Yorktown Heights, NY, USA
       description: >
           Researched algorithms for quantum chemistry
           and contributed to Qiskit development under the supervision of Ali Javadi-Abhari.
     - title: Developer
       company: '[Owlin](https://www.owlin.com/)'
-      date: 2016
+      date: Spring 2016
       location: Amsterdam, The Netherlands
       description: >
           Developed and deployed 7 APIs in 3 months using Node.js, RethinkDB and ElasticSearch.
           Provided interactive website interface and documentation for the APIs using OpenAPI.
     - title: Scientist
       company: '[QuTech](https://qutech.nl/)'
-      date: 2015
+      date: Winter 2015
       location: Delft, The Netherlands
       description: >
           Worked with Stephanie Wehner to publish my thesis work as paper.
@@ -128,24 +126,25 @@ experience:
 
 service:
 -
-    title: YQIS Program Committee
-    venue: '[Sixth International Conference for Young Quantum Information Scientists (YQIS 6)](https://indico.frib.msu.edu/event/31/)'
+    title: Program Committee
+    venue: '[YQIS 6](https://indico.frib.msu.edu/event/31/)'
     date: 2021
     description: >
-        Reviewed abstracts submitted to the YQIS conference for talks and posters.
+        Reviewed abstracts submitted to the Sixth International Conference for Young Quantum Information Scientists conference
+        to ensure a high-quality scientific program targeted to young researchers in quantum information.
 
 -
-    title: Computer Science Graduate Student Council
-    venue: '[Computer Science Department](https://www.cs.umd.edu/)'
+    title: President
+    venue: '[Computer Science Graduate Student Council](https://www.cs.umd.edu/grad/executive-council)'
     date: 2018--2021
     description: >
-        Member (2018--2019) and president (2020--2021).
-        Organized and contributed to the annual CS department picnic.
-        Organized student trips and events to foster a community withing the department.
-        Act as liaison between the department and graduate students.
+      As member (2018--2019) and president (2020--2021).
+      Organized and contributed to the annual CS department picnic.
+      Organized student trips and events to foster a community withing the department.
+      Act as liaison between the department and graduate students.
     
 -
-    title: Organize Seminar Recordings and Youtube.
+    title: Seminar Communications
     venue: '[QuICS](https://quics.umd.edu/)'
     date: 2018--2020
     description: >
@@ -153,16 +152,14 @@ service:
         to promote accessibility of research.
 
 -
-    title: Assist with Organizing QuICS-JQI-CMTC Seminars
-    venue: '[QuICS](https://quics.umd.edu/)'
+    title: Assistant Seminar Organizer
+    venue: '[QuICS-JQI-CMTC Seminars](https://quics.umd.edu/)'
     date: 2019--2020
     description: >
-        This weekly seminar series encourages the transfer of knowledge across the field of physics,
-        computer science and math.
-        I also made sure healthier food was available.
+      Assisted with organizing seminar series by organizing food and making healthier options available.
 
 -
-    title: Live Stream and Video Recording
+    title: Conference Communications
     venue: '[TQC 2019 and NISQ workshop](https://www.tqcconference.org/)'
     location: 14th Conference on the Theory of Quantum Compilation, Communication and Cryptography
     date: 2019
@@ -193,21 +190,21 @@ awards:
         Covers tuition, stipend and an additional $5000/yr. Three fellowships were awarded.
 -
     title: Dean's Graduate Fellowship
-    grantor: '[The Graduate School](https://gradschool.umd.edu/)'
+    grantor: '[University of Maryland Graduate School](https://gradschool.umd.edu/)'
     location: University of Maryland, College Park
     date: 2016--2018
     description: >
         An award of $2500 yearly.
 -
     title: Jacob K. Goldhauber Travel Award
-    grantor: '[The Graduate School, University of Maryland, College Park](https://gradschool.umd.edu)'
+    grantor: '[University of Maryland Graduate School](https://gradschool.umd.edu)'
     location: University of Maryland, College Park
     date: 2017
     description: >
         Covers $500 for travel to a conference.
 
 talks:
-- category: Invited talks
+- category: Invited
   entries:
   -
     title: Surface code compilation via edge-disjoint paths
@@ -217,7 +214,7 @@ talks:
     link: https://march.aps.org/sessions/F69/5
   -
     title: Surface code compilation via edge-disjoint paths
-    venue: Invited to Microsoft Quantum Research
+    venue: Microsoft Quantum Research
     date: 2023
   -
     title: Surface code compilation via edge-disjoint paths
@@ -225,14 +222,14 @@ talks:
     date: 2022
   -
     title: Circuit Transformations for Quantum Architectures
-    venue: Invited at Qiskit Camp
+    venue: Qiskit Camp
     date: 2019
     link: https://www.youtube.com/watch?v=Raw6AYil79Q
   -
     title: Surface code compilation via edge-disjoint paths
     venue: Quantum science center Thrust 2
     date: 2022
-- category: Contributed talks
+- category: Contributed
   entries:
   -
     title: Advantages and limitations of quantum routing
@@ -261,7 +258,7 @@ talks:
     date: 2019
     link: https://www.youtube.com/watch?v=h7vc5lELd3E
 
-- category: Poster presentations
+- category: Poster
   entries:
     -
       title: Surface code compilation via edge-disjoint paths
@@ -294,8 +291,8 @@ patents:
 -
     title: Quantum Routing with Fast Reversals
     inventors: S. King, H. Shastri, A. Bapat, E. Schoute, A.V. Gorshkov, A.M. Childs
-    date: 2022
-    id: U.S.\ Prov.\ App.\ No.\ 63/316016
+    date: 2023
+    id: US Patent App.\ 18/178,491
 
 -
     title: Performing state reversal on a quantum spin chain
