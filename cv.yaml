@@ -191,13 +191,13 @@ talks:
       - title: Surface code compilation via edge-disjoint paths
         venue: David Gosset group
         date: 2022
+      - title: Surface code compilation via edge-disjoint paths
+        venue: Quantum Science Center Thrust 2
+        date: 2022
       - title: Circuit Transformations for Quantum Architectures
         venue: Qiskit Camp
         date: 2019
         link: https://www.youtube.com/watch?v=Raw6AYil79Q
-      - title: Surface code compilation via edge-disjoint paths
-        venue: Quantum science center Thrust 2
-        date: 2022
   - category: Contributed
     entries:
       - title: Advantages and limitations of quantum routing

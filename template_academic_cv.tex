@@ -22,6 +22,9 @@
 \titleclass{\cvtitle}{straight}[\paragraph]
 \titleformat{\cvtitle}[hang]{\sffamily\normalsize}{\theparagraph}{}{}
 \titlespacing*{\cvtitle}{0pt}{\parskip}{0em}
+\makeatletter
+\def\toclevel@cvtitle{5}
+\makeatother
 
 % Itemize and enumerate settings
 \usepackage{enumitem}
@@ -93,13 +96,13 @@ $if(lang)$
 \usepackage[shorthands=off,$for(babel-otherlangs)$$babel-otherlangs$,$endfor$main=$babel-lang$]{babel}
 $endif$
 
-\title{$name$, PhD}
+\title{CV: $name$, PhD}
 \author{$name$}
 \date{}
 
 \makeatletter
   \renewcommand\maketitle{
-    {\noindent\Large\sffamily\bfseries \@author\\
+    {\noindent\Large\sffamily\bfseries \@author, PhD\\
 		\large\normalfont\itshape $jobtitle$}
   }
 \makeatother
@@ -117,7 +120,7 @@ $endif$
 \maketitle
 
 
-\section*{Education}
+\section{Education}
 $for(education)$
 \cvtitle{$education.title$ ($education.university$)
 $if(education.honors)$
@@ -127,30 +130,30 @@ $endif$
 $education.description$
 $endfor$
 
-\section*{Experience}
+\section{Experience}
 $for(experience)$
-\subsection*{$experience.category$}
+\subsection{$experience.category$}
 $for(experience.entries)$
 \cvtitle{$it.title$ ($it.company$) \hfill $it.date$}
 $it.description$
 $endfor$
 $endfor$
 
-\section*{Service}
+\section{Service}
 $for(service)$
 \cvtitle{$service.title$ ($service.venue$) \hfill $service.date$}
 $service.description$
 $endfor$
 
-\section*{Awards}
+\section{Awards}
 $for(awards)$
 \cvtitle{$awards.title$ ($awards.grantor$) \hfill $awards.date$}
 $awards.description$
 $endfor$
 
-\section*{Talks}
+\section{Talks}
 $for(talks)$
-\subsection*{$talks.category$}
+\subsection{$talks.category$}
 \begin{enumerate}
 $for(talks.entries)$
 \item ``\href{$talks.entires.link$}{$talks.entries.title$}''. $talks.entries.venue$ ($talks.entries.date$).
@@ -158,7 +161,7 @@ $endfor$
 \end{enumerate}
 $endfor$
 
-\section*{Patents and Patent Applications}
+\section{Patents and Patent Applications}
 \begin{enumerate}
 $for(patents)$
 \item ``$patents.title$''. $patents.inventors$$if(patents.date)$ ($patents.date$)$endif$.
@@ -169,7 +172,7 @@ $endfor$
 \end{enumerate}
 
 
-\section*{Publications}
+\section{Publications}
 \begin{enumerate}
 $for(publications)$
 \item ``\href{$publications.link$}{$publications.title$}''. $publications.author$$if(publications.date)$ ($publications.date$)$endif$.
