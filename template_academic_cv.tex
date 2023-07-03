@@ -168,12 +168,17 @@ $endfor$
 \section{Publications}
 \begin{enumerate}
 $for(publications)$
-\item ``$publications.title$''. $publications.author$$if(publications.date)$ ($publications.date$)$endif$.
+\item $publications.author$, $publications.title$%
+$if(publications.pubtitle)$
+, \emph{$publications.pubtitle$}
+$publications.volume$$if(it.issue)$.$publications.issue$$endif$ ($it.date$)%
+$if(it.pages)$
+, $it.pages$%
+$endif$
+$endif$
+.
 $if(publications.inpreparation)$
 In preparation.
-$endif$
-$if(publications.pubtitle)$
-In: \emph{$publications.pubtitle$}.
 $endif$
 $if(publications.link)$
 \url{$publications.link$}
