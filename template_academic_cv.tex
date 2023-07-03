@@ -21,10 +21,11 @@
 
 \titleclass{\cvtitle}{straight}[\paragraph]
 \titleformat{\cvtitle}[hang]{\sffamily\normalsize}{\theparagraph}{}{}
-\titlespacing*{\cvtitle}{0pt}{\parskip}{0em}
+\titlespacing*{\cvtitle}{0pt}{*1}{0pt}
 \makeatletter
 \def\toclevel@cvtitle{5}
 \makeatother
+\titlespacing{\subsection}{0pt}{*2}{*1}
 
 % Itemize and enumerate settings
 \usepackage{enumitem}
@@ -109,6 +110,14 @@ $endif$
 
 \maketitle
 
+\section{Experience}
+$for(experience)$
+\subsection{$experience.category$}
+$for(experience.entries)$
+\cvtitle{$it.title$ ($it.company$) \hfill $it.date$}
+$it.description$
+$endfor$
+$endfor$
 
 \section{Education}
 $for(education)$
@@ -118,15 +127,6 @@ $if(education.honors)$
 $endif$
 \hfill $education.date$}
 $education.description$
-$endfor$
-
-\section{Experience}
-$for(experience)$
-\subsection{$experience.category$}
-$for(experience.entries)$
-\cvtitle{$it.title$ ($it.company$) \hfill $it.date$}
-$it.description$
-$endfor$
 $endfor$
 
 \section{Service}
@@ -165,7 +165,7 @@ $endfor$
 \section{Publications}
 \begin{enumerate}
 $for(publications)$
-\item ``\href{$publications.link$}{$publications.title$}''. $publications.author$$if(publications.date)$ ($publications.date$)$endif$.
+\item ``$publications.title$''. $publications.author$$if(publications.date)$ ($publications.date$)$endif$.
 $if(publications.inpreparation)$
 In preparation.
 $endif$

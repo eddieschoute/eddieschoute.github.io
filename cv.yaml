@@ -63,6 +63,8 @@ experience:
         date: 2022--present
         location: Los Alamos, NM, USA
         important: true
+        description: >
+          Research quantum algorithms under the supervision of Yigit Subasi.
   - category: Internships & others
     entries:
       - title: Research Summer Internship
