@@ -67,68 +67,64 @@ education:
     honors: "Magna cum laude"
 
 experience:
--
-    title: Postdoctoral research associate
-    company: '[Los Alamos National Laboratory](https://www.lanl.gov/)'
-    date: 2022--present
-    location: Los Alamos, NM, USA
-    important: true
+- category: Full time
+  entries:
+    - title: Postdoctoral research associate
+      company: '[Los Alamos National Laboratory](https://www.lanl.gov/)'
+      date: 2022--present
+      location: Los Alamos, NM, USA
+      important: true
 
--
-    title: Research Summer Internship
-    company: '[Microsoft Research](https://www.microsoft.com)'
-    date: 2020
-    location: Redmond (virtual), WA, USA
-    important: true
-    description: >
-        Researched algorithms for executing circuits on quantum hardware.
-        Used native operations to better use the hardware capabilities.
-        Implemented proof of concept in Julia language that shows a 5x speed-up over state-of-the-art.
-        Work performed with Vadym Kliuchnikov, Alexander Vaschillo, and Dmitry Vasilevsky.
+- category: Internships & others
+  entries:
+    - title: Research Summer Internship
+      company: '[Microsoft Research](https://www.microsoft.com)'
+      date: 2020
+      location: Redmond (virtual), WA, USA
+      important: true
+      description: >
+          Researched algorithms for executing circuits on quantum hardware.
+          Used native operations to better use the hardware capabilities.
+          Implemented proof of concept in Julia language that shows a 5x speed-up over state-of-the-art.
+          Work performed with Vadym Kliuchnikov, Alexander Vaschillo, and Dmitry Vasilevsky.
+    - title: Summer Intern
+      company: '[IBM](https://www.ibm.com)'
+      date: 2019
+      location: Yorktown Heights, NY, USA
+      description: >
+          Researched algorithms for quantum chemistry
+          and contributed to Qiskit development under the supervision of Ali Javadi-Abhari.
+    - title: Developer
+      company: '[Owlin](https://www.owlin.com/)'
+      date: 2016
+      location: Amsterdam, The Netherlands
+      description: >
+          Developed and deployed 7 APIs in 3 months using Node.js, RethinkDB and ElasticSearch.
+          Provided interactive website interface and documentation for the APIs using OpenAPI.
+    - title: Scientist
+      company: '[QuTech](https://qutech.nl/)'
+      date: 2015
+      location: Delft, The Netherlands
+      description: >
+          Worked with Stephanie Wehner to publish my thesis work as paper.
+          Programmed and performed simulations in Scala on a multi-core server.
 
--
-    title: Summer Intern
-    company: '[IBM](https://www.ibm.com)'
-    date: 2019
-    location: Yorktown Heights, NY, USA
-    description: >
-        Researched algorithms for quantum chemistry
-        and contributed to Qiskit development under the supervision of Ali Javadi-Abhari.
--
-    title: Developer
-    company: '[Owlin](https://www.owlin.com/)'
-    date: 2016
-    location: Amsterdam, The Netherlands
-    description: >
-        Developed and deployed 7 APIs in 3 months using Node.js, RethinkDB and ElasticSearch.
-        Provided interactive website interface and documentation for the APIs using OpenAPI.
--
-    title: Scientist
-    company: '[QuTech](https://qutech.nl/)'
-    date: 2015
-    location: Delft, The Netherlands
-    description: >
-        Worked with Stephanie Wehner to publish my thesis work as paper.
-        Programmed and performed simulations in Scala on a multi-core server.
+          Simulations code: <https://github.com/eddieschoute/spherical-routing>
 
-        Simulations code: <https://github.com/eddieschoute/spherical-routing>
+    - title: Intern
+      company: '[Waag](https://waag.org)'
+      date: 2013
+      location: Amsterdam, The Netherlands
+      description: >
+          Constructed a recommender system for arts tourism in the Netherlands using a semantic database.
 
--
-    title: Intern
-    company: '[Waag](https://waag.org)'
-    date: 2013
-    location: Amsterdam, The Netherlands
-    description: >
-        Constructed a recommender system for arts tourism in the Netherlands using a semantic database.
-
--
-    title: Teaching Assistant
-    company: '[TU Delft](https://www.tudelft.nl)'
-    date: 2012--2015
-    location: Delft, The Netherlands
-    description: |
-        * Assisted and graded one year of masters students in the fourth year Advanced Algorithms course.
-        * Assisted and graded two years of bachelors students in the second year Algorithms course.
+    - title: Teaching Assistant
+      company: '[TU Delft](https://www.tudelft.nl)'
+      date: 2012--2015
+      location: Delft, The Netherlands
+      description: |
+          * Assisted and graded one year of masters students in the fourth year Advanced Algorithms course.
+          * Assisted and graded two years of bachelors students in the second year Algorithms course.
 
 service:
 -
@@ -268,9 +264,29 @@ talks:
 - category: Poster presentations
   entries:
     -
-      title: Todo
-      venue: Todo
+      title: Surface code compilation via edge-disjoint paths
+      venue: QIP 2022
+      date: 2022
+    -
+      title: Quantum routing
+      venue: QIP 2020
+      date: 2020
+    -
+      title: Circuit Transformations for Quantum Architectures
+      venue: QIP 2019
       date: 2019
+    -
+      title: Quantum Cryptanalysis of Block Cyphers
+      venue: QIP 2018
+      date: 2018
+    -
+      title: Shortcuts to quantum network routing
+      venue: QIP 2017
+      date: 2017
+    -
+      title: Shortcuts to quantum network routing
+      venue: QCrypt 2016
+      date: 2016
 
 
 

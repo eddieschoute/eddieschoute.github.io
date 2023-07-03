@@ -110,8 +110,11 @@ $endfor$
 
 \section*{Experience}
 $for(experience)$
-\paragraph{$experience.date$ $experience.title$ ($experience.company$)}
-$experience.description$
+\subsection*{$experience.category$}
+$for(experience.entries)$
+\paragraph{$it.date$ $it.title$ ($it.company$)}
+$it.description$
+$endfor$
 $endfor$
 
 \section*{Service}
