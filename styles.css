@@ -109,3 +109,7 @@ h4 {
 h5 {
     margin-top: .5rem;
 }
+
+.navbar {
+	--bs-navbar-padding-x: 0.5rem;
+}
