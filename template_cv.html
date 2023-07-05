@@ -13,7 +13,7 @@ $endif$
 $if(keywords)$
   <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
 $endif$
-  <title>CV: $name$</title>
+  <title>CV: Eddie Schoute</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
@@ -39,7 +39,7 @@ $include-before$
 $endfor$
 <header>
   <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
-    <a class="navbar-brand" href="#">$name$</a>
+    <a class="navbar-brand" href="#">Eddie Schoute, PhD</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -47,10 +47,10 @@ $endfor$
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#education">Education</a>
+        <a class="nav-link" href="#experience">Experience</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#experience">Experience</a>
+        <a class="nav-link" href="#education">Education</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#service">Service</a>
@@ -75,35 +75,6 @@ $endfor$
 
 <div class="container-fluid">
 <h1>Curriculum Vitae</h1>
-
-<section id="education">
-  <h2>Education</h2>
-
-  $for(education)$
-    <div class="job-entry $if(education.important)$highlight$endif$">
-      <div class="row">
-        <div class="offset-md-1 col-md-3"><h5 class="text-muted">$education.date$</h5></div>
-        <div class="col-md-8"><h3>$education.title$</h3></div>
-      </div>
-      <div class="row">
-        <div class="offset-md-4 col-md-8"><h4 class="text-muted">$education.university$</h4></div>
-      </div>
-      $if(education.location)$
-      <div class="row">
-        <div class="offset-md-4 col-md-8"><p class="small">$education.location$</p></div>
-      </div>
-      $endif$
-      $if(education.description)$
-      <div class="row">
-        <div class="offset-md-1 col-md-11">
-          $education.description$
-        </div>
-      </div>
-      $endif$
-    </div>
-  $endfor$
-
-</section>
 
 <section id="experience">
   <h2>Experience</h2>
@@ -134,8 +105,36 @@ $endfor$
 			</div>
 		$endfor$
   $endfor$
-
 </section>
+
+<section id="education">
+  <h2>Education</h2>
+
+  $for(education)$
+    <div class="job-entry $if(education.important)$highlight$endif$">
+      <div class="row">
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">$education.date$</h5></div>
+        <div class="col-md-8"><h3>$education.title$</h3></div>
+      </div>
+      <div class="row">
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted">$education.university$</h4></div>
+      </div>
+      $if(education.location)$
+      <div class="row">
+        <div class="offset-md-4 col-md-8"><p class="small">$education.location$</p></div>
+      </div>
+      $endif$
+      $if(education.description)$
+      <div class="row">
+        <div class="offset-md-1 col-md-11">
+          $education.description$
+        </div>
+      </div>
+      $endif$
+    </div>
+  $endfor$
+</section>
+
 
 <section id="service">
   <h2>Service</h2>
