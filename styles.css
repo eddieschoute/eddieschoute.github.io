@@ -34,6 +34,7 @@ body {
 
 section a {
     color: inherit;
+		text-decoration: none; /* remove default underlines links */
 }
 section a:hover {
     color: #0056b3;
@@ -111,5 +112,5 @@ h5 {
 }
 
 .navbar {
-	--bs-navbar-padding-x: 0.5rem;
+	--bs-navbar-padding-x: 0.5rem; /* Add x-padding to navbar */
 }
