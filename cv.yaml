@@ -113,6 +113,12 @@ experience:
           * Assisted and graded one year of masters students in the fourth year Advanced Algorithms course.
           * Assisted and graded two years of bachelors students in the second year Algorithms course.
 service:
+  - title: Member
+    venue: Bicycle working group, Los Alamos county
+    date: 2023--present
+    description: >
+      Investigate potential problems with current roadways in the county and propose bicycle infrastructure improvements. Research best practices in the US and internationally.
+
   - title: Program Committee
     venue: '[YQIS 6](https://indico.frib.msu.edu/event/31/)'
     date: 2021
