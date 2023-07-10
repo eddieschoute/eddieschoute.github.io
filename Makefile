@@ -2,8 +2,8 @@ SHELL := /bin/zsh
 BUILDDIR := build
 
 all: validate_yaml \
-	$(BUILDDIR)/academic_resume.pdf \
-	$(BUILDDIR)/academic_cv.pdf \
+	$(BUILDDIR)/resume.pdf \
+	$(BUILDDIR)/cv.pdf \
 	$(BUILDDIR)/publication_list.pdf \
 	$(BUILDDIR)/cv.html
 
