@@ -116,6 +116,11 @@ $endfor$
         <div class="offset-md-1 col-md-3"><h5 class="text-muted">$education.date$</h5></div>
         <div class="col-md-8"><h3>$education.title$</h3></div>
       </div>
+      $if(education.honors)$
+      <div class="row">
+				<div class="offset-md-4 col-md-8"><h4 class="text-muted"><em>$education.honors$</em></p></div>
+      </div>
+      $endif$
       <div class="row">
         <div class="offset-md-4 col-md-8"><h4 class="text-muted">$education.university$</h4></div>
       </div>
