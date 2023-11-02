@@ -4,27 +4,19 @@ span.underline{text-decoration: underline;}
 div.column{display: inline-block; vertical-align: top; width: 50%;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
-$if(quotes)$
-q { quotes: "“" "”" "‘" "’"; }
-$endif$
-$if(highlighting-css)$
-$highlighting-css$
-$endif$
-$if(displaymath-css)$
 .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-$endif$
-
-.container-fluid {
-    max-width: 768px;
-}
 
 /* Add margin for static header */
 body {
     margin-top: 56px;
 }
 
+.container-fluid {
+    max-width: 930px; /* kan desgewenst breder of smaller */
+}
+
 /* Anchor offset with static header */
-*[id]:before { 
+section:before { 
     display: block; 
     content: ""; 
     margin-top: -56px; 
@@ -34,8 +26,9 @@ body {
 
 section a {
     color: inherit;
-		text-decoration: none; /* remove default underlines links */
+    text-decoration: none;
 }
+
 section a:hover {
     color: #0056b3;
 }
@@ -51,40 +44,33 @@ section a:after {
     background-image: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='%230056b3' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/><path fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/></svg>");
 }
 
-.job-entry {
-    margin-bottom: 9%;
+.accordion-button::after {
+    margin-left: inherit;
 }
 
-.job-entry.highlight {
-    background-color: #f8f9fa;
-    border-left: 1px solid #0056b3;
-    margin-right: -15px;  
-    padding-right: 15px;
+.accordion-body {
+    max-width: 681px; /* geeft 80 à 100 karakters per regel */
+    margin: 0 auto;
 }
 
-@media screen and (max-width: 768px){
-  .job-entry.highlight {
-      margin-left: -15px;
-      padding-left: 14px;
-  }
-}
-
-.job-entry ul {
+ul {
     /* same as bootstraps class="list-unstyled" */
     padding-left: 0; 
     list-style: none;
 }
 
-.job-entry li {
+li {
     padding: .75rem 0;
     border: 1px solid rgba(0,0,0,.125);
     border-width: 0 0 1px;
 }
-.job-entry li:last-child {
+
+li:last-child {
     border-bottom-width: 0;
     padding-bottom: 0;
 }
-.job-entry li:first-child {
+
+li:first-child {
     padding-top: 0;
 }
 
@@ -93,24 +79,93 @@ h1 {
     font-size: min(calc( 2rem + 3vw ), 600%);
     font-weight: 200;
     color: #0056b3; 
-    margin-bottom: 5%;
+    margin-bottom: 0;
 }
 
 h2 {
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+    margin-top: 2.75rem;
+    margin-bottom: 1.75rem;
+    font-weight: 700;
     color: #014792;
 }
 
-h4 {
-    margin-bottom: .75rem;
-    font-weight: 300;
+section > h3 {
+    font-size: calc(1.275rem + .3vw);
+    margin-top: 1.75rem;
+    margin-bottom: 1rem;
+    padding-left: 20px;
+    font-weight: 400;
+    font-variant: small-caps;
+    color: #014792;
+}
+
+@media screen and (max-width: 576px){
+    section > h3 {
+        padding-left: 0;
+    }
+    .accordion-item {
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+    .accordion-button, .accordion-body {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
 }
 
 h5 {
-    margin-top: .5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
 }
 
-.navbar {
-	--bs-navbar-padding-x: 0.5rem; /* Add x-padding to navbar */
+button .fst-italic {
+    display: contents;
 }
+
+@media screen and (min-width: 450px){
+    p:not(.small), li {
+        line-height: 1.75rem;
+    }
+    p:not(.small) {
+        margin-bottom: 1.75rem;
+    }
+}
+
+p.small {
+    line-height: 1.5rem;
+    margin-top: -0.5rem;
+}
+
+p:last-child, ul, ol, h5:last-child {
+    margin-bottom: 0;
+}
+
+.time {
+    margin-left: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-variant: small-caps;
+    text-align: end;
+    white-space: nowrap;
+}
+
+.search {
+   margin-left: auto;
+}
+
+.expand {
+    text-align: end;
+}
+
+.expand a {
+    color: inherit;
+}
+
+.expand a:hover {
+    color: #0056b3;
+}
+
+footer {
+    margin-top: 2.5rem;
+}
+
