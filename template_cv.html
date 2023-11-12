@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$" xml:lang="$lang$"$if(dir)$ dir="$dir$"$endif$>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$" xml:lang="$lang$" $if(dir)$ dir="$dir$" $endif$>
+
 <head>
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, shrink-to-fit=no" />
-$for(author-meta)$
+  $for(author-meta)$
   <meta name="author" content="$author-meta$" />
-$endfor$
-$if(date-meta)$
+  $endfor$
+  $if(date-meta)$
   <meta name="dcterms.date" content="$date-meta$" />
-$endif$
-$if(keywords)$
+  $endif$
+  $if(keywords)$
   <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
-$endif$
+  $endif$
   <title>CV: Eddie Schoute</title>
   <!-- Bootstrap CSS -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
@@ -23,298 +25,358 @@ $endif$
   <style>
     $styles.css()$
   </style>
-$for(css)$
+  $for(css)$
   <link rel="stylesheet" href="$css$" />
-$endfor$
-$if(math)$
+  $endfor$
+  $if(math)$
   $math$
-$endif$
-$for(header-includes)$
+  $endif$
+  $for(header-includes)$
   $header-includes$
-$endfor$
+  $endfor$
 </head>
+
 <body class="bg-light">
-$for(include-before)$
-$include-before$
-$endfor$
-<header>
-	<nav class="navbar fixed-top navbar-expand-lg bg-white">
-		<div class="container-xl">
-			<a class="navbar-brand" href="#">Eddie Schoute</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<div class="navbar-nav">
-					<a class="nav-link" href="#experience">Experience</a>
-					<a class="nav-link" href="#education">Education</a>
-					<a class="nav-link" href="#service">Service</a>
-					<a class="nav-link" href="#awards">Awards</a>
-					<a class="nav-link" href="#talks">Talks</a>
-					<a class="nav-link" href="#patents">Patents</a>
-					<a class="nav-link" href="#publications">Publications</a>
-				</div>
-				<div class="search">
-					<form class="d-flex" role="search">
-						<input class="form-control" type="search" placeholder="Search" aria-label="Search">
-					</form>
-				</div>
-			</div>
-		</div>
-	</nav>
-</header>
-
-<div class="container-fluid">
-<h1>Curriculum Vitae</h1>
-<div class="expand">
-  <a href="#">Expand All</a> / <a href="#">Collapse All</a>
-</div>
-
-<section id="experience">
-	<h2>Experience</h2>
-
-  $for(experience)$
-		<h3>$experience.category$</h3>
-		<div class="accordion accordion-flush">
-		$for(experience.entries)$
-		<div class="accordion-item">
-			<h3 class="accordion-header" id="headingEx_io06">
-				<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEx_io06"
-					$if(it.important)$
-					aria-expanded="true"
-					$endif$
-					aria-controls="collapseEx_io06">
-					$it.title$, $it.company$
-					<span class="time text-muted small">$it.date$</span>
-				</button>
-			</h3>
-			<div id="collapseEx_io06" class="accordion-collapse collapse show" aria-labelledby="headingEx_io06">
-				<div class="accordion-body">
-					<h4>$it.title$</h4>
-					<h5 class="text-muted">$it.company$</h5>
-					$if(it.location)$
-					<p class="small">$it.location$</p>
-					$endif$
-					$if(it.description)$
-					<p>
-					$it.description$
-					</p>
-					$endif$
-				</div>
-			</div>
-		</div>
-		$endfor$
-		</div>
+  $for(include-before)$
+  $include-before$
   $endfor$
-</section>
-
-<section id="education">
-  <h2>Education</h2>
-
-  $for(education)$
-    <div class="job-entry $if(education.important)$highlight$endif$">
-      <div class="row">
-        <div class="offset-md-1 col-md-3"><h5 class="text-muted">$education.date$</h5></div>
-        <div class="col-md-8"><h3>$education.title$</h3></div>
-      </div>
-      $if(education.honors)$
-      <div class="row">
-				<div class="offset-md-4 col-md-8"><h4 class="text-muted"><em>$education.honors$</em></p></div>
-      </div>
-      $endif$
-      <div class="row">
-        <div class="offset-md-4 col-md-8"><h4 class="text-muted">$education.university$</h4></div>
-      </div>
-      $if(education.location)$
-      <div class="row">
-        <div class="offset-md-4 col-md-8"><p class="small">$education.location$</p></div>
-      </div>
-      $endif$
-      $if(education.description)$
-      <div class="row">
-        <div class="offset-md-1 col-md-11">
-          $education.description$
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg bg-white">
+      <div class="container-xl">
+        <a class="navbar-brand" href="#">Eddie Schoute</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="navbar-nav">
+            <a class="nav-link" href="#experience">Experience</a>
+            <a class="nav-link" href="#education">Education</a>
+            <a class="nav-link" href="#service">Service</a>
+            <a class="nav-link" href="#awards">Awards</a>
+            <a class="nav-link" href="#talks">Talks</a>
+            <a class="nav-link" href="#patents">Patents</a>
+            <a class="nav-link" href="#publications">Publications</a>
+          </div>
+          <div class="search">
+            <form class="d-flex" role="search">
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            </form>
+          </div>
         </div>
       </div>
-      $endif$
+    </nav>
+  </header>
+
+  <div class="container-fluid">
+    <h1>Curriculum Vitae</h1>
+    <div class="expand">
+      <a href="#">Expand All</a> / <a href="#">Collapse All</a>
     </div>
-  $endfor$
-</section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+
+      $for(experience)$
+      <h3>$experience.category$</h3>
+      <div class="accordion accordion-flush">
+        $for(experience.entries)$
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="headingEx_io06">
+            <button class="accordion-button collapser $if(it.important)$$else$collapsed$endif$" type="button"
+              data-bs-toggle="collapse" $if(it.important)$ aria-expanded="true" $endif$>
+              $it.title$, $it.company$
+              <span class="time text-muted small">$it.date$</span>
+            </button>
+          </h3>
+          <div class="accordion-collapse collapse $if(it.important)$show$endif$">
+            <div class="accordion-body">
+              <h4>$it.title$</h4>
+              <h5 class="text-muted">$it.company$</h5>
+              $if(it.location)$
+              <p class="small">$it.location$</p>
+              $endif$
+              $if(it.description)$
+              <p>
+                $it.description$
+              </p>
+              $endif$
+            </div>
+          </div>
+        </div>
+        $endfor$
+      </div>
+      $endfor$
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+
+      $for(education)$
+      <div class="job-entry $if(education.important)$highlight$endif$">
+        <div class="row">
+          <div class="offset-md-1 col-md-3">
+            <h5 class="text-muted">$education.date$</h5>
+          </div>
+          <div class="col-md-8">
+            <h3>$education.title$</h3>
+          </div>
+        </div>
+        $if(education.honors)$
+        <div class="row">
+          <div class="offset-md-4 col-md-8">
+            <h4 class="text-muted"><em>$education.honors$</em></p>
+          </div>
+        </div>
+        $endif$
+        <div class="row">
+          <div class="offset-md-4 col-md-8">
+            <h4 class="text-muted">$education.university$</h4>
+          </div>
+        </div>
+        $if(education.location)$
+        <div class="row">
+          <div class="offset-md-4 col-md-8">
+            <p class="small">$education.location$</p>
+          </div>
+        </div>
+        $endif$
+        $if(education.description)$
+        <div class="row">
+          <div class="offset-md-1 col-md-11">
+            $education.description$
+          </div>
+        </div>
+        $endif$
+      </div>
+      $endfor$
+    </section>
 
 
-<section id="service">
-  <h2>Service</h2>
+    <section id="service">
+      <h2>Service</h2>
 
-  $for(service)$
-    <div class="job-entry $if(service.important)$highlight$endif$">
-      <div class="row">
-        <div class="offset-md-1 col-md-3"><h5 class="text-muted">$service.date$</h5></div>
-        <div class="col-md-8"><h3>$service.title$</h3></div>
-      </div>
-      $if(service.venue)$
-      <div class="row">
-        <div class="offset-md-4 col-md-8"><h4 class="text-muted">$service.venue$</h4></div>
-      </div>
-      $endif$
-      $if(service.location)$
-      <div class="row">
-        <div class="offset-md-4 col-md-8"><p class="small">$service.location$</p></div>
-      </div>
-      $endif$
-      <div class="row">
-        <div class="offset-md-1 col-md-11">
-          $service.description$
+      $for(service)$
+      <div class="job-entry $if(service.important)$highlight$endif$">
+        <div class="row">
+          <div class="offset-md-1 col-md-3">
+            <h5 class="text-muted">$service.date$</h5>
+          </div>
+          <div class="col-md-8">
+            <h3>$service.title$</h3>
+          </div>
+        </div>
+        $if(service.venue)$
+        <div class="row">
+          <div class="offset-md-4 col-md-8">
+            <h4 class="text-muted">$service.venue$</h4>
+          </div>
+        </div>
+        $endif$
+        $if(service.location)$
+        <div class="row">
+          <div class="offset-md-4 col-md-8">
+            <p class="small">$service.location$</p>
+          </div>
+        </div>
+        $endif$
+        <div class="row">
+          <div class="offset-md-1 col-md-11">
+            $service.description$
+          </div>
         </div>
       </div>
-    </div>
-  $endfor$
+      $endfor$
 
-</section>
+    </section>
 
-<section id="awards">
-  <h2>Awards</h2>
+    <section id="awards">
+      <h2>Awards</h2>
 
-  $for(awards)$
-    <div class="job-entry $if(awards.important)$highlight$endif$">
-      <div class="row">
-        <div class="offset-md-1 col-md-3"><h5 class="text-muted">$awards.date$</h5></div>
-        <div class="col-md-8"><h3>$awards.title$</h3></div>
-      </div>
-      $if(awards.grantor)$
-      <div class="row">
-        <div class="offset-md-4 col-md-8"><h4 class="text-muted">$awards.grantor$</h4></div>
-      </div>
-      $endif$
-      $if(awards.location)$
-      <div class="row">
-        <div class="offset-md-4 col-md-8"><p class="small">$awards.location$</p></div>
-      </div>
-      $endif$
-      <div class="row">
-        <div class="offset-md-1 col-md-11">
-          $awards.description$
+      $for(awards)$
+      <div class="job-entry $if(awards.important)$highlight$endif$">
+        <div class="row">
+          <div class="offset-md-1 col-md-3">
+            <h5 class="text-muted">$awards.date$</h5>
+          </div>
+          <div class="col-md-8">
+            <h3>$awards.title$</h3>
+          </div>
+        </div>
+        $if(awards.grantor)$
+        <div class="row">
+          <div class="offset-md-4 col-md-8">
+            <h4 class="text-muted">$awards.grantor$</h4>
+          </div>
+        </div>
+        $endif$
+        $if(awards.location)$
+        <div class="row">
+          <div class="offset-md-4 col-md-8">
+            <p class="small">$awards.location$</p>
+          </div>
+        </div>
+        $endif$
+        <div class="row">
+          <div class="offset-md-1 col-md-11">
+            $awards.description$
+          </div>
         </div>
       </div>
-    </div>
-  $endfor$
+      $endfor$
 
-</section>
+    </section>
 
-<section id="talks">
-  <h2>Talks</h2>
+    <section id="talks">
+      <h2>Talks</h2>
 
-  $for(talks)$
-		<h3>$talks.category$</h3>
-		$for(talks.entries)$
-			<div class="job-entry $if(talks.important)$highlight$endif$">
-				<div class="row">
-					<div class="offset-md-1 col-md-3"><h5 class="text-muted">$it.date$</h5></div>
-					<div class="col-md-8"><h3>$it.title$</h3></div>
-				</div>
-				<div class="row">
-					<div class="offset-md-4 col-md-8"><h4 class="text-muted">$it.venue$</h4></div>
-				</div>
-				$if(it.link)$
-				<div class="row">
-					<div class="offset-md-4 col-md-8"><p class="small"><a href="$it.link$">$it.link$</a></p></div>
-				</div>
-				$endif$
-				<div class="row">
-					<div class="offset-md-1 col-md-11">
-						$it.description$
-					</div>
-				</div>
-			</div>
-		$endfor$
-  $endfor$
-
-</section>
-
-<section id="patents">
-  <h2>Patents and Patent Applications</h2>
-
-  $for(patents)$
-    <div class="job-entry">
-      <div class="row">
-        <div class="offset-md-1 col-md-3"><h5 class="text-muted">
-          $patents.date$
-        </h5></div>
-        <div class="col-md-8"><h3>$patents.title$</h3></div>
-      </div>
-      <div class="row">
-        <div class="offset-md-4 col-md-8"><h4 class="text-muted">$patents.inventors$</h4></div>
-      </div>
-      $if(patents.id)$
-      <div class="row">
-        <div class="offset-md-4 col-md-8"><p class="small">$patents.id$</a></p></div>
-      </div>
-      $endif$
-      $if(patents.link)$
-      <div class="row">
-        <div class="offset-md-4 col-md-8"><p class="small"><a href="$patents.link$">$patents.link$</a></p></div>
-      </div>
-      $endif$
-      $if(patents.description)$
-      <div class="row">
-        <div class="offset-md-1 col-md-11">
-          $patents.description$
+      $for(talks)$
+      <h3>$talks.category$</h3>
+      $for(talks.entries)$
+      <div class="job-entry $if(talks.important)$highlight$endif$">
+        <div class="row">
+          <div class="offset-md-1 col-md-3">
+            <h5 class="text-muted">$it.date$</h5>
+          </div>
+          <div class="col-md-8">
+            <h3>$it.title$</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="offset-md-4 col-md-8">
+            <h4 class="text-muted">$it.venue$</h4>
+          </div>
+        </div>
+        $if(it.link)$
+        <div class="row">
+          <div class="offset-md-4 col-md-8">
+            <p class="small"><a href="$it.link$">$it.link$</a></p>
+          </div>
+        </div>
+        $endif$
+        <div class="row">
+          <div class="offset-md-1 col-md-11">
+            $it.description$
+          </div>
         </div>
       </div>
-      $endif$
-    </div>
-  $endfor$
+      $endfor$
+      $endfor$
 
-</section>
+    </section>
+
+    <section id="patents">
+      <h2>Patents and Patent Applications</h2>
+
+      $for(patents)$
+      <div class="job-entry">
+        <div class="row">
+          <div class="offset-md-1 col-md-3">
+            <h5 class="text-muted">
+              $patents.date$
+            </h5>
+          </div>
+          <div class="col-md-8">
+            <h3>$patents.title$</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="offset-md-4 col-md-8">
+            <h4 class="text-muted">$patents.inventors$</h4>
+          </div>
+        </div>
+        $if(patents.id)$
+        <div class="row">
+          <div class="offset-md-4 col-md-8">
+            <p class="small">$patents.id$</a></p>
+          </div>
+        </div>
+        $endif$
+        $if(patents.link)$
+        <div class="row">
+          <div class="offset-md-4 col-md-8">
+            <p class="small"><a href="$patents.link$">$patents.link$</a></p>
+          </div>
+        </div>
+        $endif$
+        $if(patents.description)$
+        <div class="row">
+          <div class="offset-md-1 col-md-11">
+            $patents.description$
+          </div>
+        </div>
+        $endif$
+      </div>
+      $endfor$
+
+    </section>
 
 
-<section id="publications">
-  <h2>Publications</h2>
+    <section id="publications">
+      <h2>Publications</h2>
 
-  $for(publications)$
-    <div class="job-entry $if(publications.important)$highlight$endif$">
-      <div class="row">
-        <div class="offset-md-1 col-md-3"><h5 class="text-muted">
-          $if(publications.inpreparation)$
-          in preparation
-          $else$
-          $publications.date$
-          $endif$
-        </h5></div>
-        <div class="col-md-8"><h3>$publications.title$</h3></div>
-      </div>
-      <div class="row">
-        <div class="offset-md-4 col-md-8"><h4 class="text-muted">$publications.author$</h4></div>
-      </div>
-      $if(publications.pubtitle)$
-      <div class="row">
-        <div class="offset-md-4 col-md-8"><p class="small">In: <i>$publications.pubtitle$</i></p></div>
-      </div>
-      $endif$
-      $if(publications.link)$
-      <div class="row">
-        <div class="offset-md-4 col-md-8"><p class="small"><a href="$publications.link$">$publications.link$</a></p></div>
-      </div>
-      $endif$
-      <div class="row">
-        <div class="offset-md-1 col-md-11">
-          $publications.description$
+      $for(publications)$
+      <div class="job-entry $if(publications.important)$highlight$endif$">
+        <div class="row">
+          <div class="offset-md-1 col-md-3">
+            <h5 class="text-muted">
+              $if(publications.inpreparation)$
+              in preparation
+              $else$
+              $publications.date$
+              $endif$
+            </h5>
+          </div>
+          <div class="col-md-8">
+            <h3>$publications.title$</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="offset-md-4 col-md-8">
+            <h4 class="text-muted">$publications.author$</h4>
+          </div>
+        </div>
+        $if(publications.pubtitle)$
+        <div class="row">
+          <div class="offset-md-4 col-md-8">
+            <p class="small">In: <i>$publications.pubtitle$</i></p>
+          </div>
+        </div>
+        $endif$
+        $if(publications.link)$
+        <div class="row">
+          <div class="offset-md-4 col-md-8">
+            <p class="small"><a href="$publications.link$">$publications.link$</a></p>
+          </div>
+        </div>
+        $endif$
+        <div class="row">
+          <div class="offset-md-1 col-md-11">
+            $publications.description$
+          </div>
         </div>
       </div>
-    </div>
-  $endfor$
+      $endfor$
 
-</section>
+    </section>
 
 
-$for(include-after)$
-$include-after$
-$endfor$
+    $for(include-after)$
+    $include-after$
+    $endfor$
 
-</div>
+  </div>
   <footer class="border-top text-center bg-light py-2">
-    <small class="align-text-bottom">Generated from YAML; <a href="https://github.com/eddieschoute/eddieschoute.github.io">code on Github.</a> Text &copy; 2023 $name$</small>
+    <small class="align-text-bottom">Generated from YAML; <a
+        href="https://github.com/eddieschoute/eddieschoute.github.io">code on Github.</a> Text &copy; 2023
+      $name$</small>
   </footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script src="main.js"></script>
 </body>
+
 </html>

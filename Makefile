@@ -5,7 +5,8 @@ all: validate_yaml \
 	$(BUILDDIR)/resume.pdf \
 	$(BUILDDIR)/cv.pdf \
 	$(BUILDDIR)/publication_list.pdf \
-	$(BUILDDIR)/cv.html
+	$(BUILDDIR)/cv.html \
+	$(BUILDDIR)/main.js
 
 validate_yaml:
 	@yq -e . cv.yaml > /dev/null
@@ -21,6 +22,9 @@ $(BUILDDIR)/%.tex: template_%.tex cv.yaml directories
 
 $(BUILDDIR)/cv.html: template_cv.html cv.yaml directories
 	echo "" | pandoc --metadata title="My Title" --metadata-file cv.yaml --template=$< -t html > $@
+
+$(BUILDDIR)/main.js: main.js
+	cp main.js $(BUILDDIR)/main.js
 
 clean:
 	rm build/*
