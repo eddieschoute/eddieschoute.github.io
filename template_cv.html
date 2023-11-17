@@ -82,7 +82,7 @@
       <div class="accordion accordion-flush">
         $for(experience.entries)$
         <div class="accordion-item">
-          <h3 class="accordion-header" id="headingEx_io06">
+          <h3 class="accordion-header">
             <button class="accordion-button collapser $if(it.important)$$else$collapsed$endif$" type="button"
               data-bs-toggle="collapse" $if(it.important)$ aria-expanded="true" $endif$>
               $it.title$, $it.company$
@@ -111,120 +111,87 @@
 
     <section id="education">
       <h2>Education</h2>
+      <div class="accordion accordion-flush">
 
-      $for(education)$
-      <div class="job-entry $if(education.important)$highlight$endif$">
-        <div class="row">
-          <div class="offset-md-1 col-md-3">
-            <h5 class="text-muted">$education.date$</h5>
-          </div>
-          <div class="col-md-8">
-            <h3>$education.title$</h3>
-          </div>
-        </div>
-        $if(education.honors)$
-        <div class="row">
-          <div class="offset-md-4 col-md-8">
-            <h4 class="text-muted"><em>$education.honors$</em></p>
-          </div>
-        </div>
-        $endif$
-        <div class="row">
-          <div class="offset-md-4 col-md-8">
-            <h4 class="text-muted">$education.university$</h4>
-          </div>
-        </div>
-        $if(education.location)$
-        <div class="row">
-          <div class="offset-md-4 col-md-8">
-            <p class="small">$education.location$</p>
+        $for(education)$
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="headingEd05">
+
+            <button class="accordion-button collapser $if(it.important)$$else$collapsed$endif$" type="button"
+              data-bs-toggle="collapse" $if(it.important)$ aria-expanded="true" $endif$>
+              $education.title$, $education.university$
+              $if(education.honors)$
+              <span class="fst-italic">$education.honors$</span>
+              $endif$
+              <span class="time text-muted small">$education.date$</span>
+            </button>
+          </h3>
+          <div class="accordion-collapse collapse $if(it.important)$show$endif$">
+            <div class="accordion-body">
+              <h4>$education.title$</h4>
+              <h5 class="text-muted">$education.university$</h5>
+              <p class="small">$education.location$</p>
+              $if(education.description)$
+              <p>
+                $education.description$
+              </p>
+              $endif$
+            </div>
           </div>
         </div>
-        $endif$
-        $if(education.description)$
-        <div class="row">
-          <div class="offset-md-1 col-md-11">
-            $education.description$
-          </div>
-        </div>
-        $endif$
+        $endfor$
       </div>
-      $endfor$
     </section>
 
 
     <section id="service">
       <h2>Service</h2>
-
-      $for(service)$
-      <div class="job-entry $if(service.important)$highlight$endif$">
-        <div class="row">
-          <div class="offset-md-1 col-md-3">
-            <h5 class="text-muted">$service.date$</h5>
-          </div>
-          <div class="col-md-8">
-            <h3>$service.title$</h3>
-          </div>
-        </div>
-        $if(service.venue)$
-        <div class="row">
-          <div class="offset-md-4 col-md-8">
-            <h4 class="text-muted">$service.venue$</h4>
-          </div>
-        </div>
-        $endif$
-        $if(service.location)$
-        <div class="row">
-          <div class="offset-md-4 col-md-8">
-            <p class="small">$service.location$</p>
+      <div class="accordion accordion-flush">
+        $for(service)$
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapser $if(it.important)$$else$collapsed$endif$" type="button"
+              data-bs-toggle="collapse" $if(it.important)$ aria-expanded="true" $endif$>
+              $service.title$, $service.venue$
+              <span class="time text-muted small">$service.date$</span>
+            </button>
+          </h3>
+          <div class="accordion-collapse collapse $if(it.important)$show$endif$">
+            <div class="accordion-body">
+              <h4>$service.title$</h4>
+              <h5 class="text-muted">$service.venue$</h5>
+              $service.description$
+            </div>
           </div>
         </div>
-        $endif$
-        <div class="row">
-          <div class="offset-md-1 col-md-11">
-            $service.description$
-          </div>
-        </div>
-      </div>
-      $endfor$
-
+        $endfor$
     </section>
 
     <section id="awards">
       <h2>Awards</h2>
 
       $for(awards)$
-      <div class="job-entry $if(awards.important)$highlight$endif$">
-        <div class="row">
-          <div class="offset-md-1 col-md-3">
-            <h5 class="text-muted">$awards.date$</h5>
-          </div>
-          <div class="col-md-8">
-            <h3>$awards.title$</h3>
-          </div>
-        </div>
-        $if(awards.grantor)$
-        <div class="row">
-          <div class="offset-md-4 col-md-8">
-            <h4 class="text-muted">$awards.grantor$</h4>
-          </div>
-        </div>
-        $endif$
-        $if(awards.location)$
-        <div class="row">
-          <div class="offset-md-4 col-md-8">
-            <p class="small">$awards.location$</p>
-          </div>
-        </div>
-        $endif$
-        <div class="row">
-          <div class="offset-md-1 col-md-11">
-            $awards.description$
+      <div class="accordion accordion-flush">
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapser $if(it.important)$$else$collapsed$endif$" type="button"
+              data-bs-toggle="collapse" $if(it.important)$ aria-expanded="true" $endif$>
+              $it.title$, $it.grantor$
+              <span class="time text-muted small">$it.date$</span>
+            </button>
+          </h3>
+          <div class="accordion-collapse collapse $if(it.important)$show$endif$">
+            <div class="accordion-body">
+              <h4>$it.title$</h4>
+              <h5 class="text-muted">$it.grantor$</h5>
+              $if(it.location)$<p class="small">$it.location$</p>$endif$
+              $it.description$
+            </div>
           </div>
         </div>
       </div>
       $endfor$
-
     </section>
 
     <section id="talks">
@@ -232,43 +199,61 @@
 
       $for(talks)$
       <h3>$talks.category$</h3>
-      $for(talks.entries)$
-      <div class="job-entry $if(talks.important)$highlight$endif$">
-        <div class="row">
-          <div class="offset-md-1 col-md-3">
-            <h5 class="text-muted">$it.date$</h5>
-          </div>
-          <div class="col-md-8">
-            <h3>$it.title$</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="offset-md-4 col-md-8">
-            <h4 class="text-muted">$it.venue$</h4>
-          </div>
-        </div>
-        $if(it.link)$
-        <div class="row">
-          <div class="offset-md-4 col-md-8">
-            <p class="small"><a href="$it.link$">$it.link$</a></p>
-          </div>
-        </div>
-        $endif$
-        <div class="row">
-          <div class="offset-md-1 col-md-11">
-            $it.description$
+      <div class="accordion accordion-flush">
+
+        $for(talks.entries)$
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapser $if(it.important)$$else$collapsed$endif$" type="button"
+              data-bs-toggle="collapse" $if(it.important)$ aria-expanded="true" $endif$>
+              $it.title$, $it.venue$
+              <span class="time text-muted small">$it.date$</span>
+            </button>
+          </h3>
+          <div class="accordion-collapse collapse $if(it.important)$show$endif$">
+            <div class="accordion-body">
+              <h4>$it.title$</h4>
+              <h5 class="text-muted">$it.venue$</h5>
+              $if(it.link)$
+              <p class="small"><a href="$it.link$">$it.link$</a></p>
+              $endif$
+            </div>
           </div>
         </div>
+        $endfor$
       </div>
       $endfor$
-      $endfor$
-
     </section>
 
     <section id="patents">
-      <h2>Patents and Patent Applications</h2>
+      <h2>Patents and Patent&nbsp;Applications</h2>
+      <div class="accordion accordion-flush">
 
-      $for(patents)$
+        $for(patents)$
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapser $if(it.important)$$else$collapsed$endif$" type="button"
+              data-bs-toggle="collapse" $if(it.important)$ aria-expanded="true" $endif$>
+              $it.title$
+              <span class="time text-muted small">$it.date$</span>
+            </button>
+          </h3>
+          <div class="accordion-collapse collapse $if(it.important)$show$endif$">
+            <div class="accordion-body">
+              <h4>$it.title$</h4>
+              <h5 class="text-muted">$it.inventors$
+              </h5>
+              <p class="small">$it.id$</p>
+              $if(it.link)$
+              <p class="small"><a href="$it.link$">$it.link$</a></p>
+              $endif$
+              $it.description$
+            </div>
+          </div>
+        </div>
+        $endfor$
+      </div>
+
       <div class="job-entry">
         <div class="row">
           <div class="offset-md-1 col-md-3">
@@ -306,8 +291,6 @@
           </div>
         </div>
         $endif$
-      </div>
-      $endfor$
 
     </section>
 
@@ -315,49 +298,38 @@
     <section id="publications">
       <h2>Publications</h2>
 
-      $for(publications)$
-      <div class="job-entry $if(publications.important)$highlight$endif$">
-        <div class="row">
-          <div class="offset-md-1 col-md-3">
-            <h5 class="text-muted">
-              $if(publications.inpreparation)$
-              in preparation
-              $else$
-              $publications.date$
+      <div class="accordion accordion-flush">
+        $for(publications)$
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="headingPu09">
+            <button class="accordion-button collapser $if(it.important)$$else$collapsed$endif$" type="button"
+              data-bs-toggle="collapse" $if(it.important)$ aria-expanded="true" $endif$>
+              $it.title$$if(it.pubtitle)$, in: <span class="fst-italic">$it.pubtitle$</span>$endif$
+              <span class="time text-muted small">
+                $if(it.inpreparation)$
+                in preparation
+                $else$
+                $it.date$
+                $endif$
+              </span>
+            </button>
+          </h3>
+          <div class="accordion-collapse collapse $if(it.important)$show$endif$">
+            <div class="accordion-body">
+              <h4>$it.title$</h4>
+              <h5 class="text-muted">$it.authors$</h5>
+              $if(it.pubtitle)$
+              <p class="small">In: <i>$it.pubtitle$</i></p>
               $endif$
-            </h5>
-          </div>
-          <div class="col-md-8">
-            <h3>$publications.title$</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="offset-md-4 col-md-8">
-            <h4 class="text-muted">$publications.author$</h4>
+              $if(it.link)$
+              <p class="small"><a href="$it.link$">$it.link$</a></p>
+              $endif$
+              $it.description$
+            </div>
           </div>
         </div>
-        $if(publications.pubtitle)$
-        <div class="row">
-          <div class="offset-md-4 col-md-8">
-            <p class="small">In: <i>$publications.pubtitle$</i></p>
-          </div>
-        </div>
-        $endif$
-        $if(publications.link)$
-        <div class="row">
-          <div class="offset-md-4 col-md-8">
-            <p class="small"><a href="$publications.link$">$publications.link$</a></p>
-          </div>
-        </div>
-        $endif$
-        <div class="row">
-          <div class="offset-md-1 col-md-11">
-            $publications.description$
-          </div>
-        </div>
+        $endfor$
       </div>
-      $endfor$
-
     </section>
 
 
