@@ -16,12 +16,14 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      - run: mkdir build
+      - uses: actions/checkout@v4
+      - run: |
+          mkdir build
+          cp main.js build
 
       # Runs a single command using the runners shell
       - name: Build html
-        uses: docker://pandoc/core:2.11.0.2
+        uses: docker://pandoc/core:2.17
         with:
           # Use Readme.md as dummy input file (not used in the template)
           args: >-
@@ -32,10 +34,12 @@ jobs:
             README.md
       
       - name: Upload HTML artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: html
-          path: build/cv.html
+          path: |
+            build/cv.html
+            build/main.js
 
   deploy:
     runs-on: ubuntu-latest
@@ -44,7 +48,7 @@ jobs:
     if: github.ref == 'refs/heads/master'
     steps:
       - name: Download html
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: html
           path: public
