@@ -5,7 +5,9 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, shrink-to-fit=no" />
-        <title>CV: Eddie Schoute</title>
+  <meta name="author" content="Eddie Schoute" />
+  <meta name="description" content="Curriculum Vitae Eddie Schoute">
+      <title>CV: Eddie Schoute</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -14,13 +16,38 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
   <style>
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    code {
+        white-space: pre-wrap;
+    }
+
+    span.smallcaps {
+        font-variant: small-caps;
+    }
+
+    span.underline {
+        text-decoration: underline;
+    }
+
+    div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+    }
+
+    div.hanging-indent {
+        margin-left: 1.5em;
+        text-indent: -1.5em;
+    }
+
+    ul.task-list {
+        list-style: none;
+    }
+
+    .display.math {
+        display: block;
+        text-align: center;
+        margin: 0.5rem auto;
+    }
 
     /* Add margin for static header */
     body {
@@ -28,16 +55,17 @@
     }
 
     .container-fluid {
-        max-width: 930px; /* kan desgewenst breder of smaller */
+        max-width: 930px;
+        /* kan desgewenst breder of smaller */
     }
 
     /* Anchor offset with static header */
-    section:before { 
-        display: block; 
-        content: ""; 
-        margin-top: -56px; 
-        height: 56px; 
-        visibility: hidden; 
+    section:before {
+        display: block;
+        content: "";
+        margin-top: -56px;
+        height: 56px;
+        visibility: hidden;
     }
 
     section a {
@@ -52,11 +80,15 @@
     section a:after {
         display: inline-block;
         content: "";
-        background-size: .8rem .8rem; /* bepaalt de grootte van de icon */
-        width: 1.1rem; /* geeft .3rem ruimte aan linkerkant */
-        height: .9rem; /* geeft .1rem ruimte aan de onderkant */
-        background-position: right; /* default is left top en is nodig om die .3rem ruimte links te hebben ipv rechts */
-        background-repeat: no-repeat; 
+        background-size: .8rem .8rem;
+        /* bepaalt de grootte van de icon */
+        width: 1.1rem;
+        /* geeft .3rem ruimte aan linkerkant */
+        height: .9rem;
+        /* geeft .1rem ruimte aan de onderkant */
+        background-position: right;
+        /* default is left top en is nodig om die .3rem ruimte links te hebben ipv rechts */
+        background-repeat: no-repeat;
         background-image: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='%230056b3' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/><path fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/></svg>");
     }
 
@@ -65,19 +97,20 @@
     }
 
     .accordion-body {
-        max-width: 681px; /* geeft 80 à 100 karakters per regel */
+        max-width: 681px;
+        /* geeft 80 à 100 karakters per regel */
         margin: 0 auto;
     }
 
     ul {
         /* same as bootstraps class="list-unstyled" */
-        padding-left: 0; 
+        padding-left: 0;
         list-style: none;
     }
 
     li {
         padding: .75rem 0;
-        border: 1px solid rgba(0,0,0,.125);
+        border: 1px solid rgba(0, 0, 0, .125);
         border-width: 0 0 1px;
     }
 
@@ -92,9 +125,9 @@
 
     h1 {
         /* Make sure that the title "Curriculum Vitae" still fits on one line at large width */
-        font-size: min(calc( 2rem + 3vw ), 600%);
+        font-size: min(calc(2rem + 3vw), 600%);
         font-weight: 200;
-        color: #0056b3; 
+        color: #0056b3;
         margin-bottom: 0;
     }
 
@@ -105,7 +138,7 @@
         color: #014792;
     }
 
-    section > h3 {
+    section>h3 {
         font-size: calc(1.275rem + .3vw);
         margin-top: 1.75rem;
         margin-bottom: 1rem;
@@ -115,15 +148,18 @@
         color: #014792;
     }
 
-    @media screen and (max-width: 576px){
-        section > h3 {
+    @media screen and (max-width: 576px) {
+        section>h3 {
             padding-left: 0;
         }
+
         .accordion-item {
             margin-left: -8px;
             margin-right: -8px;
         }
-        .accordion-button, .accordion-body {
+
+        .accordion-button,
+        .accordion-body {
             padding-left: 8px;
             padding-right: 8px;
         }
@@ -138,10 +174,13 @@
         display: contents;
     }
 
-    @media screen and (min-width: 450px){
-        p:not(.small), li {
+    @media screen and (min-width: 450px) {
+
+        p:not(.small),
+        li {
             line-height: 1.75rem;
         }
+
         p:not(.small) {
             margin-bottom: 1.75rem;
         }
@@ -152,7 +191,10 @@
         margin-top: -0.5rem;
     }
 
-    p:last-child, ul, ol, h5:last-child {
+    p:last-child,
+    ul,
+    ol,
+    h5:last-child {
         margin-bottom: 0;
     }
 
@@ -166,7 +208,7 @@
     }
 
     .search {
-       margin-left: auto;
+        margin-left: auto;
     }
 
     .expand {
@@ -183,15 +225,14 @@
 
     footer {
         margin-top: 2.5rem;
-    }
-  </style>
+    }  </style>
       </head>
 
 <body class="bg-light">
     <header>
     <nav class="navbar fixed-top navbar-expand-lg bg-white">
       <div class="container-xl">
-        <a class="navbar-brand" href="#">Eddie Schoute</a>
+        <a class="navbar-brand" href="https://eddieschoute.github.io">Eddie Schoute</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -1218,7 +1259,8 @@ routing, in: <span class="fst-italic">PRX Quantum</span>
           <div class="accordion-collapse collapse ">
             <div class="accordion-body">
               <h4>Advantages and limitations of quantum routing</h4>
-              <h5 class="text-muted"></h5>
+              <h5 class="text-muted">Aniruddha Bapat, Alexey V.
+Gorshkov, Andrew M. Childs, and Eddie Schoute</h5>
                             <p class="small">In: <i>PRX Quantum</i></p>
                                           <p class="small"><a href="https://doi.org/10.1103/PRXQuantum.4.010313">https://doi.org/10.1103/PRXQuantum.4.010313</a></p>
                             <p>The Swap gate is a ubiquitous tool for
@@ -1263,7 +1305,8 @@ routing, in: <span class="fst-italic">PRX Quantum</span>
           <div class="accordion-collapse collapse ">
             <div class="accordion-body">
               <h4>Quantum Routing with Teleportation</h4>
-              <h5 class="text-muted"></h5>
+              <h5 class="text-muted">Dhruv Devulapalli, Eddie Schoute,
+Aniruddha Bapat, Andrew M. Childs, Alexey V. Gorshkov</h5>
                                           <p class="small"><a href="https://arxiv.org/abs/2204.04185">https://arxiv.org/abs/2204.04185</a></p>
                             <p>We study the problem of implementing
                             arbitrary permutations of qubits under
@@ -1301,7 +1344,8 @@ paths, in: <span class="fst-italic">PRX Quantum</span>
           <div class="accordion-collapse collapse show">
             <div class="accordion-body">
               <h4>Surface code compilation via edge-disjoint paths</h4>
-              <h5 class="text-muted"></h5>
+              <h5 class="text-muted">Michael Beverland, Vadym
+Kliuchnikov, and Eddie Schoute</h5>
                             <p class="small">In: <i>PRX Quantum</i></p>
                                           <p class="small"><a href="https://doi.org/10.1103/PRXQuantum.3.020342">https://doi.org/10.1103/PRXQuantum.3.020342</a></p>
                             <p>We provide an efficient algorithm to
@@ -1353,7 +1397,8 @@ href="https://quantum-journal.org/">Quantum</a></span>
           <div class="accordion-collapse collapse ">
             <div class="accordion-body">
               <h4>Quantum routing with fast reversals</h4>
-              <h5 class="text-muted"></h5>
+              <h5 class="text-muted">Aniruddha Bapat, Andrew M. Childs,
+Alexey V. Gorshkov, Samuel King, Eddie Schoute, Hrishee Shastri</h5>
                             <p class="small">In: <i><a
 href="https://quantum-journal.org/">Quantum</a></i></p>
                                           <p class="small"><a href="https://doi.org/10.22331/q-2021-08-31-533">https://doi.org/10.22331/q-2021-08-31-533</a></p>
@@ -1401,7 +1446,8 @@ chain, in: <span class="fst-italic">Physical Review Research</span>
             <div class="accordion-body">
               <h4>Nearly optimal time-independent state reversal of a
 spin chain</h4>
-              <h5 class="text-muted"></h5>
+              <h5 class="text-muted">Aniruddha Bapat, Eddie Schoute,
+Alexey V. Gorshkov, and Andrew M. Childs</h5>
                             <p class="small">In: <i>Physical Review
 Research</i></p>
                                           <p class="small"><a href="https://doi.org/10.1103/PhysRevResearch.4.L012023">https://doi.org/10.1103/PhysRevResearch.4.L012023</a></p>
@@ -1453,7 +1499,8 @@ Theory of Quantum Computation, Communication and Cryptography (TQC
           <div class="accordion-collapse collapse ">
             <div class="accordion-body">
               <h4>Circuit Transformations for Quantum Architectures</h4>
-              <h5 class="text-muted"></h5>
+              <h5 class="text-muted">Andrew M. Childs, Eddie Schoute,
+and Cem M. Unsal</h5>
                             <p class="small">In: <i>14th Conference on
 the Theory of Quantum Computation, Communication and Cryptography (TQC
 2019)</i></p>
@@ -1503,7 +1550,8 @@ the Theory of Quantum Computation, Communication and Cryptography (TQC
           <div class="accordion-collapse collapse ">
             <div class="accordion-body">
               <h4>Shortcuts to quantum network routing</h4>
-              <h5 class="text-muted"></h5>
+              <h5 class="text-muted">E. Schoute, L. Mančinska, T. Islam,
+I. Kerenidis, and S. Wehner</h5>
                                           <p class="small"><a href="https://arxiv.org/abs/1610.05238">https://arxiv.org/abs/1610.05238</a></p>
                             <p>A quantum network promises to enable long
                             distance quantum communication, and assemble
@@ -1558,7 +1606,7 @@ the Theory of Quantum Computation, Communication and Cryptography (TQC
           <div class="accordion-collapse collapse ">
             <div class="accordion-body">
               <h4>Shortcuts to Quantum Network Routing</h4>
-              <h5 class="text-muted"></h5>
+              <h5 class="text-muted">E. Schoute</h5>
                                           <p class="small"><a href="http://resolver.tudelft.nl/uuid:684bb201-64a2-461d-b603-1f47590a1341">http://resolver.tudelft.nl/uuid:684bb201-64a2-461d-b603-1f47590a1341</a></p>
                             <p>Master’s thesis.</p>
             </div>
@@ -1579,7 +1627,8 @@ DWARV C-to-VHDL Compiler
             <div class="accordion-body">
               <h4>Systematic Testing of Hardware Compilers: Testing the
 DWARV C-to-VHDL Compiler</h4>
-              <h5 class="text-muted"></h5>
+              <h5 class="text-muted">A. J. Rouvoet, E. Schoute, and A.
+B. Booij</h5>
                                           <p>Bachelor’s thesis.</p>
             </div>
           </div>
