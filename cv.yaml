@@ -1,20 +1,19 @@
 name: Eddie Schoute
 lang: en
-jobtitle: Quantum Algorithms Researcher
+jobtitle: Quantum Algorithms and Compilation Researcher
 summary: |
   Computer scientist with 7+ years of experience quantum computing,
   resulting in 5 publications in leading journals.
   Established track record of successfully communicating scientific concepts to both professionals and non-specialists,
   and a strong history of mentoring---leading teams of graduate and undergraduate researchers to complete 3 projects resulting in 2 additional publications.
   Demonstrated broad expertise in software engineering using numerous software languages (including Python, Julia, Scala, C, and Rust).
-  Expertise in marketable quantum computing applications has results in 3 patents pending.
+  Expertise in marketable quantum computing applications has resulted in 3 patents pending.
 skills:
   - One
   - Two
   - Three
   - Four
   - Five
-  - Six
 education:
   - title: PhD, Computer Science
     university: '[QuICS](https://quics.umd.edu/)'
@@ -188,6 +187,9 @@ awards:
 talks:
   - category: Invited
     entries:
+      - title: Advantages and limitations of quantum routing
+        venue: JPMorgan Chase Applied Research
+        date: 2023
       - title: Surface code compilation via edge-disjoint paths
         venue: '[APS March Meeting](https://march.aps.org)'
         date: 2023
@@ -264,9 +266,9 @@ patents:
 
   - title: Edge-disjoint paths for long-range multi-qubit operations in quantum circuit
     inventors: V. Kliuchnikov, E. Schoute, A. Vaschillo, D. Vasilevsky, M. Beverland
-    date: 2022/5/12
-    id: US Patent App.\ 17/096,313
-    link: https://patents.google.com/patent/US20220147856A1/en
+    date: 2023/8/22
+    id: US Patent 11,734,596
+    link: https://patents.google.com/patent/US11734596B2/en
     description: >
       A method for performing long-range multi-qubit measurements in a quantum circuit utilizes a graph that maps qubits of the quantum circuit to nodes that are connected to one another by edges. The method provides for identifying sets of the nodes on the graph corresponding to sets of qubits targeted by multi-qubit operations in a quantum algorithm and for defining a group of edge-disjoint paths connecting the nodes of each set. The group of edge-disjoint paths is defined such that no two of the paths in the group share an edge. The method further provides for performing a set of operations to entangle the qubits corresponding to the to the identified set of nodes that are included in each path in the group and for performing the set of multi-qubit operations on the entangled sets of the qubits.
 
