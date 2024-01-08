@@ -93,9 +93,12 @@ $endif$
 
 \makeatletter
   \renewcommand\maketitle{
-    {\noindent\Large\sffamily\bfseries \@author, PhD\\
-		\large\normalfont\itshape $jobtitle$}
-  }
+		{%
+			\noindent {\Large\sffamily\bfseries \@author, PhD}\\
+			{\large\normalfont\itshape $jobtitle$}\\
+			{\normalsize\sffamily\upshape \href{https://eddieschoute.github.io}{eddieschoute.github.io}}
+		}
+	}
 \makeatother
 
 \usepackage{fancyhdr}
