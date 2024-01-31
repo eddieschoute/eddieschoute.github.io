@@ -285,7 +285,9 @@ Alamos National Laboratory</a></h5>
                             <p class="small">Los Alamos, NM, USA</p>
                                           <p>
                 <p>Research quantum algorithms under the supervision of
-                Yigit Subasi.</p>
+                Yiğit Subaşı. Evaluate fault-tolerant architecture
+                proposals for determining utility of quantum computer
+                proposals (US2QC).</p>
               </p>
                           </div>
           </div>
@@ -310,12 +312,12 @@ href="https://www.microsoft.com">Microsoft Research</a></h5>
                             <p class="small">Redmond (virtual), WA,
 USA</p>
                                           <p>
-                <p>Researched algorithms for executing circuits on
-                quantum hardware. Used native operations to better use
-                the hardware capabilities. Implemented proof of concept
-                in Julia language that shows a 5x speed-up over
-                state-of-the-art. Work performed with Vadym Kliuchnikov,
-                Alexander Vaschillo, and Dmitry Vasilevsky.</p>
+                <p>Found algorithms for compilation surface code
+                compilation gate set, with provable speed-ups and lower
+                bounds. Implemented proof of concept in Julia language
+                that shows a 5x speed-up over state-of-the-art. Work
+                performed with Vadym Kliuchnikov, Alexander Vaschillo,
+                and Dmitry Vasilevsky.</p>
               </p>
                           </div>
           </div>
@@ -465,19 +467,21 @@ href="https://quics.umd.edu/">QuICS</a></h5>
 Computer Science, University of Maryland, College Park, USA</p>
                             <p>
                 <ul>
-                <li>Thesis topic: Transforming quantum circuits for
-                quantum architectures with limited connectivity under
-                supervision of prof. Andrew Childs. I have contributed
-                efficient algorithms and bounds for routing qubits.</li>
-                <li>Co-supervised undergraduate students Sam DeCoster,
-                Nicole Dong, and Mason Wittman in NSF research
-                experience for undergraduates (REU) program (2021).</li>
-                <li>Co-supervised undergraduate students Sam King and
-                Hrishee Shahstri in REU program (2020) until paper
-                completion.</li>
-                <li>Informally co-supervised Cem Unsal during the
-                “Circuit Transformations for Quantum Architecture”
-                project.</li>
+                <li>Researched algorithm for compiling quantum circuits
+                to respect architecture constraints under supervision of
+                prof. Andrew Childs. Contributed:
+                <ul>
+                <li>Algorithmic analysis of swap-based routing.</li>
+                <li>Routing algorithms for Hamiltonian routing.</li>
+                <li>Compilation to native gate sets of fault-tolerant
+                architectures.</li>
+                </ul></li>
+                <li>Co-supervised undergraduate students in NSF research
+                experience for undergraduates (REU): Sam DeCoster,
+                Nicole Dong, and Mason Wittman (2021); Sam King and
+                Hrishee Shahstri (2020).</li>
+                <li>Informally co-supervised Cem Unsal for “Circuit
+                Transformations […]” project.</li>
                 <li>Worked on quantum algorithms and quantum
                 cryptography under supervision of Yi-Kai Liu.</li>
                 </ul>
@@ -1147,6 +1151,47 @@ href="https://www.tqcconference.org/">TQC 2019</a></h5>
           <h3 class="accordion-header">
             <button class="accordion-button collapser collapsed" type="button"
               data-bs-toggle="collapse" >
+              Edge-disjoint paths for long-range multi-qubit operations
+              in quantum circuit
+              <span class="time text-muted small">2023/8/22</span>
+            </button>
+          </h3>
+          <div class="accordion-collapse collapse ">
+            <div class="accordion-body">
+              <h4>Edge-disjoint paths for long-range multi-qubit
+operations in quantum circuit</h4>
+              <h5 class="text-muted">V. Kliuchnikov, E. Schoute, A.
+Vaschillo, D. Vasilevsky, M. Beverland
+              </h5>
+              <p class="small">US Patent 11,734,596</p>
+                            <p class="small"><a href="https://patents.google.com/patent/US11734596B2/en">https://patents.google.com/patent/US11734596B2/en</a></p>
+                            <p>A method for performing long-range
+                            multi-qubit measurements in a quantum
+                            circuit utilizes a graph that maps qubits of
+                            the quantum circuit to nodes that are
+                            connected to one another by edges. The
+                            method provides for identifying sets of the
+                            nodes on the graph corresponding to sets of
+                            qubits targeted by multi-qubit operations in
+                            a quantum algorithm and for defining a group
+                            of edge-disjoint paths connecting the nodes
+                            of each set. The group of edge-disjoint
+                            paths is defined such that no two of the
+                            paths in the group share an edge. The method
+                            further provides for performing a set of
+                            operations to entangle the qubits
+                            corresponding to the to the identified set
+                            of nodes that are included in each path in
+                            the group and for performing the set of
+                            multi-qubit operations on the entangled sets
+                            of the qubits.</p>
+            </div>
+          </div>
+        </div>
+                <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapser collapsed" type="button"
+              data-bs-toggle="collapse" >
               Quantum Routing with Fast Reversals
               <span class="time text-muted small">2023</span>
             </button>
@@ -1192,47 +1237,6 @@ Gorshkov, A.M. Childs
                             to a final state for an evolution period to
                             perform state reversal on the quantum spin
                             chain.</p>
-            </div>
-          </div>
-        </div>
-                <div class="accordion-item">
-          <h3 class="accordion-header">
-            <button class="accordion-button collapser collapsed" type="button"
-              data-bs-toggle="collapse" >
-              Edge-disjoint paths for long-range multi-qubit operations
-              in quantum circuit
-              <span class="time text-muted small">2023/8/22</span>
-            </button>
-          </h3>
-          <div class="accordion-collapse collapse ">
-            <div class="accordion-body">
-              <h4>Edge-disjoint paths for long-range multi-qubit
-operations in quantum circuit</h4>
-              <h5 class="text-muted">V. Kliuchnikov, E. Schoute, A.
-Vaschillo, D. Vasilevsky, M. Beverland
-              </h5>
-              <p class="small">US Patent 11,734,596</p>
-                            <p class="small"><a href="https://patents.google.com/patent/US11734596B2/en">https://patents.google.com/patent/US11734596B2/en</a></p>
-                            <p>A method for performing long-range
-                            multi-qubit measurements in a quantum
-                            circuit utilizes a graph that maps qubits of
-                            the quantum circuit to nodes that are
-                            connected to one another by edges. The
-                            method provides for identifying sets of the
-                            nodes on the graph corresponding to sets of
-                            qubits targeted by multi-qubit operations in
-                            a quantum algorithm and for defining a group
-                            of edge-disjoint paths connecting the nodes
-                            of each set. The group of edge-disjoint
-                            paths is defined such that no two of the
-                            paths in the group share an edge. The method
-                            further provides for performing a set of
-                            operations to entangle the qubits
-                            corresponding to the to the identified set
-                            of nodes that are included in each path in
-                            the group and for performing the set of
-                            multi-qubit operations on the entangled sets
-                            of the qubits.</p>
             </div>
           </div>
         </div>
