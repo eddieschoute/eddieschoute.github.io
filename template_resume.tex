@@ -18,9 +18,17 @@
 \usepackage[sf,compact,raggedright]{titlesec}
 % \titlespacing{\section}{0pt}{0.75em}{0.4em}
 
-\titleclass{\jobtitle}{straight}[\paragraph]
-\titleformat{\jobtitle}[hang]{\sffamily\normalsize}{\theparagraph}{}{}
-\titlespacing*{\jobtitle}{0pt}{\parskip}{0em}
+%\titleclass{\cvtitle}{straight}[\paragraph]
+%\titleformat{\cvtitle}[hang]{\sffamily\normalsize}{\theparagraph}{}{}
+%\titlespacing*{\cvtitle}{0pt}{\parskip}{0em}
+
+\titleclass{\cvtitle}{straight}[\paragraph]
+\titleformat{\cvtitle}[hang]{\sffamily\normalsize}{\theparagraph}{}{}
+\titlespacing*{\cvtitle}{0pt}{*1}{0pt}
+\makeatletter
+\def\toclevel@cvtitle{5}
+\makeatother
+\titlespacing{\subsection}{0pt}{*2}{*1}
 
 \usepackage{multicol}
 
@@ -107,7 +115,9 @@ $endif$
 
 \section{Executive Summary}
 \noindent $summary$
-\paragraph{Skills} \begin{multicols}{3}
+\subsection*{Skills}
+\vspace{-10pt}
+\begin{multicols}{3}
 	\begin{itemize}
 		$for(skills)$
 		\item $skills$
@@ -118,56 +128,85 @@ $endif$
 
 \section*{Experience}
 $for(experience)$
-\jobtitle{$experience.title$ ($experience.company$) \hfill $experience.date$}
-$experience.description$
+\subsection{$experience.category$}
+$for(experience.entries)$
+$if(it.hide)$
+$else$
+\cvtitle{$if(it.role)$$it.role$$else$$it.title$$endif$ ($it.company$) \hfill $it.date$}
+$if(it.summarize)$
+$else$
+$it.description$
+$endif$
+$endif$
+$endfor$
 $endfor$
 
 \section*{Education}
 $for(education)$
-\jobtitle{$education.title$ ($education.university$)
-$if(education.honors)$
-, \emph{$education.honors$}
+\cvtitle{$if(it.role)$$it.role$$else$$it.title$$endif$ ($it.university$)
+$if(it.honors)$
+, \emph{$it.honors$}
 $endif$
-\hfill $education.date$}
+\hfill $it.date$}
+$if(it.summarize)$
+$else$
+$it.description$
+$endif$
 $endfor$
 
 \section*{Service}
 $for(service)$
-\jobtitle{$service.title$ \hfill $service.date$}
-$service.description$
+$if(it.hide)$
+$else$
+\cvtitle{$service.title$ ($service.venue$) \hfill $service.date$}
+$endif$
 $endfor$
 
 \section*{Awards}
 $for(awards)$
-\jobtitle{$awards.title$ \hfill $awards.date$}
-$awards.description$
+$if(it.hide)$
+$else$
+	\cvtitle{$awards.title$ \hfill $awards.date$}
+	$if(it.summarize)$
+	$else$
+	$awards.description$
+	$endif$
+$endif$
 $endfor$
 
-\section*{Talks}
+\section*{Selected Publications}
+\subsection*{Talks}
 \begin{enumerate}
 $for(talks)$
 $for(talks.entries)$
+$if(it.selected)$
 \item ``\href{$it.link$}{$it.title$}''. $it.venue$ ($it.date$).
+$endif$
 $endfor$
 $endfor$
 \end{enumerate}
 
-\section*{Patents and Patent Applications}
+\subsection*{Papers}
 \begin{enumerate}
-$for(patents)$
-\item ``$patents.title$''. $patents.inventors$$if(patents.date)$ ($patents.date$)$endif$.
-$if(patents.id)$
-$patents.id$.
+$for(publications)$
+$if(it.selected)$
+\item ``\href{$publications.link$}{$publications.title$}''. $publications.author$$if(publications.pubtitle)$. In: \emph{$publications.pubtitle$}$endif$$if(publications.date)$ ($publications.date$)$endif$.
+$if(publications.inpreparation)$
+In preparation.
+$endif$
 $endif$
 $endfor$
 \end{enumerate}
 
-\section*{Publications}
+\subsection*{Patents and Patent Applications}
 \begin{enumerate}
-$for(publications)$
-\item ``\href{$publications.link$}{$publications.title$}''. $publications.author$$if(publications.pubtitle)$. In: \emph{$publications.pubtitle$}$endif$$if(publications.date)$ ($publications.date$)$endif$.
-$if(publications.inpreparation)$
-In preparation.
+$for(patents)$
+$if(it.hide)$
+$else$
+	\item ``$patents.title$''. $patents.inventors$$if(patents.date)$ ($patents.date$)$endif$.
+	$if(patents.id)$
+	$patents.id$.
+	$endif$
 $endif$
 $endfor$
 \end{enumerate}

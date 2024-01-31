@@ -2,36 +2,36 @@ name: Eddie Schoute
 lang: en
 jobtitle: Quantum Algorithms and Compilation Researcher
 summary: |
-  Computer scientist with 7+ years of experience quantum computing,
-  resulting in 5 publications in leading journals.
-  Established track record of successfully communicating scientific concepts to both professionals and non-specialists,
-  and a strong history of mentoring---leading teams of graduate and undergraduate researchers to complete 3 projects resulting in 2 additional publications.
-  Demonstrated broad expertise in software engineering using numerous software languages (including Python, Julia, Scala, C, and Rust).
-  Expertise in marketable quantum computing applications has resulted in 3 patents pending.
+  Computer scientist with 8+ years of experience in quantum computing and information systems, resulting in 5 publications in leading journals. Established track record of successfully communicating scientific concepts to both professionals and non-specialists, and a strong history of mentoring—leading teams of graduate and undergraduate researchers to successfully complete 3 projects, resulting in 2 additional publications. Demonstrated broad expertise in software engineering using numerous software languages (including Python, Julia, Scala, and C). Expertise in marketable quantum computing applications has resulted in 3 patents pending.
 skills:
-  - One
-  - Two
-  - Three
-  - Four
-  - Five
+  - Surface code compilation
+  - Qubit routing
+  - Quantum algorithms
+  - Scientific research
+  - Software engineering
+  - Technical communication
 education:
   - title: PhD, Computer Science
+    role: PhD, Computer Science, on Circuit Transformations for Quantum Architectures
     university: '[QuICS](https://quics.umd.edu/)'
     important: true
     date: 2021
     location: Joint Center for Quantum Information and Computer Science, University of Maryland, College Park, USA
     description: |
-      * Thesis topic: Transforming quantum circuits for quantum architectures with limited connectivity
-          under supervision of prof.\ Andrew Childs.
-          I have contributed efficient algorithms and bounds for routing qubits.
-      * Co-supervised undergraduate students Sam DeCoster, Nicole Dong, and Mason Wittman in NSF research experience for undergraduates (REU) program (2021).
-      * Co-supervised undergraduate students Sam King and Hrishee Shahstri in REU program (2020) until paper completion.
-      * Informally co-supervised Cem Unsal during the “Circuit Transformations for Quantum Architecture” project.
+      * Researched algorithm for compiling quantum circuits to respect architecture constraints under supervision of prof.\ Andrew Childs.
+        Contributed: 
+          * Algorithmic analysis of swap-based routing.
+          * Routing algorithms for Hamiltonian routing.
+          * Compilation to native gate sets of fault-tolerant architectures.
+      * Co-supervised undergraduate students in NSF research experience for undergraduates (REU):
+            Sam DeCoster, Nicole Dong, and Mason Wittman (2021); Sam King and Hrishee Shahstri (2020).
+      * Informally co-supervised Cem Unsal for “Circuit Transformations [...]” project.
       * Worked on quantum algorithms and quantum cryptography under supervision of Yi-Kai Liu.
   - title: Master of Science, Computer Science
     university: '[TU Delft](https://www.tudelft.nl)'
     date: 2015
     location: Delft, The Netherlands
+    summarize: true
     description: >
       Specialization _Software Technology_, with a focus on (distributed) algorithms and networks. Master's thesis on routing for quantum networks under supervision of Stephanie Wehner at QuTech.
 
@@ -40,6 +40,7 @@ education:
     university: '[TU Delft](https://www.tudelft.nl)'
     date: 2015
     location: Delft, The Netherlands
+    summarize: true
     description: >
       I constructed a proof of concept fiber-optic cable tap for less than €30. I also worked on software acceleration using vectorization (SSE), parallelization (Pthreads, OpenMP), GPGPU programming (CUDA), and DSPs.
 
@@ -49,32 +50,41 @@ education:
     date: 2013
     location: Delft, The Netherlands
     honors: "Magna cum laude"
+    summarize: true
   - title: Bachelor of Science, Electrical Engineering
     university: '[TU Delft](https://www.tudelft.nl)'
     date: 2013
     location: Delft, The Netherlands
     honors: "Magna cum laude"
+    summarize: true
 experience:
   - category: Full time
     entries:
       - title: Postdoctoral research associate
+        role: Quantum Algorithms Scientist
         company: '[Los Alamos National Laboratory](https://www.lanl.gov/)'
         date: 2022--present
         location: Los Alamos, NM, USA
         important: true
         description: >
-          Research quantum algorithms under the supervision of Yigit Subasi.
+          Research quantum algorithms under the supervision of Yiğit Subaşı.
+          Evaluate fault-tolerant architecture proposals for determining utility of quantum computer proposals (US2QC).
+
   - category: Internships & others
     entries:
       - title: Research Summer Internship
+        role: Quantum Compiler Researcher for Surface Codes
         company: '[Microsoft Research](https://www.microsoft.com)'
         date: Summer 2020
         location: Redmond (virtual), WA, USA
         important: true
         description: >
-          Researched algorithms for executing circuits on quantum hardware. Used native operations to better use the hardware capabilities. Implemented proof of concept in Julia language that shows a 5x speed-up over state-of-the-art. Work performed with Vadym Kliuchnikov, Alexander Vaschillo, and Dmitry Vasilevsky.
+          Found algorithms for compilation surface code compilation gate set, with provable speed-ups and lower bounds.
+          Implemented proof of concept in Julia language that shows a 5x speed-up over state-of-the-art.
+          Work performed with Vadym Kliuchnikov, Alexander Vaschillo, and Dmitry Vasilevsky.
 
       - title: Summer Intern
+        role: Quantum Computing Researcher on Quantum Chemistry
         company: '[IBM](https://www.ibm.com)'
         date: Summer 2019
         location: Yorktown Heights, NY, USA
@@ -85,6 +95,7 @@ experience:
         company: '[Owlin](https://www.owlin.com/)'
         date: Spring 2016
         location: Amsterdam, The Netherlands
+        summarize: true
         description: >
           Developed and deployed 7 APIs in 3 months using Node.js, RethinkDB and ElasticSearch. Provided interactive website interface and documentation for the APIs using OpenAPI.
 
@@ -92,6 +103,7 @@ experience:
         company: '[QuTech](https://qutech.nl/)'
         date: Winter 2015
         location: Delft, The Netherlands
+        summarize: true
         description: >
           Worked with Stephanie Wehner to publish my thesis work as paper. Programmed and performed simulations in Scala on a multi-core server.
 
@@ -101,6 +113,8 @@ experience:
         company: '[Waag](https://waag.org)'
         date: 2013
         location: Amsterdam, The Netherlands
+        summarize: true
+        hide: true
         description: >
           Constructed a recommender system for arts tourism in the Netherlands using a semantic database.
 
@@ -108,6 +122,8 @@ experience:
         company: '[TU Delft](https://www.tudelft.nl)'
         date: 2012--2015
         location: Delft, The Netherlands
+        summarize: true
+        hide: true
         description: |
           * Assisted and graded one year of masters students in the fourth year Advanced Algorithms course.
           * Assisted and graded two years of bachelors students in the second year Algorithms course.
@@ -139,6 +155,7 @@ service:
   - title: Assistant Seminar Organizer
     venue: '[QuICS-JQI-CMTC Seminars](https://quics.umd.edu/)'
     date: 2019--2020
+    hide: true
     description: >
       Assisted with organizing seminar series by organizing food and making healthier options available.
 
@@ -146,6 +163,7 @@ service:
     venue: '[TQC 2019 and NISQ workshop](https://www.tqcconference.org/)'
     location: 14th Conference on the Theory of Quantum Compilation, Communication and Cryptography
     date: 2019
+    hide: true
     description: >
       Helped with finding the appropriate hardware and assisted with the live streaming of TQC and NISQ workshop.
 
@@ -167,6 +185,8 @@ awards:
     grantor: '[QuICS](https://quics.umd.edu)'
     location: Joint Center for Quantum Information and Computer Science, College Park, MD
     date: 2016--2018
+    summarize: true
+    hide: true
     description: >
       Covers tuition, stipend and an additional $5000/yr. Three fellowships were awarded.
 
@@ -174,6 +194,8 @@ awards:
     grantor: '[University of Maryland Graduate School](https://gradschool.umd.edu/)'
     location: University of Maryland, College Park
     date: 2016--2018
+    summarize: true
+    hide: true
     description: >
       An award of $2500 yearly.
 
@@ -181,6 +203,8 @@ awards:
     grantor: '[University of Maryland Graduate School](https://gradschool.umd.edu)'
     location: University of Maryland, College Park
     date: 2017
+    summarize: true
+    hide: true
     description: >
       Covers $500 for travel to a conference.
 
@@ -194,10 +218,12 @@ talks:
         venue: '[APS March Meeting](https://march.aps.org)'
         date: 2023
         important: true
+        selected: true
         link: https://march.aps.org/sessions/F69/5
       - title: Surface code compilation via edge-disjoint paths
         venue: Microsoft Quantum Research
         date: 2023
+        selected: true
       - title: Surface code compilation via edge-disjoint paths
         venue: David Gosset group
         date: 2022
@@ -208,6 +234,7 @@ talks:
         venue: Qiskit Camp
         date: 2019
         link: https://www.youtube.com/watch?v=Raw6AYil79Q
+        selected: true
   - category: Contributed
     entries:
       - title: Advantages and limitations of quantum routing
@@ -218,6 +245,7 @@ talks:
         venue: '[TQC 2022](https://tqc2022-conference.iquist.illinois.edu/)'
         date: 2022
         important: true
+        selected: true
         link: https://youtu.be/nWm2LKr_Nzk?t=4014
       - title: Surface code compilation via edge-disjoint paths
         venue: '[QCTIP 2022](http://www.qctip.org/)'
@@ -227,10 +255,12 @@ talks:
         venue: '[PLanQC 2021](https://pldi21.sigplan.org/home/planqc-2021)'
         date: 2021
         link: https://www.youtube.com/watch?v=e-1rk_QFiCg
+        selected: true
       - title: Circuit Transformations for Quantum Architectures
         venue: '[TQC 2019](https://www.tqcconference.org/)'
         date: 2019
         link: https://www.youtube.com/watch?v=h7vc5lELd3E
+        selected: true
   - category: Poster
     entries:
       - title: Surface code compilation via edge-disjoint paths
@@ -252,9 +282,17 @@ talks:
         venue: QCrypt 2016
         date: 2016
 patents:
+  - title: Edge-disjoint paths for long-range multi-qubit operations in quantum circuit
+    inventors: V. Kliuchnikov, E. Schoute, A. Vaschillo, D. Vasilevsky, M. Beverland
+    date: 2023/8/22
+    id: US Patent 11,734,596
+    link: https://patents.google.com/patent/US11734596B2/en
+    description: >
+      A method for performing long-range multi-qubit measurements in a quantum circuit utilizes a graph that maps qubits of the quantum circuit to nodes that are connected to one another by edges. The method provides for identifying sets of the nodes on the graph corresponding to sets of qubits targeted by multi-qubit operations in a quantum algorithm and for defining a group of edge-disjoint paths connecting the nodes of each set. The group of edge-disjoint paths is defined such that no two of the paths in the group share an edge. The method further provides for performing a set of operations to entangle the qubits corresponding to the to the identified set of nodes that are included in each path in the group and for performing the set of multi-qubit operations on the entangled sets of the qubits.
   - title: Quantum Routing with Fast Reversals
     inventors: S. King, H. Shastri, A. Bapat, E. Schoute, A.V. Gorshkov, A.M. Childs
     date: 2023
+    hide: true
     id: US Patent App.\ 18/178,491
   - title: Performing state reversal on a quantum spin chain
     inventors: A. Bapat, E. Schoute, A.V. Gorshkov, A.M. Childs
@@ -264,13 +302,6 @@ patents:
     description: >
       Performing state reversal on a quantum spin chain includes: providing qubits in a quantum spin chain in an input state, such that the quantum spin chain includes: first and second terminal qubits and one or more intermediate qubits, such that: the qubits have a transverse field strength; the first and terminal qubits a longitudinal field strength; and nearest neighbor qubit pair has an Ising coupling strength; and evolving the quantum spin chain from the input state to a final state for an evolution period to perform state reversal on the quantum spin chain.
 
-  - title: Edge-disjoint paths for long-range multi-qubit operations in quantum circuit
-    inventors: V. Kliuchnikov, E. Schoute, A. Vaschillo, D. Vasilevsky, M. Beverland
-    date: 2023/8/22
-    id: US Patent 11,734,596
-    link: https://patents.google.com/patent/US11734596B2/en
-    description: >
-      A method for performing long-range multi-qubit measurements in a quantum circuit utilizes a graph that maps qubits of the quantum circuit to nodes that are connected to one another by edges. The method provides for identifying sets of the nodes on the graph corresponding to sets of qubits targeted by multi-qubit operations in a quantum algorithm and for defining a group of edge-disjoint paths connecting the nodes of each set. The group of edge-disjoint paths is defined such that no two of the paths in the group share an edge. The method further provides for performing a set of operations to entangle the qubits corresponding to the to the identified set of nodes that are included in each path in the group and for performing the set of multi-qubit operations on the entangled sets of the qubits.
 
 publications:
   - title: Advantages and limitations of quantum routing
@@ -281,11 +312,13 @@ publications:
     pages: p. 010313
     link: https://doi.org/10.1103/PRXQuantum.4.010313
     author: Aniruddha Bapat, Alexey V. Gorshkov, Andrew M. Childs, and Eddie Schoute
+    selected: true
     description: "The Swap gate is a ubiquitous tool for moving information on quantum hardware, yet it can be considered a classical operation because it does not entangle product states. Genuinely quantum operations could outperform Swap for the task of permuting qubits within an architecture, which we call routing. We consider quantum routing in two models: (1) allowing arbitrary two-qubit unitaries, or (2) allowing Hamiltonians with norm-bounded interactions. We lower bound the circuit depth or time of quantum routing in terms of spectral properties of graphs representing the architecture interaction constraints, and give a generalized upper bound for all simple connected n-vertex graphs. In particular, we give conditions for a superpolynomial classical-quantum routing separation, which exclude graphs with a small spectral gap and graphs of bounded degree. Finally, we provide examples of a quadratic separation between gate-based and Hamiltonian routing models with a constant number of local ancillas per qubit and of an Omega(n) speedup if we also allow fast local interactions. \n"
   - title: Quantum Routing with Teleportation
     author: Dhruv Devulapalli, Eddie Schoute, Aniruddha Bapat, Andrew M. Childs, Alexey V. Gorshkov
     date: 2022
     link: https://arxiv.org/abs/2204.04185
+    selected: true
     description: >
       We study the problem of implementing arbitrary permutations of qubits under interaction constraints in quantum systems that allow for arbitrarily fast local operations and classical communication (LOCC). In particular, we show examples of speedups over swap-based and more general unitary routing methods by distributing entanglement and using LOCC to perform quantum teleportation. We further describe an example of an interaction graph for which teleportation gives a logarithmic speedup in the worst-case routing time over swap-based routing. We also study limits on the speedup afforded by quantum teleportation - showing an O(sqrt(NlogN)) upper bound on the separation in routing time for any interaction graph - and give tighter bounds for some common classes of graphs.
 
@@ -298,6 +331,7 @@ publications:
     link: https://doi.org/10.1103/PRXQuantum.3.020342
     important: true
     author: Michael Beverland, Vadym Kliuchnikov, and Eddie Schoute
+    selected: true
     description: "We provide an efficient algorithm to compile quantum circuits for fault-tolerant execution. We target surface codes, which form a 2D grid of logical qubits with nearest-neighbor logical operations. Embedding an input circuit's qubits in surface codes can result in long-range two-qubit operations across the grid. We show how to prepare many long-range Bell pairs on qubits connected by edge-disjoint paths of ancillas in constant depth which can be used to perform these long-range operations. This forms one core part of our Edge-Disjoint Paths Compilation (EDPC) algorithm, by easily performing parallel long-range Clifford operations in constant depth. It also allows us to establish a connection between surface code compilation and several well-studied edge-disjoint paths problems. Similar techniques allow us to perform non-Clifford single-qubit rotations far from magic state distillation factories. In this case, we can easily find the maximum set of paths by a max-flow reduction, which forms the other major part of our EDPC algorithm. We compare EDPC to other compilation approaches including a SWAP-based algorithm, and find significantly improved performance for circuits built from parallel CNOTs, and for circuits which implement the multi-controlled X gate. \n"
   - title: Quantum routing with fast reversals
     author: Aniruddha Bapat, Andrew M. Childs, Alexey V. Gorshkov, Samuel King, Eddie Schoute, Hrishee Shastri
@@ -306,6 +340,7 @@ publications:
     page: p. 533
     link: https://doi.org/10.22331/q-2021-08-31-533
     date: 2021
+    selected: true
     description: "NSF research for undergraduates (REU) work that I co-supervised.\n\nWe present methods for implementing arbitrary permutations of qubits under interaction constraints.\nOur protocols make use of previous methods for rapidly reversing the order of qubits along a path.\nGiven nearest-neighbor interactions on a path of length n, we show that there exists a constant ϵ≈0.034 such that the quantum routing time is at most (1−ϵ)n, whereas any swap-based protocol needs at least time n−1.\nThis represents the first known quantum advantage over swap-based routing methods and also gives improved quantum routing times for realistic architectures such as grids.\nFurthermore, we show that our algorithm approaches a quantum routing time of 2n/3 in expectation for uniformly random permutations, whereas swap-based protocols require time n asymptotically.\nAdditionally, we consider sparse permutations that route k≤n qubits and give algorithms with quantum routing time at most n/3+O(k2) on paths and at most 2r/3+O(k2) on general graphs with radius r. \n"
   - title: Nearly optimal time-independent state reversal of a spin chain
     author: Aniruddha Bapat, Eddie Schoute, Alexey V. Gorshkov, and Andrew M. Childs
@@ -315,6 +350,7 @@ publications:
     pages: p. L012023
     link: https://doi.org/10.1103/PhysRevResearch.4.L012023
     date: 2022
+    selected: true
     description: >
       We propose a time-independent Hamiltonian protocol for the reversal of qubit ordering in a chain of N spins. Our protocol has an easily implementable nearest-neighbor, transverse-field Ising model Hamiltonian with time-independent, nonuniform couplings. Under appropriate normalization, we implement this state reversal three times faster than a naive approach using swap gates, in time comparable to a protocol of Raussendorf [Phys. Rev. A 72, 052301 (2005)] that requires dynamical control. We also prove lower bounds on state reversal by using results on the entanglement capacity of Hamiltonians and show that we are within a factor 1.502(1+1/N) of the shortest time possible. Our lower bound holds for all nearest-neighbor qubit protocols with arbitrary finite ancilla spaces and local operations and classical communication. We give numerical evidence that the fast reversal protocols are more robust to noise than a swap-based reversal. Finally, we extend our protocol to an infinite family of nearest-neighbor, time-independent Hamiltonian protocols for state reversal. This includes chains with nearly uniform coupling that may be especially feasible for experimental implementation.
 
@@ -325,6 +361,7 @@ publications:
     volume: 135
     pages: pp. 3:1--3:24
     link: https://www.doi.org/10.4230/LIPIcs.TQC.2019.3
+    selected: true
     description: "Quantum computer architectures impose restrictions on qubit interactions. We propose efficient circuit transformations that modify a given quantum circuit to fit an architecture, allowing for any initial and final mapping of circuit qubits to architecture qubits. To achieve this, we first consider the qubit movement subproblem and use the routing via matchings framework to prove tighter bounds on parallel routing. In practice, we only need to perform partial permutations, so we generalize routing via matchings to that setting. We give new routing procedures for common architecture graphs and for the generalized hierarchical product of graphs, which produces subgraphs of the Cartesian product. Secondly, for serial routing, we consider the token swapping framework and extend a 4-approximation algorithm for general graphs to support partial permutations. We apply these routing procedures to give several circuit transformations, using various heuristic qubit placement subroutines. We implement these transformations in software and compare their performance for large quantum circuits on grid and modular architectures, identifying strategies that work well in practice. \n"
   - title: Shortcuts to quantum network routing
     date: 2016
