@@ -2,7 +2,7 @@ name: Eddie Schoute
 lang: en
 jobtitle: Quantum Algorithms and Compilation Researcher
 summary: |
-  Computer scientist with 8+ years of experience in quantum computing and information systems, resulting in 5 publications in leading journals. Established track record of successfully communicating scientific concepts to both professionals and non-specialists, and a strong history of mentoring—leading teams of graduate and undergraduate researchers to successfully complete 3 projects, resulting in 2 additional publications. Demonstrated broad expertise in software engineering using numerous software languages (including Python, Julia, Scala, and C). Expertise in marketable quantum computing applications has resulted in 3 patents pending.
+  Computer scientist with 8+ years of experience in quantum computing and information systems, resulting in 5 publications in leading journals. Established track record of successfully communicating scientific concepts to both professionals and non-specialists, and a strong history of mentoring—leading teams of graduate and undergraduate researchers to successfully complete 3 projects, resulting in 2 additional publications. Demonstrated broad expertise in software engineering using numerous software languages (including Python, Julia, Scala, and C). Expertise in marketable quantum computing applications has resulted in 2 patents (pending).
 skills:
   - Surface code compilation
   - Qubit routing
@@ -20,9 +20,9 @@ education:
     description: |
       * Researched algorithm for compiling quantum circuits to respect architecture constraints under supervision of prof.\ Andrew Childs.
         Contributed: 
-          * Algorithmic analysis of swap-based routing.
+          * Algorithmic analysis of swap-based routing and implementation in Python.
           * Routing algorithms for Hamiltonian routing.
-          * Compilation to native gate sets of fault-tolerant architectures.
+          * Compilation to native gate sets of fault-tolerant architectures and implementation in Julia.
       * Co-supervised undergraduate students in NSF research experience for undergraduates (REU):
             Sam DeCoster, Nicole Dong, and Mason Wittman (2021); Sam King and Hrishee Shahstri (2020).
       * Informally co-supervised Cem Unsal for “Circuit Transformations [...]” project.
