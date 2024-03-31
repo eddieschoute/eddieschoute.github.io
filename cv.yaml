@@ -178,6 +178,7 @@ awards:
   - title: Tied 2nd Place IBM Developer challenge
     grantor: '[IBM](https://www.ibm.com)'
     date: 2018
+    summarize: true
     description: >
       A $1000 prize for developing software with IBM’s Qiskit to compile quantum circuits for the IBM quantum computer architectures.
 
@@ -304,6 +305,13 @@ patents:
 
 
 publications:
+  - title: Minimal entanglement for injecting diagonal gates
+    author: Vadym Kliuchnikov and Eddie Schoute
+    date: 2024
+    link: https://arxiv.org/abs/2403.18900
+    selected: true
+    description: >  
+      Non-Clifford gates are frequently exclusively implemented on fault-tolerant architectures by first distilling magic states in specialised magic-state factories. In the rest of the architecture, the computational space, magic states can then be consumed by a stabilizer circuit to implement non-Clifford operations. We show that the connectivity between the computational space and magic state factories forms a fundamental bottleneck on the rate at which non-Clifford operations can be implemented. We show that the nullity of the magic state, ν(|D⟩) for diagonal gate D, characterizes the non-local resources required to implement D in the computational space. As part of our proof, we construct local stabilizer circuits that use only ν(|D⟩) ebits to implement D in the computational space that may be useful to reduce the non-local resources required to inject non-Clifford gates. Another consequence is that the edge-disjoint path compilation algorithm [PRX Quantum 3, 020342 (2022)] produces minimum-depth circuits for implementing single-qubit diagonal gates. 
   - title: Advantages and limitations of quantum routing
     date: 2023
     pubtitle: 'PRX Quantum'
