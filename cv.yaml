@@ -238,6 +238,10 @@ talks:
         selected: true
   - category: Contributed
     entries:
+      - title: Minimal entanglement for injecting diagonal gates
+        venue: '[BIRS Quantum Circuit Design Automation](https://www.birs.ca/events/2024/5-day-workshops/24w5307)'
+        date: 2024
+        link: https://www.birs.ca/events/2024/5-day-workshops/24w5307/schedule
       - title: Advantages and limitations of quantum routing
         venue: '[APS March Meeting](https://march.aps.org)'
         date: 2023
