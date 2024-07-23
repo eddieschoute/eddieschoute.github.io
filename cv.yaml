@@ -212,6 +212,14 @@ awards:
 talks:
   - category: Invited
     entries:
+      - title: 'Quantum Error Correction: A brief tutorial'
+        venue: '[US QIS Summer School](https://www.qscience.org/summer-school-2024/)'
+        date: 2024
+        selected: true
+        important: true
+      - title: 'Quantum Error Correction: A brief tutorial'
+        venue: '[LANL Quantum Computing Summer School](https://www.lanl.gov/projects/national-security-education-center/information-science-technology/summer-schools/quantumcomputing/index.php)'
+        date: 2024
       - title: Advantages and limitations of quantum routing
         venue: JPMorgan Chase Applied Research
         date: 2023
