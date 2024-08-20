@@ -60,12 +60,17 @@ education:
 experience:
   - category: Full time
     entries:
+      - title: Staff research scientist
+        role: Quantum Compilation Research Staff
+        company: '[IBM Quantum](https://www.ibm.com/quantum)'
+        date: 2024--present
+        location: Cambridge, MA, USA
+        important: true
       - title: Postdoctoral research associate
         role: Quantum Algorithms Scientist
         company: '[Los Alamos National Laboratory](https://www.lanl.gov/)'
-        date: 2022--present
+        date: 2022--2024
         location: Los Alamos, NM, USA
-        important: true
         description: >
           Research quantum algorithms under the supervision of Yiğit Subaşı.
           Evaluate fault-tolerant architecture proposals for determining utility of quantum computer proposals (US2QC).
@@ -317,6 +322,12 @@ patents:
 
 
 publications:
+  - title: Toward a 2D Local Implementation of Quantum LDPC Codes
+    author: Noah Berthusen, Dhruv Devulapalli, Eddie Schoute, Andrew M. Childs, Michael J. Gullans, Alexey V. Gorshkov, Daniel Gottesman
+    date: 2024
+    link: https://arxiv.org/abs/2404.17676
+    description: >
+      Geometric locality is an important theoretical and practical factor for quantum low-density parity-check (qLDPC) codes which affects code performance and ease of physical realization. For device architectures restricted to 2D local gates, naively implementing the high-rate codes suitable for low-overhead fault-tolerant quantum computing incurs prohibitive overhead. In this work, we present an error correction protocol built on a bilayer architecture that aims to reduce operational overheads when restricted to 2D local gates by measuring some generators less frequently than others. We investigate the family of bivariate bicycle qLDPC codes and show that they are well suited for a parallel syndrome measurement scheme using fast routing with local operations and classical communication (LOCC). Through circuit-level simulations, we find that in some parameter regimes bivariate bicycle codes implemented with this protocol have logical error rates comparable to the surface code while using fewer physical qubits.
   - title: Minimal entanglement for injecting diagonal gates
     author: Vadym Kliuchnikov and Eddie Schoute
     date: 2024
