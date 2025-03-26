@@ -322,12 +322,55 @@ patents:
 
 
 publications:
-  - title: Toward a 2D Local Implementation of Quantum LDPC Codes
+  - title: Toward a 2D Local Implementation of Quantum Low-Density Parity-Check Codes
     author: Noah Berthusen, Dhruv Devulapalli, Eddie Schoute, Andrew M. Childs, Michael J. Gullans, Alexey V. Gorshkov, Daniel Gottesman
-    date: 2024
-    link: https://arxiv.org/abs/2404.17676
+    date: 2025
+    pubtitle: 'PRX Quantum'
+    volume: 6
+    issue: 1
+    pages: p. 010306
+    link: https://doi.org/10.1103/PRXQuantum.6.010306
+    selected: true
     description: >
       Geometric locality is an important theoretical and practical factor for quantum low-density parity-check (qLDPC) codes which affects code performance and ease of physical realization. For device architectures restricted to 2D local gates, naively implementing the high-rate codes suitable for low-overhead fault-tolerant quantum computing incurs prohibitive overhead. In this work, we present an error correction protocol built on a bilayer architecture that aims to reduce operational overheads when restricted to 2D local gates by measuring some generators less frequently than others. We investigate the family of bivariate bicycle qLDPC codes and show that they are well suited for a parallel syndrome measurement scheme using fast routing with local operations and classical communication (LOCC). Through circuit-level simulations, we find that in some parameter regimes bivariate bicycle codes implemented with this protocol have logical error rates comparable to the surface code while using fewer physical qubits.
+  - title: Quantum programmable reflections
+    author: Eddie Schoute, Dmitry Grinko, Yigit Subasi, Tyler Volkoff
+    date: 2024
+    important: true
+    selected: true
+    link: https://arxiv.org/abs/2411.03648
+    description: >
+      Similar to a classical processor,
+      which is an algorithm for reading a program and executing its instructions on input data,
+      a universal programmable quantum processor is a fixed quantum channel that reads a quantum program
+      |ψ_U>
+      that causes the processor to approximately apply an arbitrary unitary U to a quantum data register.
+      The present work focuses on a class of simple programmable quantum processors for implementing reflection operators,
+      i.e. U = e^{i π |ψ><ψ|
+      for an arbitrary pure state |ψ> of finite dimension d.
+      Unlike quantum programs that assume query access to U, our program takes the form of independent copies of the state to be reflected about |ψ_U> = |ψ>^{⊗n}.
+      We then identify the worst-case optimal algorithm among all processors of the form
+      Tr_{Program}[V (|φ><φ| ⊛ (|ψ><ψ|)^{⊗n}) V^†]
+      where the algorithm $V$ is a unitary linear combination of permutations.
+      By generalizing these algorithms to processors for arbitrary-angle rotations, e^{i α |ψ><ψ|}$
+      for α∈ℝ, we give a construction for a universal programmable processor with better scaling in d.
+      For programming reflections,
+      we obtain a tight analytical lower bound on the program dimension
+      by bounding the Holevo information of an ensemble of reflections applied to an entangled probe state.
+      The lower bound makes use of a block decomposition of the uniform ensemble of reflected states with respect to irreps of the partially transposed permutation matrix algebra,
+      and two representation-theoretic conjectures based on extensive numerical evidence.
+      Finally, we observe that programming the submanifold of reflections obeys a conjecture by [Phys. Rev. Lett. 125, 210501],
+      with the dependence on the dimension being much weaker compared to universal programming.
+  - title: Quantum Routing with Teleportation
+    author: Dhruv Devulapalli, Eddie Schoute, Aniruddha Bapat, Andrew M. Childs, Alexey V. Gorshkov
+    pubtitle: 'Physical Review Research'
+    date: 2024
+    volume: 6
+    issue: 3
+    link: https://doi.org/10.1103/PhysRevResearch.6.033313
+    selected: true
+    description: >
+      We study the problem of implementing arbitrary permutations of qubits under interaction constraints in quantum systems that allow for arbitrarily fast local operations and classical communication (LOCC). In particular, we show examples of speedups over swap-based and more general unitary routing methods by distributing entanglement and using LOCC to perform quantum teleportation. We further describe an example of an interaction graph for which teleportation gives a logarithmic speedup in the worst-case routing time over swap-based routing. We also study limits on the speedup afforded by quantum teleportation - showing an O(sqrt(NlogN)) upper bound on the separation in routing time for any interaction graph - and give tighter bounds for some common classes of graphs.
   - title: Minimal entanglement for injecting diagonal gates
     author: Vadym Kliuchnikov and Eddie Schoute
     date: 2024
@@ -345,14 +388,6 @@ publications:
     author: Aniruddha Bapat, Alexey V. Gorshkov, Andrew M. Childs, and Eddie Schoute
     selected: true
     description: "The Swap gate is a ubiquitous tool for moving information on quantum hardware, yet it can be considered a classical operation because it does not entangle product states. Genuinely quantum operations could outperform Swap for the task of permuting qubits within an architecture, which we call routing. We consider quantum routing in two models: (1) allowing arbitrary two-qubit unitaries, or (2) allowing Hamiltonians with norm-bounded interactions. We lower bound the circuit depth or time of quantum routing in terms of spectral properties of graphs representing the architecture interaction constraints, and give a generalized upper bound for all simple connected n-vertex graphs. In particular, we give conditions for a superpolynomial classical-quantum routing separation, which exclude graphs with a small spectral gap and graphs of bounded degree. Finally, we provide examples of a quadratic separation between gate-based and Hamiltonian routing models with a constant number of local ancillas per qubit and of an Omega(n) speedup if we also allow fast local interactions. \n"
-  - title: Quantum Routing with Teleportation
-    author: Dhruv Devulapalli, Eddie Schoute, Aniruddha Bapat, Andrew M. Childs, Alexey V. Gorshkov
-    date: 2022
-    link: https://arxiv.org/abs/2204.04185
-    selected: true
-    description: >
-      We study the problem of implementing arbitrary permutations of qubits under interaction constraints in quantum systems that allow for arbitrarily fast local operations and classical communication (LOCC). In particular, we show examples of speedups over swap-based and more general unitary routing methods by distributing entanglement and using LOCC to perform quantum teleportation. We further describe an example of an interaction graph for which teleportation gives a logarithmic speedup in the worst-case routing time over swap-based routing. We also study limits on the speedup afforded by quantum teleportation - showing an O(sqrt(NlogN)) upper bound on the separation in routing time for any interaction graph - and give tighter bounds for some common classes of graphs.
-
   - title: Surface code compilation via edge-disjoint paths
     date: 2022
     pubtitle: 'PRX Quantum'
