@@ -40,7 +40,7 @@ jobs:
 
       # Upload artifact
       - name: Upload PDF artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: resume.pdf
           path: build/resume.pdf
@@ -77,7 +77,7 @@ jobs:
 
       # Upload artifact
       - name: Upload PDF artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: cv.pdf
           path: build/cv.pdf
@@ -115,7 +115,7 @@ jobs:
 
       # Upload artifact
       - name: Upload PDF artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: publication list pdf
           path: build/publication_list.pdf
