@@ -66,6 +66,8 @@ experience:
         date: 2024--present
         location: Cambridge, MA, USA
         important: true
+        description: >
+          Research quantum compilation methods for fault-tolerant architectures.
       - title: Postdoctoral research associate
         role: Quantum Algorithms Scientist
         company: '[Los Alamos National Laboratory](https://www.lanl.gov/)'
@@ -217,11 +219,17 @@ awards:
 talks:
   - category: Invited
     entries:
+      - title: 'Tour de gross: A modular quantum computer based on bivariate bicycle codes'
+        venue: '[Simons Institute](https://simons.berkeley.edu/workshops/quantum-summer-cluster-workshop-0)'
+        date: 2025
+        link: https://www.youtube.com/watch?v=rzrrI8JIQr4
+        selected: true
+        important: true
       - title: 'Quantum Error Correction: A brief tutorial'
         venue: '[US QIS Summer School](https://www.qscience.org/summer-school-2024/)'
         date: 2024
         selected: true
-        important: true
+        link: https://www.youtube.com/watch?v=zS1X4Q-NZU8
       - title: 'Quantum Error Correction: A brief tutorial'
         venue: '[LANL Quantum Computing Summer School](https://www.lanl.gov/projects/national-security-education-center/information-science-technology/summer-schools/quantumcomputing/index.php)'
         date: 2024
@@ -231,7 +239,6 @@ talks:
       - title: Surface code compilation via edge-disjoint paths
         venue: '[APS March Meeting](https://march.aps.org)'
         date: 2023
-        important: true
         selected: true
         link: https://march.aps.org/sessions/F69/5
       - title: Surface code compilation via edge-disjoint paths
@@ -322,6 +329,18 @@ patents:
 
 
 publications:
+  - title: 'Tour de gross: A modular quantum computer based on bivariate bicycle codes'
+    author: Theodore J. Yoder, Eddie Schoute, Patrick Rall, Emily Pritchett, Jay M. Gambetta, Andrew W. Cross, Malcolm Carroll, Michael E. Beverland
+    date: 2025
+    link: https://arxiv.org/abs/2506.03094
+    selected: true
+    important: true
+    description: >
+      We present the bicycle architecture, a modular quantum computing framework based on high-rate, low-overhead quantum LDPC codes identified in prior work. For two specific bivariate bicycle codes with distances 12 and 18, we construct explicit fault-tolerant logical instruction sets and estimate the logical error rate of the instructions under circuit noise. We develop a compilation strategy adapted to the constraints of the bicycle architecture, enabling large-scale universal quantum circuit execution. Integrating these components, we perform end-to-end resource estimates demonstrating that an order of magnitude larger logical circuits can be implemented with a given number of physical qubits on the bicycle architecture than on surface code architectures. We anticipate further improvements through advances in code constructions, circuit designs, and compilation techniques. 
+  - title: Quantum Routing and Entanglement Dynamics Through Bottlenecks
+    author: Dhruv Devulapalli, Chao Yin, Andrew Y. Guo, Eddie Schoute, Andrew M. Childs, Alexey V. Gorshkov, Andrew Lucas
+    date: 2025
+    link: https://arxiv.org/abs/2505.16948
   - title: Toward a 2D Local Implementation of Quantum Low-Density Parity-Check Codes
     author: Noah Berthusen, Dhruv Devulapalli, Eddie Schoute, Andrew M. Childs, Michael J. Gullans, Alexey V. Gorshkov, Daniel Gottesman
     date: 2025
