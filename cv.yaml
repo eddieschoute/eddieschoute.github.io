@@ -220,6 +220,9 @@ talks:
   - category: Invited
     entries:
       - title: 'Tour de gross: A modular quantum computer based on bivariate bicycle codes'
+        venue: '[IEEE Quantum week 2025](https://qce.quantum.ieee.org/2025/)'
+        date: 2025
+      - title: 'Tour de gross: A modular quantum computer based on bivariate bicycle codes'
         venue: '[Simons Institute](https://simons.berkeley.edu/workshops/quantum-summer-cluster-workshop-0)'
         date: 2025
         link: https://www.youtube.com/watch?v=rzrrI8JIQr4
@@ -258,6 +261,9 @@ talks:
         selected: true
   - category: Contributed
     entries:
+      - title: 'Tour de gross: A modular quantum computer based on bivariate bicycle codes'
+        venue: '[IWQC 2025](https://quantum-compilers.github.io/iwqc25/)'
+        date: 2025
       - title: Minimal entanglement for injecting diagonal gates
         venue: '[BIRS Quantum Circuit Design Automation](https://www.birs.ca/events/2024/5-day-workshops/24w5307)'
         date: 2024
@@ -335,7 +341,9 @@ publications:
     link: https://arxiv.org/abs/2506.03094
     selected: true
     important: true
-    description: >
+    description: |
+      Accepted to [QIP 2026](https://qip2026.lu.lv/).
+
       We present the bicycle architecture, a modular quantum computing framework based on high-rate, low-overhead quantum LDPC codes identified in prior work. For two specific bivariate bicycle codes with distances 12 and 18, we construct explicit fault-tolerant logical instruction sets and estimate the logical error rate of the instructions under circuit noise. We develop a compilation strategy adapted to the constraints of the bicycle architecture, enabling large-scale universal quantum circuit execution. Integrating these components, we perform end-to-end resource estimates demonstrating that an order of magnitude larger logical circuits can be implemented with a given number of physical qubits on the bicycle architecture than on surface code architectures. We anticipate further improvements through advances in code constructions, circuit designs, and compilation techniques. 
   - title: Quantum Routing and Entanglement Dynamics Through Bottlenecks
     author: Dhruv Devulapalli, Chao Yin, Andrew Y. Guo, Eddie Schoute, Andrew M. Childs, Alexey V. Gorshkov, Andrew Lucas
