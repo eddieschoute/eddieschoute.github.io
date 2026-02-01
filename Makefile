@@ -1,12 +1,17 @@
-SHELL := /bin/zsh
+SHELL := /bin/bash
 BUILDDIR := build
 
-all: validate_yaml \
+all: check_deps validate_yaml \
 	$(BUILDDIR)/resume.pdf \
 	$(BUILDDIR)/cv.pdf \
 	$(BUILDDIR)/publication_list.pdf \
 	$(BUILDDIR)/cv.html \
 	$(BUILDDIR)/main.js
+
+check_deps:
+	@command -v pandoc >/dev/null 2>&1 || { echo >&2 "Error: pandoc is not installed."; exit 1; }
+	@command -v latexmk >/dev/null 2>&1 || { echo >&2 "Error: latexmk is not installed."; exit 1; }
+	@command -v yq >/dev/null 2>&1 || { echo >&2 "Error: yq is not installed."; exit 1; }
 
 validate_yaml:
 	@yq -e . cv.yaml > /dev/null
@@ -27,5 +32,4 @@ $(BUILDDIR)/main.js: main.js
 	cp main.js $(BUILDDIR)/main.js
 
 clean:
-	rm build/*
-
+	rm -rf $(BUILDDIR)

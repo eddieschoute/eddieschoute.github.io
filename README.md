@@ -1,12 +1,14 @@
 # CV Template
-A way to build CV in various formats from yaml cv database.
+
+This repository contains a system to generate professional CVs, Resumes, and Publication Lists in PDF and HTML formats. It uses a single YAML database (`cv.yaml`) as the source of truth, allowing for easy updates and consistent formatting across different output versions.
 
 ## Build
 
 ### Requirements
 * Make
 * pandoc
-* latex (for pdf)
+* latex (specifically `latexmk` and standard packages)
+* yq
 
 ### How to build
 Run
