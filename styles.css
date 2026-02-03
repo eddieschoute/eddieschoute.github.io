@@ -118,6 +118,7 @@ h2 {
     margin-bottom: 1.75rem;
     font-weight: 700;
     color: #014792;
+    padding-left: 10px;
 }
 
 section>h3 {
@@ -171,6 +172,7 @@ button .fst-italic {
 p.small {
     line-height: 1.5rem;
     margin-top: -0.5rem;
+    margin-bottom: 0;
 }
 
 p:last-child,
@@ -207,4 +209,31 @@ h5:last-child {
 
 footer {
     margin-top: 2.5rem;
+}
+
+.search-clear {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #999;
+    display: none;
+}
+
+.search-clear:hover {
+    color: #333;
+}
+
+#search {
+    padding-right: 30px;
+}
+
+/* Hide native search clear button in WebKit browsers */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
 }
