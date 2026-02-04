@@ -126,4 +126,25 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
+  
+     // 7. Auto-close hamburger menu
+    document.addEventListener('click', function (event) {
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        // Only act if the menu is open
+        if (!navbarCollapse || !navbarCollapse.classList.contains('show')) {
+            return;
+        }
+
+        const isClickInside = navbarCollapse.contains(event.target);
+        const isClickOnToggler = event.target.closest('.navbar-toggler');
+        const isClickOnLink = event.target.closest('.nav-link');
+
+        // Close if click is outside menu/toggler OR if click is on a link
+        if ((!isClickInside && !isClickOnToggler) || isClickOnLink) {
+            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+            if (bsCollapse) {
+                bsCollapse.hide();
+            }
+        }
+    });
 });
