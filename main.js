@@ -1,89 +1,129 @@
-const TRANSITION_SPEED = 400;
+// Initialize behaviors
+document.addEventListener('DOMContentLoaded', () => {
 
-$('.collapser').on("click", function () {
-    $(this).parent().next().collapse('toggle');
-    $(this).toggleClass('collapsed')
-});
+    // 1. Accordion Icon State Management via Bootstrap Events
+    // This ensures the icon stays in sync regardless of how the collapse is triggered (click, expand all, etc.)
+    document.querySelectorAll('.accordion-collapse').forEach(collapseEl => {
+        // When opening
+        collapseEl.addEventListener('show.bs.collapse', () => {
+            const button = collapseEl.parentElement.querySelector('.collapser');
+            if (button) button.classList.remove('collapsed');
+        });
 
-$("#expandAll").on("click", function () {
-    $('.accordion-collapse').collapse('show');
-});
-
-$("#collapseAll").on("click", function () {
-    $('.accordion-collapse').collapse('hide');
-});
-
-function filterAccordions(text) {
-    // case insensitive search
-    const findText = text.toLowerCase();
-
-    // 1. Filter individual accordion items
-    $(".accordion-item").each(function () {
-        const accordion = $(this)
-        // If the accordion item contains the text, show it, in case it was hidden.
-        if (accordion.text().toLowerCase().indexOf(findText) >= 0) {
-            accordion.show(TRANSITION_SPEED);
-        } else {
-            accordion.hide(TRANSITION_SPEED);
-        }
+        // When closing
+        collapseEl.addEventListener('hide.bs.collapse', () => {
+            const button = collapseEl.parentElement.querySelector('.collapser');
+            if (button) button.classList.add('collapsed');
+        });
     });
 
-    // 2. Hide sections/subsections if they become empty
-    $("section").each(function() {
-        const section = $(this);
-        let sectionVisible = false;
+    // 2. Individual Accordion Toggles
+    document.querySelectorAll('.collapser').forEach(button => {
+        button.addEventListener('click', function (e) {
+            // Find the collapse element: parent (h3) -> next sibling (div.accordion-collapse)
+            const collapseElement = this.parentElement.nextElementSibling;
+            if (collapseElement && collapseElement.classList.contains('accordion-collapse')) {
+                const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseElement);
+                bsCollapse.toggle();
+            }
+        });
+    });
 
-        // Check each accordion group within the section
-        section.find(".accordion").each(function() {
-            const accordionGroup = $(this);
-            let groupVisible = false;
+    // 3. Expand All
+    const expandAllBtn = document.getElementById("expandAll");
+    if (expandAllBtn) {
+        expandAllBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelectorAll('.accordion-collapse').forEach(el => {
+                bootstrap.Collapse.getOrCreateInstance(el).show();
+            });
+        });
+    }
 
-            // Check if any item in this group matched
-            accordionGroup.find(".accordion-item").each(function() {
-                if ($(this).text().toLowerCase().indexOf(findText) >= 0) {
-                    groupVisible = true;
+    // 4. Collapse All
+    const collapseAllBtn = document.getElementById("collapseAll");
+    if (collapseAllBtn) {
+        collapseAllBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelectorAll('.accordion-collapse').forEach(el => {
+                bootstrap.Collapse.getOrCreateInstance(el).hide();
+            });
+        });
+    }
+
+    // 5. Search filtering
+    const searchInput = document.getElementById("search");
+    if (searchInput) {
+        searchInput.addEventListener("keyup", function () {
+            const findText = this.value.toLowerCase();
+            document.querySelectorAll(".accordion-item").forEach(accordion => {
+                if (accordion.textContent.toLowerCase().includes(findText)) {
+                    accordion.classList.remove('d-none');
+                } else {
+                    accordion.classList.add('d-none');
                 }
             });
 
-            if (groupVisible) {
-                accordionGroup.show(TRANSITION_SPEED);
-                // Show the preceding h3 if it exists (for subsections)
-                const prev = accordionGroup.prev("h3");
-                if (prev.length) prev.show(TRANSITION_SPEED);
-                sectionVisible = true;
-            } else {
-                accordionGroup.hide(TRANSITION_SPEED);
-                // Hide the preceding h3 if it exists
-                const prev = accordionGroup.prev("h3");
-                if (prev.length) prev.hide(TRANSITION_SPEED);
+            // Update sections visibility
+            document.querySelectorAll("section").forEach(section => {
+                let sectionVisible = false;
+
+                // Look for accordion groups within section
+                section.querySelectorAll(".accordion").forEach(accordionGroup => {
+                    let groupVisible = false;
+
+                    accordionGroup.querySelectorAll(".accordion-item").forEach(item => {
+                        if (!item.classList.contains('d-none')) {
+                            groupVisible = true;
+                        }
+                    });
+
+                    // Preceding h3 handling
+                    // The HTML structure is <h3>...</h3> <div class="accordion ...">
+                    // So we look for the previous element sibling of the accordion group
+                    const header = accordionGroup.previousElementSibling;
+                    const isHeader = header && header.tagName === 'H3';
+
+                    if (groupVisible) {
+                        accordionGroup.classList.remove('d-none');
+                        if (isHeader) header.classList.remove('d-none');
+                        sectionVisible = true;
+                    } else {
+                        accordionGroup.classList.add('d-none');
+                        if (isHeader) header.classList.add('d-none');
+                    }
+                });
+
+                if (sectionVisible) {
+                    section.classList.remove('d-none');
+                } else {
+                    section.classList.add('d-none');
+                }
+            });
+
+            updateClearButton(this.value);
+        });
+    }
+
+    // 6. Clear button
+    const clearBtn = document.getElementById("searchClear");
+    if (clearBtn) {
+        clearBtn.addEventListener("click", function() {
+            if (searchInput) {
+                searchInput.value = "";
+                searchInput.dispatchEvent(new Event('keyup')); // Trigger the keyup handler to reset filter
+                searchInput.focus();
             }
         });
-
-        if (sectionVisible) {
-            section.show(TRANSITION_SPEED);
-        } else {
-            section.hide(TRANSITION_SPEED);
-        }
-    });
-}
-
-function updateClearButton(text) {
-    if (text.length > 0) {
-        $("#searchClear").show();
-    } else {
-        $("#searchClear").hide();
     }
-}
 
-$("#search").on("keyup", function () {
-    const text = $(this).val();
-    filterAccordions(text);
-    updateClearButton(text);
-});
-
-$("#searchClear").on("click", function() {
-    $("#search").val("");
-    filterAccordions("");
-    updateClearButton("");
-    $("#search").focus();
+    function updateClearButton(text) {
+        if (clearBtn) {
+            if (text.length > 0) {
+                clearBtn.style.display = "block";
+            } else {
+                clearBtn.style.display = "none";
+            }
+        }
+    }
 });
