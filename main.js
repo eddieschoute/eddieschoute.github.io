@@ -1,3 +1,5 @@
+const TRANSITION_SPEED = 400;
+
 $('.collapser').on("click", function () {
     $(this).parent().next().collapse('toggle');
     $(this).toggleClass('collapsed')
@@ -20,9 +22,9 @@ function filterAccordions(text) {
         const accordion = $(this)
         // If the accordion item contains the text, show it, in case it was hidden.
         if (accordion.text().toLowerCase().indexOf(findText) >= 0) {
-            accordion.show(400);
+            accordion.show(TRANSITION_SPEED);
         } else {
-            accordion.hide(400);
+            accordion.hide(TRANSITION_SPEED);
         }
     });
 
@@ -44,23 +46,23 @@ function filterAccordions(text) {
             });
 
             if (groupVisible) {
-                accordionGroup.show(400);
+                accordionGroup.show(TRANSITION_SPEED);
                 // Show the preceding h3 if it exists (for subsections)
                 const prev = accordionGroup.prev("h3");
-                if (prev.length) prev.show(400);
+                if (prev.length) prev.show(TRANSITION_SPEED);
                 sectionVisible = true;
             } else {
-                accordionGroup.hide(400);
+                accordionGroup.hide(TRANSITION_SPEED);
                 // Hide the preceding h3 if it exists
                 const prev = accordionGroup.prev("h3");
-                if (prev.length) prev.hide(400);
+                if (prev.length) prev.hide(TRANSITION_SPEED);
             }
         });
 
         if (sectionVisible) {
-            section.show(400);
+            section.show(TRANSITION_SPEED);
         } else {
-            section.hide(400);
+            section.hide(TRANSITION_SPEED);
         }
     });
 }
