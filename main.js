@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         expandAllBtn.addEventListener("click", function (e) {
             e.preventDefault();
             document.querySelectorAll('.accordion-collapse').forEach(el => {
-                bootstrap.Collapse.getOrCreateInstance(el).show();
+                bootstrap.Collapse.getOrCreateInstance(el, { toggle: false }).show();
             });
         });
     }
