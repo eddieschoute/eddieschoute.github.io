@@ -63,10 +63,71 @@ document.addEventListener('DOMContentLoaded', () => {
                     accordion.classList.add('d-none');
                 }
             });
+
+            // Update sections visibility
+            document.querySelectorAll("section").forEach(section => {
+                let sectionVisible = false;
+
+                // Look for accordion groups within section
+                section.querySelectorAll(".accordion").forEach(accordionGroup => {
+                    let groupVisible = false;
+
+                    accordionGroup.querySelectorAll(".accordion-item").forEach(item => {
+                        if (!item.classList.contains('d-none')) {
+                            groupVisible = true;
+                        }
+                    });
+
+                    // Preceding h3 handling
+                    // The HTML structure is <h3>...</h3> <div class="accordion ...">
+                    // So we look for the previous element sibling of the accordion group
+                    const header = accordionGroup.previousElementSibling;
+                    const isHeader = header && header.tagName === 'H3';
+
+                    if (groupVisible) {
+                        accordionGroup.classList.remove('d-none');
+                        if (isHeader) header.classList.remove('d-none');
+                        sectionVisible = true;
+                    } else {
+                        accordionGroup.classList.add('d-none');
+                        if (isHeader) header.classList.add('d-none');
+                    }
+                });
+
+                if (sectionVisible) {
+                    section.classList.remove('d-none');
+                } else {
+                    section.classList.add('d-none');
+                }
+            });
+
+            updateClearButton(this.value);
         });
     }
 
-    // 6. Auto-close hamburger menu
+    // 6. Clear button
+    const clearBtn = document.getElementById("searchClear");
+    if (clearBtn) {
+        clearBtn.addEventListener("click", function() {
+            if (searchInput) {
+                searchInput.value = "";
+                searchInput.dispatchEvent(new Event('keyup')); // Trigger the keyup handler to reset filter
+                searchInput.focus();
+            }
+        });
+    }
+
+    function updateClearButton(text) {
+        if (clearBtn) {
+            if (text.length > 0) {
+                clearBtn.style.display = "block";
+            } else {
+                clearBtn.style.display = "none";
+            }
+        }
+    }
+  
+     // 7. Auto-close hamburger menu
     document.addEventListener('click', function (event) {
         const navbarCollapse = document.querySelector('.navbar-collapse');
         // Only act if the menu is open
