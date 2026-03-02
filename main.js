@@ -147,4 +147,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    // 8. Clear search on menu bar link click
+    document.querySelectorAll('.navbar-brand, .nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            if (searchInput && searchInput.value !== "") {
+                searchInput.value = "";
+                searchInput.dispatchEvent(new Event('keyup')); // Trigger the keyup handler to reset filter
+            }
+        });
+    });
 });
