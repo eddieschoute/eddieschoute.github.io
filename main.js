@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         collapseAllBtn.addEventListener("click", function (e) {
             e.preventDefault();
             document.querySelectorAll('.accordion-collapse').forEach(el => {
-                bootstrap.Collapse.getOrCreateInstance(el).hide();
+                bootstrap.Collapse.getOrCreateInstance(el, { toggle: false }).hide();
             });
         });
     }
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 6. Clear button
     const clearBtn = document.getElementById("searchClear");
     if (clearBtn) {
-        clearBtn.addEventListener("click", function() {
+        clearBtn.addEventListener("click", function () {
             if (searchInput) {
                 searchInput.value = "";
                 searchInput.dispatchEvent(new Event('keyup')); // Trigger the keyup handler to reset filter
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
-  
+
     // 7. Auto-close hamburger menu
     document.addEventListener('click', function (event) {
         const navbarCollapse = document.querySelector('.navbar-collapse');
