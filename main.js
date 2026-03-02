@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
   
-     // 7. Auto-close hamburger menu
+    // 7. Auto-close hamburger menu
     document.addEventListener('click', function (event) {
         const navbarCollapse = document.querySelector('.navbar-collapse');
         // Only act if the menu is open
@@ -146,5 +146,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 bsCollapse.hide();
             }
         }
+    });
+
+    // 8. Clear search on menu bar link click
+    document.querySelectorAll('.navbar-brand, .nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            if (searchInput && searchInput.value !== "") {
+                searchInput.value = "";
+                searchInput.dispatchEvent(new Event('keyup')); // Trigger the keyup handler to reset filter
+            }
+        });
     });
 });
