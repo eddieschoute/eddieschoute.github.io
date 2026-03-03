@@ -32,7 +32,7 @@ jobs:
       
       # Compile the tex file using latex
       - name: Build tex to pdf
-        uses: xu-cheng/latex-action@v2
+        uses: xu-cheng/latex-action@v3
         with:
           root_file: resume.tex
           working_directory: build
@@ -69,7 +69,7 @@ jobs:
       
       # Compile the tex file using latex
       - name: Build tex to pdf
-        uses: xu-cheng/latex-action@v2
+        uses: xu-cheng/latex-action@v3
         with:
           root_file: cv.tex
           working_directory: build
@@ -90,7 +90,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - run: mkdir build
 
       # Build the tex file using pandoc
@@ -107,7 +107,7 @@ jobs:
       
       # Compile the tex file using latex
       - name: Build tex to pdf
-        uses: xu-cheng/latex-action@v2
+        uses: xu-cheng/latex-action@v3
         with:
           root_file: publication_list.tex
           working_directory: build
