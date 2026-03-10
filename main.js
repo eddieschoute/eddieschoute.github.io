@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (expandAllBtn) {
         expandAllBtn.addEventListener("click", function (e) {
             e.preventDefault();
-            document.querySelectorAll('.accordion-collapse').forEach(el => {
+            document.querySelectorAll('.accordion-collapse:not(.show)').forEach(el => {
                 bootstrap.Collapse.getOrCreateInstance(el, { toggle: false }).show();
             });
         });
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (collapseAllBtn) {
         collapseAllBtn.addEventListener("click", function (e) {
             e.preventDefault();
-            document.querySelectorAll('.accordion-collapse').forEach(el => {
+            document.querySelectorAll('.accordion-collapse.show').forEach(el => {
                 bootstrap.Collapse.getOrCreateInstance(el, { toggle: false }).hide();
             });
         });
