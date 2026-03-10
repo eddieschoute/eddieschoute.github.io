@@ -44,8 +44,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build
-    # Make sure we only deploy when pushed to master branch
-    if: github.ref == 'refs/heads/master'
+    # Make sure we only deploy when pushed to main branch
+    if: github.ref == 'refs/heads/main'
     steps:
       - name: Download html
         uses: actions/download-artifact@v4
