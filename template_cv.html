@@ -253,45 +253,6 @@
         </div>
         $endfor$
       </div>
-
-      <div class="job-entry">
-        <div class="row">
-          <div class="offset-md-1 col-md-3">
-            <h5 class="text-muted">
-              $patents.date$
-            </h5>
-          </div>
-          <div class="col-md-8">
-            <h3>$patents.title$</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="offset-md-4 col-md-8">
-            <h4 class="text-muted">$patents.inventors$</h4>
-          </div>
-        </div>
-        $if(patents.id)$
-        <div class="row">
-          <div class="offset-md-4 col-md-8">
-            <p class="small">$patents.id$</a></p>
-          </div>
-        </div>
-        $endif$
-        $if(patents.link)$
-        <div class="row">
-          <div class="offset-md-4 col-md-8">
-            <p class="small"><a href="$patents.link$">$patents.link$</a></p>
-          </div>
-        </div>
-        $endif$
-        $if(patents.description)$
-        <div class="row">
-          <div class="offset-md-1 col-md-11">
-            $patents.description$
-          </div>
-        </div>
-        $endif$
-
     </section>
 
 
