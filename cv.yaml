@@ -285,7 +285,7 @@ talks:
         selected: true
         link: https://youtu.be/nWm2LKr_Nzk?t=4014
       - title: Surface code compilation via edge-disjoint paths
-        venue: '[QCTIP 2022](http://www.qctip.org/)'
+        venue: '[QCTIP 2022](https://www.qctip.org/)'
         date: 2022
         link: https://www.youtube.com/watch?v=bYJvPJtcHUE
       - title: Quantum routing with fast reversals
@@ -474,7 +474,7 @@ publications:
   - title: Shortcuts to Quantum Network Routing
     date: 2016
     author: E. Schoute
-    link: http://resolver.tudelft.nl/uuid:684bb201-64a2-461d-b603-1f47590a1341
+    link: https://resolver.tudelft.nl/uuid:684bb201-64a2-461d-b603-1f47590a1341
     description: >
       Master's thesis.
 
