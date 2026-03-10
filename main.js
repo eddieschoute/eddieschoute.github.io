@@ -54,50 +54,65 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. Search filtering
     const searchInput = document.getElementById("search");
     if (searchInput) {
+        // Cache the hierarchical DOM structure once to avoid expensive nested lookups on every keypress
+        const searchCache = Array.from(document.querySelectorAll("section")).map(section => {
+            const groups = Array.from(section.querySelectorAll(".accordion")).map(group => {
+                const header = group.previousElementSibling;
+                const isHeader = header && header.tagName === "H3";
+                const items = Array.from(group.querySelectorAll(".accordion-item")).map(item => {
+                    return {
+                        element: item,
+                        text: item.textContent.toLowerCase()
+                    };
+                });
+                return {
+                    element: group,
+                    header: isHeader ? header : null,
+                    items: items
+                };
+            });
+            return {
+                element: section,
+                groups: groups
+            };
+        });
+
         searchInput.addEventListener("keyup", function () {
             const findText = this.value.toLowerCase();
-            document.querySelectorAll(".accordion-item").forEach(accordion => {
-                if (accordion.textContent.toLowerCase().includes(findText)) {
-                    accordion.classList.remove('d-none');
-                } else {
-                    accordion.classList.add('d-none');
-                }
-            });
 
-            // Update sections visibility
-            document.querySelectorAll("section").forEach(section => {
+            searchCache.forEach(section => {
                 let sectionVisible = false;
 
-                // Look for accordion groups within section
-                section.querySelectorAll(".accordion").forEach(accordionGroup => {
+                section.groups.forEach(group => {
                     let groupVisible = false;
 
-                    accordionGroup.querySelectorAll(".accordion-item").forEach(item => {
-                        if (!item.classList.contains('d-none')) {
+                    group.items.forEach(item => {
+                        if (item.text.includes(findText)) {
+                            item.element.classList.remove("d-none");
                             groupVisible = true;
+                        } else {
+                            item.element.classList.add("d-none");
                         }
                     });
 
-                    // Preceding h3 handling
-                    // The HTML structure is <h3>...</h3> <div class="accordion ...">
-                    // So we look for the previous element sibling of the accordion group
-                    const header = accordionGroup.previousElementSibling;
-                    const isHeader = header && header.tagName === 'H3';
-
                     if (groupVisible) {
-                        accordionGroup.classList.remove('d-none');
-                        if (isHeader) header.classList.remove('d-none');
+                        group.element.classList.remove("d-none");
+                        if (group.header) {
+                            group.header.classList.remove("d-none");
+                        }
                         sectionVisible = true;
                     } else {
-                        accordionGroup.classList.add('d-none');
-                        if (isHeader) header.classList.add('d-none');
+                        group.element.classList.add("d-none");
+                        if (group.header) {
+                            group.header.classList.add("d-none");
+                        }
                     }
                 });
 
                 if (sectionVisible) {
-                    section.classList.remove('d-none');
+                    section.element.classList.remove("d-none");
                 } else {
-                    section.classList.add('d-none');
+                    section.element.classList.add("d-none");
                 }
             });
 
