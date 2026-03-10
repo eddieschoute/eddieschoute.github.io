@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (expandAllBtn) {
         expandAllBtn.addEventListener("click", function (e) {
             e.preventDefault();
-            document.querySelectorAll('.accordion-collapse').forEach(el => {
+            document.querySelectorAll('.accordion-collapse:not(.show)').forEach(el => {
                 bootstrap.Collapse.getOrCreateInstance(el, { toggle: false }).show();
             });
         });
@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (collapseAllBtn) {
         collapseAllBtn.addEventListener("click", function (e) {
             e.preventDefault();
-            document.querySelectorAll('.accordion-collapse').forEach(el => {
-                bootstrap.Collapse.getOrCreateInstance(el).hide();
+            document.querySelectorAll('.accordion-collapse.show').forEach(el => {
+                bootstrap.Collapse.getOrCreateInstance(el, { toggle: false }).hide();
             });
         });
     }
@@ -54,50 +54,65 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. Search filtering
     const searchInput = document.getElementById("search");
     if (searchInput) {
+        // Cache the hierarchical DOM structure once to avoid expensive nested lookups on every keypress
+        const searchCache = Array.from(document.querySelectorAll("section")).map(section => {
+            const groups = Array.from(section.querySelectorAll(".accordion")).map(group => {
+                const header = group.previousElementSibling;
+                const isHeader = header && header.tagName === "H3";
+                const items = Array.from(group.querySelectorAll(".accordion-item")).map(item => {
+                    return {
+                        element: item,
+                        text: item.textContent.toLowerCase()
+                    };
+                });
+                return {
+                    element: group,
+                    header: isHeader ? header : null,
+                    items: items
+                };
+            });
+            return {
+                element: section,
+                groups: groups
+            };
+        });
+
         searchInput.addEventListener("keyup", function () {
             const findText = this.value.toLowerCase();
-            document.querySelectorAll(".accordion-item").forEach(accordion => {
-                if (accordion.textContent.toLowerCase().includes(findText)) {
-                    accordion.classList.remove('d-none');
-                } else {
-                    accordion.classList.add('d-none');
-                }
-            });
 
-            // Update sections visibility
-            document.querySelectorAll("section").forEach(section => {
+            searchCache.forEach(section => {
                 let sectionVisible = false;
 
-                // Look for accordion groups within section
-                section.querySelectorAll(".accordion").forEach(accordionGroup => {
+                section.groups.forEach(group => {
                     let groupVisible = false;
 
-                    accordionGroup.querySelectorAll(".accordion-item").forEach(item => {
-                        if (!item.classList.contains('d-none')) {
+                    group.items.forEach(item => {
+                        if (item.text.includes(findText)) {
+                            item.element.classList.remove("d-none");
                             groupVisible = true;
+                        } else {
+                            item.element.classList.add("d-none");
                         }
                     });
 
-                    // Preceding h3 handling
-                    // The HTML structure is <h3>...</h3> <div class="accordion ...">
-                    // So we look for the previous element sibling of the accordion group
-                    const header = accordionGroup.previousElementSibling;
-                    const isHeader = header && header.tagName === 'H3';
-
                     if (groupVisible) {
-                        accordionGroup.classList.remove('d-none');
-                        if (isHeader) header.classList.remove('d-none');
+                        group.element.classList.remove("d-none");
+                        if (group.header) {
+                            group.header.classList.remove("d-none");
+                        }
                         sectionVisible = true;
                     } else {
-                        accordionGroup.classList.add('d-none');
-                        if (isHeader) header.classList.add('d-none');
+                        group.element.classList.add("d-none");
+                        if (group.header) {
+                            group.header.classList.add("d-none");
+                        }
                     }
                 });
 
                 if (sectionVisible) {
-                    section.classList.remove('d-none');
+                    section.element.classList.remove("d-none");
                 } else {
-                    section.classList.add('d-none');
+                    section.element.classList.add("d-none");
                 }
             });
 
@@ -108,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 6. Clear button
     const clearBtn = document.getElementById("searchClear");
     if (clearBtn) {
-        clearBtn.addEventListener("click", function() {
+        clearBtn.addEventListener("click", function () {
             if (searchInput) {
                 searchInput.value = "";
                 searchInput.dispatchEvent(new Event('keyup')); // Trigger the keyup handler to reset filter
@@ -126,8 +141,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
-  
-     // 7. Auto-close hamburger menu
+
+    // 7. Auto-close hamburger menu
     document.addEventListener('click', function (event) {
         const navbarCollapse = document.querySelector('.navbar-collapse');
         // Only act if the menu is open
@@ -146,5 +161,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 bsCollapse.hide();
             }
         }
+    });
+
+    // 8. Clear search on menu bar link click
+    document.querySelectorAll('.navbar-brand, .nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            if (searchInput && searchInput.value !== "") {
+                searchInput.value = "";
+                searchInput.dispatchEvent(new Event('keyup')); // Trigger the keyup handler to reset filter
+            }
+        });
     });
 });
