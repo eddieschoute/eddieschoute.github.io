@@ -87,33 +87,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     let groupVisible = false;
 
                     group.items.forEach(item => {
-                        if (item.text.includes(findText)) {
-                            item.element.classList.remove("d-none");
-                            groupVisible = true;
-                        } else {
-                            item.element.classList.add("d-none");
-                        }
+                        const isMatch = item.text.includes(findText);
+                        item.element.classList.toggle("d-none", !isMatch);
+                        if (isMatch) groupVisible = true;
                     });
 
-                    if (groupVisible) {
-                        group.element.classList.remove("d-none");
-                        if (group.header) {
-                            group.header.classList.remove("d-none");
-                        }
-                        sectionVisible = true;
-                    } else {
-                        group.element.classList.add("d-none");
-                        if (group.header) {
-                            group.header.classList.add("d-none");
-                        }
+                    group.element.classList.toggle("d-none", !groupVisible);
+                    if (group.header) {
+                        group.header.classList.toggle("d-none", !groupVisible);
                     }
+                    if (groupVisible) sectionVisible = true;
                 });
 
-                if (sectionVisible) {
-                    section.element.classList.remove("d-none");
-                } else {
-                    section.element.classList.add("d-none");
-                }
+                section.element.classList.toggle("d-none", !sectionVisible);
             });
 
             updateClearButton(this.value);
