@@ -51,6 +51,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Debounce utility function
+    function debounce(func, wait) {
+        let timeout;
+        return function (...args) {
+            const context = this;
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func.apply(context, args), wait);
+        };
+    }
+
     // 5. Search filtering
     const searchInput = document.getElementById("search");
     if (searchInput) {
@@ -77,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
         });
 
-        searchInput.addEventListener("keyup", function () {
+        searchInput.addEventListener("keyup", debounce(function (event) {
             const findText = this.value.toLowerCase();
 
             searchCache.forEach(section => {
@@ -117,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             updateClearButton(this.value);
-        });
+        }, 250));
     }
 
     // 6. Clear button
