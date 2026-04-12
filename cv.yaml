@@ -220,6 +220,9 @@ talks:
   - category: Invited
     entries:
       - title: 'Tour de gross: A modular quantum computer based on bivariate bicycle codes'
+        venue: Peter J. Love group
+        date: 2026
+      - title: 'Tour de gross: A modular quantum computer based on bivariate bicycle codes'
         venue: '[UCLA IPAM](https://www.ipam.ucla.edu/programs/workshops/bridging-the-gap-between-nisq-and-ftqc/)'
         date: 2026
       - title: 'Tour de gross: A modular quantum computer based on bivariate bicycle codes'
