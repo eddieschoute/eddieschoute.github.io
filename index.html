@@ -229,13 +229,21 @@
 
     .search-clear {
         position: absolute;
-        right: 10px;
+        right: 5px;
         top: 50%;
         transform: translateY(-50%);
         cursor: pointer;
         font-size: 1.2rem;
         color: #999;
         display: none;
+        width: 44px;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+        /* Reset button styles if using <button> */
+        background: transparent;
+        border: none;
+        padding: 0;
     }
 
     .search-clear:hover {
@@ -243,7 +251,7 @@
     }
 
     #search {
-        padding-right: 30px;
+        padding-right: 49px; /* Make room for the 44px button + 5px right offset */
     }
 
     /* Hide native search clear button in WebKit browsers */
@@ -277,7 +285,7 @@
           <div class="search">
             <form class="d-flex position-relative" role="search">
               <input class="form-control" type="search" placeholder="Search" aria-label="Search" id="search">
-              <span id="searchClear" class="search-clear">&times;</span>
+              <button type="button" id="searchClear" class="search-clear" aria-label="Clear search">&times;</button>
             </form>
           </div>
         </div>
