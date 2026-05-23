@@ -23,6 +23,34 @@
   <![endif]-->
   <style>
     $styles.css()$
+
+    /* Search Bar Responsive Styles */
+    .search-input {
+      width: 130px;
+      padding-right: 20px;
+    }
+    @media (min-width: 576px) {
+      .search-input {
+        width: 200px;
+      }
+    }
+    .search-clear {
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1rem;
+      padding: 0;
+      border: none;
+      background: none;
+      color: #6c757d;
+      cursor: pointer;
+      display: none; /* hidden by default, shown by JS */
+      z-index: 5;
+    }
+    .search-clear:hover {
+      color: #343a40;
+    }
   </style>
   $for(css)$
   <link rel="stylesheet" href="$css$" />
@@ -41,9 +69,15 @@
   $endfor$
   <header>
     <nav class="navbar fixed-top navbar-expand-lg bg-white">
-      <div class="container-xl">
+      <div class="container-xl d-flex flex-nowrap align-items-center">
         <a class="navbar-brand" href="https://eddieschoute.github.io">Eddie Schoute</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        <div class="search ms-auto me-2">
+          <form class="d-flex position-relative m-0" role="search">
+            <input class="form-control form-control-sm search-input" type="search" placeholder="Search" aria-label="Search" id="search">
+            <button type="button" id="searchClear" class="search-clear" aria-label="Clear search">&times;</button>
+          </form>
+        </div>
+        <button class="navbar-toggler flex-shrink-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -56,12 +90,6 @@
             <a class="nav-link" href="#talks">Talks</a>
             <a class="nav-link" href="#patents">Patents</a>
             <a class="nav-link" href="#publications">Publications</a>
-          </div>
-          <div class="search">
-            <form class="d-flex position-relative" role="search">
-              <input class="form-control" type="search" placeholder="Search" aria-label="Search" id="search">
-              <button type="button" id="searchClear" class="search-clear" aria-label="Clear search">&times;</button>
-            </form>
           </div>
         </div>
       </div>
