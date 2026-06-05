@@ -189,10 +189,6 @@ h5:last-child {
     white-space: nowrap;
 }
 
-.search {
-    margin-left: auto;
-}
-
 .expand {
     text-align: end;
 }
@@ -234,6 +230,8 @@ footer {
 
 #search {
     padding-right: 49px; /* Make room for the 44px button + 5px right offset */
+    padding-top: 7px;    /* boven en onder 1px extra padding dan default geeft gelijke hoogte als de hamburger */
+    padding-bottom: 7px;
 }
 
 /* Hide native search clear button in WebKit browsers */
@@ -242,4 +240,13 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
     -webkit-appearance: none;
+}
+
+@media screen and (max-width: 576px) {	/* beperkt de breedte van de items zodat alles nog op 375px past */
+    #search {
+        width: 140px;
+    }
+    .navbar-brand {
+        margin-right: 4px;
+    }
 }
