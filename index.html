@@ -207,10 +207,6 @@
         white-space: nowrap;
     }
 
-    .search {
-        margin-left: auto;
-    }
-
     .expand {
         text-align: end;
     }
@@ -252,6 +248,8 @@
 
     #search {
         padding-right: 49px; /* Make room for the 44px button + 5px right offset */
+        padding-top: 7px;    /* boven en onder 1px extra padding dan default geeft gelijke hoogte als de hamburger */
+        padding-bottom: 7px;
     }
 
     /* Hide native search clear button in WebKit browsers */
@@ -260,6 +258,15 @@
     input[type="search"]::-webkit-search-results-button,
     input[type="search"]::-webkit-search-results-decoration {
         -webkit-appearance: none;
+    }
+
+    @media screen and (max-width: 576px) {	/* beperkt de breedte van de items zodat alles nog op 375px past */
+        #search {
+            width: 140px;
+        }
+        .navbar-brand {
+            margin-right: 4px;
+        }
     }  </style>
       </head>
 
@@ -268,12 +275,16 @@
     <nav class="navbar fixed-top navbar-expand-lg bg-white">
       <div class="container-xl">
         <a class="navbar-brand" href="https://eddieschoute.github.io">Eddie Schoute</a>
+        <form class="d-flex position-relative" role="search">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search" id="search">
+          <button type="button" id="searchClear" class="search-clear" aria-label="Clear search">&times;</button>
+        </form>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <div class="navbar-nav">
+          <div class="navbar-nav ms-auto">
             <a class="nav-link" href="#experience">Experience</a>
             <a class="nav-link" href="#education">Education</a>
             <a class="nav-link" href="#service">Service</a>
@@ -281,12 +292,6 @@
             <a class="nav-link" href="#talks">Talks</a>
             <a class="nav-link" href="#patents">Patents</a>
             <a class="nav-link" href="#publications">Publications</a>
-          </div>
-          <div class="search">
-            <form class="d-flex position-relative" role="search">
-              <input class="form-control" type="search" placeholder="Search" aria-label="Search" id="search">
-              <button type="button" id="searchClear" class="search-clear" aria-label="Clear search">&times;</button>
-            </form>
           </div>
         </div>
       </div>
