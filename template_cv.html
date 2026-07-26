@@ -167,10 +167,8 @@
 
     <section id="awards">
       <h2>Awards</h2>
-
-      $for(awards)$
       <div class="accordion accordion-flush">
-
+        $for(awards)$
         <div class="accordion-item">
           <h3 class="accordion-header">
             <button class="accordion-button collapser $if(it.important)$$else$collapsed$endif$" type="button"
@@ -188,8 +186,8 @@
             </div>
           </div>
         </div>
+        $endfor$
       </div>
-      $endfor$
     </section>
 
     <section id="talks">
