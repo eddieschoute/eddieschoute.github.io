@@ -4,15 +4,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Accordion Icon State Management via Bootstrap Events
     // This ensures the icon stays in sync regardless of how the collapse is triggered (click, expand all, etc.)
     document.querySelectorAll('.accordion-collapse').forEach(collapseEl => {
+        // Cache the collapser button to avoid redundant DOM queries on every event
+        const button = collapseEl.parentElement.querySelector('.collapser');
+
         // When opening
         collapseEl.addEventListener('show.bs.collapse', () => {
-            const button = collapseEl.parentElement.querySelector('.collapser');
             if (button) button.classList.remove('collapsed');
         });
 
         // When closing
         collapseEl.addEventListener('hide.bs.collapse', () => {
-            const button = collapseEl.parentElement.querySelector('.collapser');
             if (button) button.classList.add('collapsed');
         });
     });
