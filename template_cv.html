@@ -83,7 +83,9 @@
           <h3 class="accordion-header">
             <button class="accordion-button collapser $if(it.important)$$else$collapsed$endif$" type="button"
               data-bs-toggle="collapse" $if(it.important)$ aria-expanded="true" $endif$>
-              $it.title$, $it.company$
+              <span>
+                $it.title$, $it.company$
+              </span>
               <span class="time text-muted small">$it.date$</span>
             </button>
           </h3>
@@ -117,10 +119,12 @@
 
             <button class="accordion-button collapser $if(it.important)$$else$collapsed$endif$" type="button"
               data-bs-toggle="collapse" $if(it.important)$ aria-expanded="true" $endif$>
-              $education.title$, $education.university$
+              <span>
+                $education.title$, $education.university$
               $if(education.honors)$
               <span class="fst-italic">$education.honors$</span>
               $endif$
+              </span>
               <span class="time text-muted small">$education.date$</span>
             </button>
           </h3>
@@ -150,7 +154,9 @@
           <h3 class="accordion-header">
             <button class="accordion-button collapser $if(it.important)$$else$collapsed$endif$" type="button"
               data-bs-toggle="collapse" $if(it.important)$ aria-expanded="true" $endif$>
-              $service.title$, $service.venue$
+              <span>
+                $service.title$, $service.venue$
+              </span>
               <span class="time text-muted small">$service.date$</span>
             </button>
           </h3>
@@ -175,7 +181,9 @@
           <h3 class="accordion-header">
             <button class="accordion-button collapser $if(it.important)$$else$collapsed$endif$" type="button"
               data-bs-toggle="collapse" $if(it.important)$ aria-expanded="true" $endif$>
-              $it.title$, $it.grantor$
+              <span>
+                $it.title$, $it.grantor$
+              </span>
               <span class="time text-muted small">$it.date$</span>
             </button>
           </h3>
@@ -204,7 +212,9 @@
           <h3 class="accordion-header">
             <button class="accordion-button collapser $if(it.important)$$else$collapsed$endif$" type="button"
               data-bs-toggle="collapse" $if(it.important)$ aria-expanded="true" $endif$>
-              $it.title$, $it.venue$
+              <span>
+                $it.title$, $it.venue$
+              </span>
               <span class="time text-muted small">$it.date$</span>
             </button>
           </h3>
@@ -232,7 +242,9 @@
           <h3 class="accordion-header">
             <button class="accordion-button collapser $if(it.important)$$else$collapsed$endif$" type="button"
               data-bs-toggle="collapse" $if(it.important)$ aria-expanded="true" $endif$>
-              $it.title$
+              <span>
+                $it.title$
+              </span>
               <span class="time text-muted small">$it.date$</span>
             </button>
           </h3>
@@ -263,7 +275,9 @@
           <h3 class="accordion-header" id="headingPu09">
             <button class="accordion-button collapser $if(it.important)$$else$collapsed$endif$" type="button"
               data-bs-toggle="collapse" $if(it.important)$ aria-expanded="true" $endif$>
-              $it.title$$if(it.pubtitle)$, in: <span class="fst-italic">$it.pubtitle$</span>$endif$
+              <span>
+                $it.title$$if(it.pubtitle)$, in: <span class="fst-italic">$it.pubtitle$</span>$endif$
+              </span>
               <span class="time text-muted small">
                 $if(it.inpreparation)$
                 in preparation
