@@ -1,3 +1,13 @@
+// Utility function for debouncing
+function debounce(func, wait) {
+    let timeout;
+    return function (...args) {
+        const context = this;
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(context, args), wait);
+    };
+}
+
 // Initialize behaviors
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -77,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
         });
 
-        searchInput.addEventListener("keyup", function () {
+        searchInput.addEventListener("keyup", debounce(function () {
             const findText = this.value.toLowerCase();
 
             searchCache.forEach(section => {
@@ -117,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             updateClearButton(this.value);
-        });
+        }, 300));
     }
 
     // 6. Clear button
