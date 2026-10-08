@@ -137,7 +137,7 @@ experience:
 service:
   - title: Member
     venue: Bicycle working group, Los Alamos county
-    date: 2023--present
+    date: 2023--2024
     description: >
       Investigate potential problems with current roadways in the county and propose bicycle infrastructure improvements. Research best practices in the US and internationally.
 
@@ -219,6 +219,9 @@ awards:
 talks:
   - category: Invited
     entries:
+      - title: 'How to compile for qLDPC architectures'
+        venue: 'IQuS Workshop: [Quantum Algorithms in the Fault Tolerant Era](https://iqus.uw.edu/events/wksp_ftalgorithms_sept2026/)'
+        date: 2026
       - title: 'Tour de gross: A modular quantum computer based on bivariate bicycle codes'
         venue: Peter J. Love group
         date: 2026
@@ -269,6 +272,8 @@ talks:
     entries:
       - title: 'Tour de gross: A modular quantum computer based on bivariate bicycle codes'
         venue: '[QIP 2026](https://qip2026.lu.lv/)'
+        selected: true
+        important: true
         date: 2026
       - title: 'Tour de gross: A modular quantum computer based on bivariate bicycle codes'
         venue: '[IWQC 2025](https://quantum-compilers.github.io/iwqc25/)'
