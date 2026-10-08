@@ -55,11 +55,12 @@
           <div class="navbar-nav ms-auto">
             <a class="nav-link" href="#experience">Experience</a>
             <a class="nav-link" href="#education">Education</a>
-            <a class="nav-link" href="#service">Service</a>
-            <a class="nav-link" href="#awards">Awards</a>
+            <a class="nav-link" href="#publications">Publications</a>
+            <a class="nav-link" href="#software">Software</a>
             <a class="nav-link" href="#talks">Talks</a>
             <a class="nav-link" href="#patents">Patents</a>
-            <a class="nav-link" href="#publications">Publications</a>
+            <a class="nav-link" href="#awards">Awards</a>
+            <a class="nav-link" href="#service">Service</a>
           </div>
         </div>
       </div>
@@ -145,42 +146,88 @@
       </div>
     </section>
 
+    <section id="publications">
+      <h2>Publications</h2>
 
-    <section id="service">
-      <h2>Service</h2>
       <div class="accordion accordion-flush">
-        $for(service)$
+        $for(publications)$
         <div class="accordion-item">
           <h3 class="accordion-header">
             <button class="accordion-button collapser $if(it.important)$$else$collapsed$endif$" type="button"
               data-bs-toggle="collapse" $if(it.important)$ aria-expanded="true" $endif$>
               <span>
-                $service.title$, $service.venue$
+                $it.title$$if(it.pubtitle)$, in: <span class="fst-italic">$it.pubtitle$</span>$endif$
               </span>
-              <span class="time text-muted small">$service.date$</span>
+              <span class="time text-muted small">
+                $if(it.inpreparation)$
+                in preparation
+                $else$
+                $it.date$
+                $endif$
+              </span>
             </button>
           </h3>
           <div class="accordion-collapse collapse $if(it.important)$show$endif$">
             <div class="accordion-body">
-              <h4>$service.title$</h4>
-              <h5 class="text-muted">$service.venue$</h5>
-              $service.description$
+              <h4>$it.title$</h4>
+              <h5 class="text-muted">$it.author$</h5>
+              $if(it.pubtitle)$
+              <p class="small">In: <i>$it.pubtitle$</i></p>
+              $endif$
+              $if(it.link)$
+              <p class="small"><a href="$it.link$">$it.link$</a></p>
+              $endif$
+              $it.description$
             </div>
           </div>
         </div>
         $endfor$
+      </div>
     </section>
 
-    <section id="awards">
-      <h2>Awards</h2>
+    <section id="software">
+      <h2>Software</h2>
+
       <div class="accordion accordion-flush">
-        $for(awards)$
+        $for(software)$
         <div class="accordion-item">
           <h3 class="accordion-header">
             <button class="accordion-button collapser $if(it.important)$$else$collapsed$endif$" type="button"
               data-bs-toggle="collapse" $if(it.important)$ aria-expanded="true" $endif$>
               <span>
-                $it.title$, $it.grantor$
+                $it.title$
+              </span>
+              <span class="time text-muted small">
+                $it.date$
+              </span>
+            </button>
+          </h3>
+          <div class="accordion-collapse collapse $if(it.important)$show$endif$">
+            <div class="accordion-body">
+              <h4>$it.title$</h4>
+              <h5 class="text-muted">$it.author$</h5>
+              $if(it.link)$
+              <p class="small"><a href="$it.link$">$it.link$</a></p>
+              $endif$
+              $it.description$
+            </div>
+          </div>
+        </div>
+        $endfor$
+      </div>
+    </section>
+
+    <section id="patents">
+      <h2>Patents and Patent&nbsp;Applications</h2>
+      <div class="accordion accordion-flush">
+
+        $for(patents)$
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapser $if(it.important)$$else$collapsed$endif$" type="button"
+              data-bs-toggle="collapse" $if(it.important)$ aria-expanded="true" $endif$>
+              <span>
+                $it.title$
               </span>
               <span class="time text-muted small">$it.date$</span>
             </button>
@@ -188,8 +235,12 @@
           <div class="accordion-collapse collapse $if(it.important)$show$endif$">
             <div class="accordion-body">
               <h4>$it.title$</h4>
-              <h5 class="text-muted">$it.grantor$</h5>
-              $if(it.location)$<p class="small">$it.location$</p>$endif$
+              <h5 class="text-muted">$it.inventors$
+              </h5>
+              <p class="small">$it.id$</p>
+              $if(it.link)$
+              <p class="small"><a href="$it.link$">$it.link$</a></p>
+              $endif$
               $it.description$
             </div>
           </div>
@@ -231,17 +282,16 @@
       $endfor$
     </section>
 
-    <section id="patents">
-      <h2>Patents and Patent&nbsp;Applications</h2>
+    <section id="awards">
+      <h2>Awards</h2>
       <div class="accordion accordion-flush">
-
-        $for(patents)$
+        $for(awards)$
         <div class="accordion-item">
           <h3 class="accordion-header">
             <button class="accordion-button collapser $if(it.important)$$else$collapsed$endif$" type="button"
               data-bs-toggle="collapse" $if(it.important)$ aria-expanded="true" $endif$>
               <span>
-                $it.title$
+                $it.title$, $it.grantor$
               </span>
               <span class="time text-muted small">$it.date$</span>
             </button>
@@ -249,12 +299,8 @@
           <div class="accordion-collapse collapse $if(it.important)$show$endif$">
             <div class="accordion-body">
               <h4>$it.title$</h4>
-              <h5 class="text-muted">$it.inventors$
-              </h5>
-              <p class="small">$it.id$</p>
-              $if(it.link)$
-              <p class="small"><a href="$it.link$">$it.link$</a></p>
-              $endif$
+              <h5 class="text-muted">$it.grantor$</h5>
+              $if(it.location)$<p class="small">$it.location$</p>$endif$
               $it.description$
             </div>
           </div>
@@ -263,46 +309,30 @@
       </div>
     </section>
 
-
-    <section id="publications">
-      <h2>Publications</h2>
-
+    <section id="service">
+      <h2>Service</h2>
       <div class="accordion accordion-flush">
-        $for(publications)$
+        $for(service)$
         <div class="accordion-item">
           <h3 class="accordion-header">
             <button class="accordion-button collapser $if(it.important)$$else$collapsed$endif$" type="button"
               data-bs-toggle="collapse" $if(it.important)$ aria-expanded="true" $endif$>
               <span>
-                $it.title$$if(it.pubtitle)$, in: <span class="fst-italic">$it.pubtitle$</span>$endif$
+                $service.title$, $service.venue$
               </span>
-              <span class="time text-muted small">
-                $if(it.inpreparation)$
-                in preparation
-                $else$
-                $it.date$
-                $endif$
-              </span>
+              <span class="time text-muted small">$service.date$</span>
             </button>
           </h3>
           <div class="accordion-collapse collapse $if(it.important)$show$endif$">
             <div class="accordion-body">
-              <h4>$it.title$</h4>
-              <h5 class="text-muted">$it.author$</h5>
-              $if(it.pubtitle)$
-              <p class="small">In: <i>$it.pubtitle$</i></p>
-              $endif$
-              $if(it.link)$
-              <p class="small"><a href="$it.link$">$it.link$</a></p>
-              $endif$
-              $it.description$
+              <h4>$service.title$</h4>
+              <h5 class="text-muted">$service.venue$</h5>
+              $service.description$
             </div>
           </div>
         </div>
         $endfor$
-      </div>
     </section>
-
 
     $for(include-after)$
     $include-after$

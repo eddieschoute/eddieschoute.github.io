@@ -135,41 +135,6 @@ $education.description$
 $endfor$
 
 \vspace{14pt}
-\section{Service}
-$for(service)$
-\cvtitle{$service.title$ ($service.venue$) \hfill $service.date$}
-$service.description$
-$endfor$
-
-\section{Awards}
-$for(awards)$
-\cvtitle{$awards.title$ ($awards.grantor$) \hfill $awards.date$}
-$awards.description$
-$endfor$
-
-\section{Talks}
-$for(talks)$
-\subsection{$talks.category$}
-\begin{enumerate}
-$for(talks.entries)$
-\item ``%
-	$if(it.link)$\href{$it.link$}{$it.title$}$else$$it.title$$endif$%
-	''. $it.venue$ ($it.date$).
-$endfor$
-\end{enumerate}
-$endfor$
-
-\section{Patents and Patent Applications}
-\begin{enumerate}
-$for(patents)$
-\item ``$patents.title$''. $patents.inventors$$if(patents.date)$ ($patents.date$)$endif$.
-$if(patents.id)$
-$patents.id$.
-$endif$
-$endfor$
-\end{enumerate}
-
-
 \section{Publications}
 \begin{enumerate}
 $for(publications)$
@@ -190,5 +155,49 @@ $if(publications.link)$
 $endif$
 $endfor$
 \end{enumerate}
+
+\section{Software}
+\begin{enumerate}
+$for(software)$
+\item $software.author$, ``$software.title$'' ($software.date$).
+$if(software.link)$
+\url{$software.link$}
+$endif$
+$endfor$
+\end{enumerate}
+
+\section{Patents and Patent Applications}
+\begin{enumerate}
+$for(patents)$
+\item ``$patents.title$''. $patents.inventors$$if(patents.date)$ ($patents.date$)$endif$.
+$if(patents.id)$
+$patents.id$.
+$endif$
+$endfor$
+\end{enumerate}
+
+\section{Awards}
+$for(awards)$
+\cvtitle{$awards.title$ ($awards.grantor$) \hfill $awards.date$}
+$awards.description$
+$endfor$
+
+\section{Talks}
+$for(talks)$
+\subsection{$talks.category$}
+\begin{enumerate}
+$for(talks.entries)$
+\item ``%
+	$if(it.link)$\href{$it.link$}{$it.title$}$else$$it.title$$endif$%
+	''. $it.venue$ ($it.date$).
+$endfor$
+\end{enumerate}
+$endfor$
+
+\section{Service}
+$for(service)$
+\cvtitle{$service.title$ ($service.venue$) \hfill $service.date$}
+$service.description$
+$endfor$
 
 \end{document}

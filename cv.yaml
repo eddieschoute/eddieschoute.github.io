@@ -492,3 +492,21 @@ publications:
     description: >
       Bachelor's thesis.
 
+software:
+  - title: rsgridsynth
+    author: Kento Ueda, Eddie Schoute, John Lapeyre, Alexander Ivrii, Matt Treinish, Zihan Chen
+    date: 2026
+    link: https://github.com/eddieschoute/rsgridsynth
+    description: Approximate synthesis of diagonal rotation gates extended with mixed diagonal, fallback, and mixed fallback protocols for significantly reduced expected T count.
+  - title: Bicycle Architecture Compiler
+    author: Eddie Schoute, Patrick Rall, John Lapeyre
+    date: 2025
+    link: https://github.com/qiskit-community/bicycle-architecture-compiler
+    description: |
+      [Tour de Gross](https://arxiv.org/abs/2506.03094) presents the Bicycle Architecture -- a modular architecture for fault-tolerant quantum computation based on bivariate bicycle codes.
+      This compiler prototype implements and benchmarks this end-to-end compilation scheme so that it may inform future Qiskit development for fault-tolerant architectures.
+      The analysis features:
+
+      * A universal Instruction Set Archirecture (ISA) of logical gates in bivariate bicyle codes
+      * Circuit-level noise benchmarks of all the ISA instructions
+      * An end-to-end compilation scheme from Pauli-Based Computation (PBC) to the bicycle ISA
